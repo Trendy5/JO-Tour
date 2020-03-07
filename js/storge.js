@@ -37,15 +37,18 @@ var Rate = function(object,user_name,rate){
     this.rate = rate,
     object.rate.push(this)
 }
-new Pleace(0,'Amman Citadel','ksldjflkjdslfljdslkjads',['img/DSC_0337-min.JPG',],'Center Downtown Amman','Places')
-new Pleace(0,'The Duke\'s Diwan','ksldjflkjdslfljdslkjads',['img/DSC_1227-min.jpg'],'Downtown','Places')
-new Pleace(0,'Al Kalha Stakirs','ksldjflkjdslfljdslkjads',['img/IMG_1793-min.jpg'],'Between Jabal Al Lweibdah and Downtown','Places')
-new Pleace(0,'Downtown','ksldjflkjdslfljdslkjads',['img/Snapchat-1589789031-min.jpg'],'wastbald','Places')
-new Pleace(1,'Petra','ksldjflkjdslfljdslkjads',['img/IMG_3960-min.jpg'],'wastbald','Places')
+new Pleace(0,'Amman Citadel','ksldjflkjdslfljdslkjads',['img/DSC_0337-min.JPG',],'Center Downtown Amman','places')
+new Pleace(0,'The Duke\'s Diwan','ksldjflkjdslfljdslkjads',['img/DSC_1227-min.jpg'],'Downtown','places')
+new Pleace(0,'Al Kalha Stakirs','ksldjflkjdslfljdslkjads',['img/IMG_1793-min.jpg'],'Between Jabal Al Lweibdah and Downtown','places')
+new Pleace(0,'Downtown','ksldjflkjdslfljdslkjads',['img/Snapchat-1589789031-min.jpg'],'wastbald','places')
+new Pleace(1,'Petra','ksldjflkjdslfljdslkjads',['img/IMG_3960-min.jpg'],'wastbald','places')
 new Comment(places[0],'yazan','jlkjsdlkj','kldsjfkl')
+if(!(localStorage.places)&&!(localStorage.restaurants)&&!(localStorage.locations)){
 localStorage.locations = JSON.stringify(locations)
 localStorage.restaurants = JSON.stringify(restaurants) 
 localStorage.places = JSON.stringify(places) 
-var StorgeLoctions = JSON.parse(localStorage.locations)
-var StorgeRestaurants = JSON.parse(localStorage.restaurants)
-var StorgePlaces = JSON.parse(localStorage.places)
+}
+// console.log('dsf')
+locations= JSON.parse(localStorage.locations)
+restaurants = JSON.parse(localStorage.restaurants)
+places = JSON.parse(localStorage.places)
