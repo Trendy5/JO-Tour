@@ -35,10 +35,14 @@ var Rate = function(object,user_name,rate){
     this.rate = rate,
     object.rate.push(this)
 }
-// new Restrunt(0,'abujbarah','ksldjflkjdslfljdslkjads',['sdfafas'],'wastbald')
-// new Restrunt(0,'abujbarah','ksldjflkjdslfljdslkjads',['sdfafas'],'wastbald')
-// new Restrunt(0,'abujbarah','ksldjflkjdslfljdslkjads',['sdfafas'],'wastbald')
-// new Comment(restaurants[0],'yazan','jlkjsdlkj','kldsjfkl')
+new Restrunt(0,'abujbarah','ksldjflkjdslfljdslkjads',['sdfafas'],'wastbald')
+new Restrunt(0,'abujbarah','ksldjflkjdslfljdslkjads',['sdfafas'],'wastbald')
+new Restrunt(0,'abujbarah','ksldjflkjdslfljdslkjads',['sdfafas'],'wastbald')
+new Comment(restaurants[0],'yazan','jlkjsdlkj','kldsjfkl')
 localStorage.locations = JSON.stringify(locations)
 localStorage.restaurants = JSON.stringify(restaurants) 
 localStorage.places = JSON.stringify(places) 
+var StorgeLoctions = JSON.parse(localStorage.locations)
+var StorgeRestaurants = JSON.parse(localStorage.restaurants)
+var StorgePlaces = JSON.parse(localStorage.places)
+// console.log(StorgeLoctions,StorgePlaces,StorgeRestaurants)
