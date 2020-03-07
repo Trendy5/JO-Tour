@@ -1,0 +1,75 @@
+body{
+    width: 80%;
+    margin: auto;
+    background-image: url(../img/DSC_93.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 5000px;
+
+}
+
+header{
+    height: 100%;
+    position: relative;
+}
+nav{
+    width: 100%;
+    background-color: #fbd9cf;
+    margin-top: 0%;
+    position: sticky;
+    top: 0;
+}
+li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 1% 8%;
+    font-size: 1.3em;
+    color: #794d6f;
+
+}
+a{
+    text-decoration: none;
+    color: #794d6f;
+}
+a:hover{
+    color: #adadad;;
+}
+
+
+#logo {
+    width: 8%;
+    border-radius: 60px;
+    margin-right: 29.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: double #794d6f;
+}
+#logodiv {
+    text-align: center;
+}
+h1{
+    font-family: 'Monoton', cursive;
+    font-size: 6em;
+    margin-top: -10%;
+    color: #794e6f;
+}
+ul{
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+}
+
+.slideshow {
+    
+    height: 500px;
+    width: 1050px;
+    margin-left: 1.5%;
+    margin-top: 1%;
+    
+}
+
+footer{
+    background-color: #fbd9cf;
+    text-align: center;
+    padding: 0.5%;
+    font-family: 'Monoton', cursive;
+}

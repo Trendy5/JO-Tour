@@ -34,10 +34,10 @@ a{
 a:hover{
     color: #adadad;;
 }
-#logo{
+#logo {
     width: 8%;
     border-radius: 60px;
-    margin-right: 30%;
+    margin-right: 29.5%;
     margin-top: 1%;
     margin-bottom: 1%;
     border: double #794d6f;
@@ -55,3 +55,20 @@ ul{
     text-align: center;
     font-family: 'Satisfy', cursive;
 }
+
+.slideshow {
+    
+    height: 500px;
+    width: 1050px;
+    margin-left: 1.5%;
+    margin-top: 1%;
+    
+}
+
+footer{
+    background-color: #fbd9cf;
+    text-align: center;
+    padding: 0.5%;
+    font-family: 'Monoton', cursive;
+}
+
