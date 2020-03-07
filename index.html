@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,9 @@
 
     <title>JO Tour</title>
 </head>
+
 <body>
+
       <header>
           <div id="logodiv" >
             <img id="logo" src="img/Pink Mandala Massage Logo.png" alt="">
@@ -37,7 +40,51 @@
         </div>
     </header>
     <main>
+ <form>
+        <fieldset>
+            <legend>Filter Bar</legend>
+            <p>
+                <label>Location</label>
 
+                <input type="checkbox" id="first" value="Amman" />
+                <label for="first">Amman</label>
+
+                <input type="checkbox" id="second" value="Irbid" />
+                <label for="second">Irbid</label>
+
+                <input type="checkbox" id="third" value="Maan" />
+                <label for="third">Maan</label>
+            </p>
+            <p>
+                <label>Category</label>
+
+                <input type="checkbox" id="first" value="Resturants" />
+                <label for="first">Resturants</label>
+
+                <input type="checkbox" id="second" value="Places" />
+                <label for="second">Places</label>
+            </p>
+            <p>
+                <label for="Budget">Enter Your Budget </label><br>
+                <input type="number" id="Budget" name="Budget"><br>
+            </p>
+            <p>
+
+                <div class="rating js-rating">
+
+                    <label for="rating" class="">Choose a Rate :</label>
+                    <select name="rating" id="rating" class="rating__select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <input type="submit">
+            </p>
+        </fieldset>
+    </form>
     </main>
     <footer>
 

@@ -1,3 +1,5 @@
+
+'use strict';
 // 'use strict';
 // // console.log(Comment)
 // var slideIndex = 0;
