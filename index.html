@@ -1,19 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Satisfy&display=swap" 
+          rel="stylesheet">
+
     <title>JO Tour</title>
 </head>
+
 <body>
+
+      <header>
+          <div id="logodiv" >
+            <img id="logo" src="img/Pink Mandala Massage Logo.png" alt="">
+            <h1>
+              J     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TOUR
+            </h1>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href=""></a>Book a Tour</li>
+                <li><a href="about.html"></a>About Us</li>
+            </ul>
+        </nav>
+        <div id="imgslide">
+            <img class="slideshow" src="img/DSC_6-min.jpg" alt="Amman">
+          <img class="slideshow" src="img/20191109_160806-min.jpg" alt="birds">
+          <img  class="slideshow" src="img/DSC_0337-min.JPG" alt="citedal">
+          <img class="slideshow" src="img/DSC_0332-min.JPG" alt="houses">
+          <img class="slideshow" src="img/20191109_155609-min.jpg" alt="romantheatre">
+          <img class="slideshow" src="img/DSC_0228-min.JPG" alt="citedal">
+          <img class="slideshow" src="img/20160414_122938-min.jpg" alt="Roman">
+          <img class="slideshow" src="img/IMG_1845-min.jpg" alt="Bokharyeh">
+          <img class="slideshow" src="img/DSC_1209-min.JPG" alt="cat">
+          <img class="slideshow" src="img/IMG-20190305-WA0036-min.jpg" alt="street">
+          <img class="slideshow" src="img/20150126_114136-min.jpg" alt="bookstore">
+          <img class="slideshow" src="img/DSC_0350-min.JPG" alt="Roman">
+          <img class="slideshow" src="img/20150126_114347-min.jpg" alt="Amman">
+          <img class="slideshow" src="img/IMG_3912-min.jpg" alt="petra">
+          <img class="slideshow" src="img/IMG_3766-min.jpg" alt="camel">
+        </div>
+    </header>
+    <main>
+ <form>
+        <fieldset>
+            <legend>Filter Bar</legend>
+            <p>
+                <label>Location</label>
+
+                <input type="checkbox" id="first" value="Amman" />
+                <label for="first">Amman</label>
+
+                <input type="checkbox" id="second" value="Irbid" />
+                <label for="second">Irbid</label>
+
+                <input type="checkbox" id="third" value="Maan" />
+                <label for="third">Maan</label>
+            </p>
+            <p>
+                <label>Category</label>
+
+                <input type="checkbox" id="first" value="Resturants" />
+                <label for="first">Resturants</label>
+
+                <input type="checkbox" id="second" value="Places" />
+                <label for="second">Places</label>
+            </p>
+            <p>
+                <label for="Budget">Enter Your Budget </label><br>
+                <input type="number" id="Budget" name="Budget"><br>
+            </p>
+            <p>
+
+                <div class="rating js-rating">
+
+                    <label for="rating" class="">Choose a Rate :</label>
+                    <select name="rating" id="rating" class="rating__select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <input type="submit">
+            </p>
+        </fieldset>
+    </form>
+    </main>
+    <footer>
+        <footer>
+            <p>©2020 COPY RIGHT TRENDY5 </p>
+            <!-- <p>Book your project @ +962 75645</p> -->
+        </footer>
+    </footer>
     
     <main>
    
     </main>
     <script src="js/storge.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
