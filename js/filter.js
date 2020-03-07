@@ -67,16 +67,15 @@ function filterCost(cost) {
       continue;
     }
     if (avgCost / filtered[i].avarge.length <= cost) {
-      console.log('jkljklj');
       arr.push(filtered[i]);
     }
+    avgCost = 0;
   }
 
   if (arr.length > 0) {
-    // console.log('if')
     filtered = arr;
   }
 }
 
-filterCost(21);
+filterCost(28);
 console.log(filtered);
