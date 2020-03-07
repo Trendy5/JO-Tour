@@ -79,3 +79,4 @@ function filterCost(cost) {
 
 filterCost(28);
 console.log(filtered);
+var filter = document.getElementById('filter');
