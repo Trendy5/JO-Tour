@@ -70,16 +70,11 @@ new Pleace(
 );
 new Pleace(
   0,
-<<<<<<< HEAD
   'The Duke\'s Diwan',
-  'ksldjflkjdslfljdslkjads',
-=======
-  "The Duke's Diwan",
   `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
   Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
   Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
   Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
->>>>>>> 7c47af2ff9d3ca447e6f7f8cfe0b7177df3cd4b4
   [
     'img/DSC_1227-min.jpg',
     'img/DSC_1241-min.JPG',
