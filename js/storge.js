@@ -53,7 +53,10 @@ var Avarge = function(object, user_name, avg) {
 new Pleace(
   0,
   'Amman Citadel',
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   [
     'img/DSC_0337-min.JPG',
     'img/DSC_0367-min.JPG',
@@ -68,7 +71,10 @@ new Pleace(
 new Pleace(
   0,
   "The Duke's Diwan",
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   [
     'img/DSC_1227-min.jpg',
     'img/DSC_1241-min.JPG',
@@ -82,7 +88,10 @@ new Pleace(
 new Pleace(
   0,
   'Al Kalha Stakirs',
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   [
     'img/IMG_1792-min.JPG',
     'img/IMG_1793-min.jpg',
@@ -95,7 +104,10 @@ new Pleace(
 new Pleace(
   0,
   'Downtown',
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   [
     'img/Snapchat-1589789031-min.jpg',
     'img/20150126_114136-min.jpg',
@@ -108,7 +120,10 @@ new Pleace(
 new Pleace(
   1,
   'Petra',
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   [
     'img/IMG_3960-min.jpg',
     'img/IMG_385-min.jpg',
@@ -124,7 +139,10 @@ new Pleace(
 new Pleace(
   1,
   'Abu zagla',
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   ['img/IMG_3960-min.jpg'],
   'wastbald',
   'restaurants'
@@ -132,27 +150,30 @@ new Pleace(
 new Pleace(
   1,
   'KFC',
-  'ksldjflkjdslfljdslkjads',
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
+  Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
+  Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
+  Dolorem nostrum sequi doloremque maxime recusandae esse quia assumenda repellendus natus. Voluptatum maxime deserunt, assumenda numquam ab voluptas necessitatibus reiciendis placeat nam iusto vel veniam soluta aliquam minus, facilis aspernatur.`,
   ['img/IMG_3960-min.jpg'],
   'wastbald',
   'restaurants'
 );
 
 new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
-new Rate(0, 'yazan', 10);
-new Rate(0, 'yazan', 10);
+new Rate(0, 'yazan', 5);
+new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 4);
-new Rate(0, 'yazan', 6);
+new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 4);
 new Rate(1, 'yazan', 2);
-new Rate(1, 'yazan', 10);
-new Rate(1, 'yazan', 10);
+new Rate(1, 'yazan', 5);
+new Rate(1, 'yazan', 5);
 new Rate(1, 'yazan', 3);
-new Rate(1, 'yazan', 6);
+new Rate(1, 'yazan', 5);
 new Rate(1, 'yazan', 2);
-new Rate(2, 'yazan', 10);
-new Rate(2, 'yazan', 10);
-new Rate(2, 'yazan', 10);
+new Rate(2, 'yazan', 5);
+new Rate(2, 'yazan', 5);
+new Rate(2, 'yazan', 5);
 new Rate(2, 'yazan', 4);
 new Rate(2, 'yazan', 0);
 new Rate(2, 'yazan', 0);
