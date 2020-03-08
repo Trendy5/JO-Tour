@@ -6,6 +6,9 @@ body {
     background-position: center;
     /* height: 5000px; */
 }
+main{
+    height: 1000px;
+}
 
 header{
     height: 100%;
@@ -66,9 +69,75 @@ ul{
     
 }
 
+
 footer{
     background-color: #fbd9cf;
     text-align: center;
     padding: 0.5%;
-    font-family: 'Monoton', cursive;
+    font-family: 'Satisfy', cursive;
+    color: #794e6f;
+   
+
+}
+.footerinfo{
+    font-size: 1em;
+    padding: .5% 5%;
+}
+#phonenumber{
+    margin-left: -110px;
+}
+#phonenumber:hover{
+    color: #adadad;;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 20%;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin-left: 15%;
+    margin-top: 2%;
+    float: left;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: #fbd9cf;
+  }
+  
+  .flip-box-back {
+    background-color: #fbd9cf;
+    color: #794d6f;
+    transform: rotateY(180deg);
+  }
+
+  h2#name {
+    margin-top: 15%;
+    font-size: 204%;
+    font-size: 154%;
+}
+p#description {
+    margin-top: 12%;
 }
