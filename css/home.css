@@ -173,3 +173,34 @@ footer{
 {
 	background: #109177;
 }   
+.cardfullbox{
+    width: 60%;
+    float: right;
+    border: double #794d6f;
+    border-width: 10px;
+    margin-right: 3%;
+    background-color: #fbd9d094;
+    margin-bottom: 4%;
+}
+.cardphoto{
+	width: 34%;
+    float: left;
+    border-right: solid #794d6f;
+    border-width: 5px;
+}
+.cardtext{
+	float: right;
+    margin-top: -22%;
+    margin-left: 40%;
+    font-size: 1.5em;
+    margin-bottom: 0%;
+    width: 60%;
+    color: #794d6f;
+}
+.cardtitle{
+    font-size: 2em;
+    display: inline-block;
+    border-bottom: solid #794d6f;
+    margin-bottom: 2%;
+
+}
