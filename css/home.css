@@ -324,4 +324,6 @@ h3{
 }
 .content-p{
 	font-size: 1.5em;
+	text-align: justify;
+    margin-right: 5%;
 }
