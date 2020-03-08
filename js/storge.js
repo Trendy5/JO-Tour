@@ -7,14 +7,14 @@ var Storge = {
 
 var Pleace = function(id, name, des, imgs, location, type) {
   (this.id = id),
-    (this.name = name),
-    (this.des = des),
-    (this.imgs = imgs),
-    (this.location = location),
-    (this.rate = [{ user_name: 'defulte', rate: 1 }]),
-    (this.comments = []),
-    (this.avarge = []),
-    (this.type = type);
+  (this.name = name),
+  (this.des = des),
+  (this.imgs = imgs),
+  (this.location = location),
+  (this.rate = [{ user_name: 'defulte', rate: 1 }]),
+  (this.comments = []),
+  (this.avarge = []),
+  (this.type = type);
   Storge.places.push(this);
 };
 // var Restrunt = function(id,name,des,imgs,location,type){
@@ -31,23 +31,23 @@ var Pleace = function(id, name, des, imgs, location, type) {
 // }
 var Comment = function(object, user_name, comment, time) {
   (this.user_name = user_name),
-    (this.comment = comment),
-    (this.time = time),
-    Storge.places[object].comments.push(this);
+  (this.comment = comment),
+  (this.time = time),
+  Storge.places[object].comments.push(this);
 
   // object.comments.push(this)
 };
 var Rate = function(object, user_name, rate) {
   (this.user_name = user_name),
-    (this.rate = rate),
-    Storge.places[object].rate.push(this);
+  (this.rate = rate),
+  Storge.places[object].rate.push(this);
 
   // object.rate.push(this)
 };
 var Avarge = function(object, user_name, avg) {
   (this.user_name = user_name),
-    (this.avg = avg),
-    Storge.places[object].avarge.push(this);
+  (this.avg = avg),
+  Storge.places[object].avarge.push(this);
   // console.log(Storge.places[object].avarge)
 };
 new Pleace(
@@ -70,7 +70,7 @@ new Pleace(
 );
 new Pleace(
   0,
-  "The Duke's Diwan",
+  'The Duke\'s Diwan',
   `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum delectus quibusdam corrupti. Recusandae nihil vero molestiae natus ipsam eos voluptates repudiandae, eaque nemo aspernatur quae dolores rerum exercitationem illo veniam?
   Officiis necessitatibus dolores quas, sunt placeat consequuntur. Natus rerum eum similique minima placeat tenetur, dolorum doloremque in quod, praesentium eligendi. Corrupti vitae nesciunt maiores perspiciatis blanditiis. Enim esse similique sed.
   Pariatur odio quia, voluptates dignissimos laudantium recusandae quisquam repellat quasi doloribus inventore magnam iusto officia reiciendis blanditiis ratione, libero laborum excepturi dolores cumque cupiditate sequi est error! Saepe, deserunt possimus?
