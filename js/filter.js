@@ -1,6 +1,5 @@
 'use strict';
 var filtered = [...Storge.places];
-// console.log(filtered);
 function filterLoction(arrId) {
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
@@ -14,8 +13,7 @@ function filterLoction(arrId) {
     filtered = arr;
   }
 }
-// filterLoction([0]);
-// console.log(filtered);
+
 function filterType(arrType) {
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
@@ -29,8 +27,6 @@ function filterType(arrType) {
     filtered = arr;
   }
 }
-// filterType(['restaurants'])
-// console.log(filtered)
 
 function filterRate(rate) {
   var arr = [];
@@ -40,7 +36,7 @@ function filterRate(rate) {
       avgRate += filtered[i].rate[j].rate;
     }
     avgRate = avgRate / filtered[i].rate.length;
-    // console.log(Math.floor(avgRate));
+
     if (Math.floor(avgRate) >= rate) {
       arr.push(filtered[i]);
     }
@@ -50,33 +46,33 @@ function filterRate(rate) {
     filtered = arr;
   }
 }
-// filterRate(5);
-// console.log(filtered);
 
 function filterCost(cost) {
   var arr = [];
   var avgCost = 0;
   for (let i = 0; i < filtered.length; i++) {
-    // console.log(filtered[i]);
-    if (filtered[i].avarge) {
+    if (filtered[i].avarge.length > 0) {
       for (let j = 0; j < filtered[i].avarge.length; j++) {
         avgCost += filtered[i].avarge[j].avg;
       }
     } else {
+      // console.log('else');
       arr.push(filtered[i]);
       continue;
     }
     if (avgCost / filtered[i].avarge.length <= cost) {
+      // console.log(avgCost / filtered[i].avarge.length);
+      // console.log('if');
       arr.push(filtered[i]);
     }
     avgCost = 0;
   }
 
   if (arr.length > 0) {
-alert('sdf')  }
+    filtered = arr;
+  }
 }
 
-// filterCost(28);
 var filter = document.getElementById('filter');
 
 filter.addEventListener('submit', funFilter);
@@ -87,26 +83,22 @@ function funFilter(event) {
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
     filterLoction(search);
-    console.log(filtered);
+    // console.log(filtered);
   }
-  // console.log(search);
+
   search = getCheckedCheckboxesFor('place');
-  if(search.length > 0){
-    filterType(search)
-    console.log(filtered)
+  if (search.length > 0) {
+    filterType(search);
+    // console.log(filtered);
   }
-  // console.log(search);
-  filterRate(event.target.rating.value)
-  search = event.target.Budget.value
-  if(search){
-    filterCost(search)
-    console.log(filtered)
+
+  filterRate(event.target.rating.value);
+  search = event.target.Budget.value;
+  if (search) {
+    filterCost(search);
+    // console.log(filtered);
   }
-  // console.log(filtered)
-    // console.log(event.target.rating.value)
-    // console.log(event.target.Budget.value==false)
-  //  console.log(getCheckedCheckboxesFor('loction'))
-  //  console.log(getCheckedCheckboxesFor('place'))
+  console.log(filtered)
 }
 
 function getCheckedCheckboxesFor(checkboxName) {
@@ -119,4 +111,4 @@ function getCheckedCheckboxesFor(checkboxName) {
   });
   return values;
 }
-console.log(filtered);
+// console.log(filtered);
