@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/header-footer.css">
   <link rel="stylesheet" href="css/home.css">
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Satisfy&display=swap" 
+        rel="stylesheet">
 
   <title>JO Tour</title>
 </head>
@@ -50,9 +51,10 @@
   <main>
 
     <aside class="form-style-5">
+      <p id="formtitle">APPLY DESIRED FILTERS:</p>
       <form id="filter">
         <fieldset>
-          <legend><span class="number">1</span> Location</legend>
+          <legend><span class="number">1</span> Location:</legend>
           <br>
           <input type="checkbox" id="0" name="loction" value="Amman" />
           <label for="0">Amman</label>
@@ -67,7 +69,7 @@
         </fieldset>
         <fieldset>
 
-          <legend><span class="number">2</span> category </legend>
+          <legend><span class="number">2</span> Category: </legend>
 
           <input type="checkbox" id="restaurants" name="place" value="Resturants" />
           <label for="restaurants">Resturants</label>
@@ -76,11 +78,11 @@
           <label for="places">Places</label>
         </fieldset>
         <fieldset>
-          <legend for="Budget"><span class="number">3</span> Enter your budget</legend>
+          <legend for="Budget"><span class="number">3</span> Enter your budget:</legend>
           <input type="number" id="Budget" name="Budget"><br>
         </fieldset>
         <fieldset>
-          <legend><span class="number">4</span> Choose a rate</legend>
+          <legend><span class="number">4</span> Choose a rate:</legend>
           <select name="rating" id="rating" class="rating__select">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -96,9 +98,9 @@
 
     
 
-    <div class="popup" onclick="myFunction()">Click me!
+    <!-- <div class="popup" onclick="myFunction()">Click me!
       <span class="popuptext" id="myPopup">Popup text...</span>
-    </div>
+    </div> -->
 
     <section id="render-objects"></section>
 
