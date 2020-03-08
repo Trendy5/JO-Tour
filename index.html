@@ -48,44 +48,61 @@
   </header>
 
   <main>
-    <form id="filter">
-      <fieldset>
-        <legend>Filter Bar</legend>
-        <p>
-          <label>Location</label>
+
+    <aside class="form-style-5">
+      <form id="filter">
+        <fieldset>
+          <legend><span class="number">1</span> Location</legend>
+          <br>
           <input type="checkbox" id="0" name="loction" value="Amman" />
-          <label for="first">Amman</label>
+          <label for="0">Amman</label>
+          <br>
           <input type="checkbox" id="2" name="loction" value="Irbid" />
-          <label for="second">Irbid</label>
+          <label for="2">Irbid</label>
+          <br>
           <input type="checkbox" id="1" name="loction" value="Maan" />
-          <label for="third">Maan</label>
-        </p>
-        <p>
-          <label>Category</label>
+          <label for="1">Maan</label>
+
+          <br>
+        </fieldset>
+        <fieldset>
+
+          <legend><span class="number">2</span> category </legend>
+
           <input type="checkbox" id="restaurants" name="place" value="Resturants" />
-          <label for="first">Resturants</label>
+          <label for="restaurants">Resturants</label>
+
           <input type="checkbox" id="places" name="place" value="Places" />
-          <label for="second">Places</label>
-        </p>
-        <p>
-          <label for="Budget">Enter Your Budget </label><br>
+          <label for="places">Places</label>
+        </fieldset>
+        <fieldset>
+          <legend for="Budget"><span class="number">3</span> Enter your budget</legend>
           <input type="number" id="Budget" name="Budget"><br>
-        </p>
-        <p>
-          <div class="rating js-rating">
-            <label for="rating" class="">Choose a Rate :</label>
-            <select name="rating" id="rating" class="rating__select">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <input type="submit">
-        </p>
-      </fieldset>
-    </form>
+        </fieldset>
+        <fieldset>
+          <legend><span class="number">4</span> Choose a rate</legend>
+          <select name="rating" id="rating" class="rating__select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </fieldset>
+        <input type="submit" value="Apply" />
+
+      </form>
+    </aside>
+
+    
+
+    <div class="popup" onclick="myFunction()">Click me!
+      <span class="popuptext" id="myPopup">Popup text...</span>
+    </div>
+
+    <section id="render-objects"></section>
+
+
   </main>
   <footer>
     <ul>
