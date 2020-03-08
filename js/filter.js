@@ -1,5 +1,6 @@
 'use strict';
 var filtered = [...Storge.places];
+
 function filterLoction(arrId) {
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
@@ -73,6 +74,39 @@ function filterCost(cost) {
   }
 }
 
+function render() {
+  var section = document.getElementById('render-objects');
+  var artical;
+  var img;
+  var div;
+  var h3;
+  var p;
+  for (let index = 0; index < filtered.length; index++) {
+    artical = document.createElement('article');
+    img = document.createElement('img');
+    img.src = filtered[index].imgs[0];
+    artical.appendChild(img);
+    div = document.createElement('div');
+    h3 = document.createElement('h3');
+    h3.textContent = filtered[index].name;
+    p = document.createElement('p');
+    p.textContent = `${filtered[index].des.slice(0, 90)}....`;
+    div.appendChild(h3);
+    div.appendChild(p);
+    p = document.createElement('p');
+    p.textContent = `rate: ${Math.floor(
+      filtered[index].rate.reduce((a, b) => a + b.rate, 0) /
+        filtered[index].rate.length
+    )}/5`;
+    div.appendChild(p);
+    artical.appendChild(div);
+    section.appendChild(artical);
+  }
+  console.log(filtered[0]);
+  console.log(section);
+}
+render();
+
 var filter = document.getElementById('filter');
 
 filter.addEventListener('submit', funFilter);
@@ -98,7 +132,7 @@ function funFilter(event) {
     filterCost(search);
     // console.log(filtered);
   }
-  console.log(filtered)
+  console.log(filtered);
 }
 
 function getCheckedCheckboxesFor(checkboxName) {
@@ -111,4 +145,3 @@ function getCheckedCheckboxesFor(checkboxName) {
   });
   return values;
 }
-// console.log(filtered);
