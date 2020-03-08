@@ -7,14 +7,14 @@ var Storge = {
 
 var Pleace = function(id, name, des, imgs, location, type) {
   (this.id = id),
-    (this.name = name),
-    (this.des = des),
-    (this.imgs = imgs),
-    (this.location = location),
-    (this.rate = [{ user_name: 'defulte', rate: 1 }]),
-    (this.comments = []),
-    (this.avarge = []),
-    (this.type = type);
+  (this.name = name),
+  (this.des = des),
+  (this.imgs = imgs),
+  (this.location = location),
+  (this.rate = [{ user_name: 'defulte', rate: 1 }]),
+  (this.comments = []),
+  (this.avarge = []),
+  (this.type = type);
   Storge.places.push(this);
 };
 // var Restrunt = function(id,name,des,imgs,location,type){
@@ -31,23 +31,23 @@ var Pleace = function(id, name, des, imgs, location, type) {
 // }
 var Comment = function(object, user_name, comment, time) {
   (this.user_name = user_name),
-    (this.comment = comment),
-    (this.time = time),
-    Storge.places[object].comments.push(this);
+  (this.comment = comment),
+  (this.time = time),
+  Storge.places[object].comments.push(this);
 
   // object.comments.push(this)
 };
 var Rate = function(object, user_name, rate) {
   (this.user_name = user_name),
-    (this.rate = rate),
-    Storge.places[object].rate.push(this);
+  (this.rate = rate),
+  Storge.places[object].rate.push(this);
 
   // object.rate.push(this)
 };
 var Avarge = function(object, user_name, avg) {
   (this.user_name = user_name),
-    (this.avg = avg),
-    Storge.places[object].avarge.push(this);
+  (this.avg = avg),
+  Storge.places[object].avarge.push(this);
   // console.log(Storge.places[object].avarge)
 };
 new Pleace(
@@ -67,7 +67,7 @@ new Pleace(
 );
 new Pleace(
   0,
-  "The Duke's Diwan",
+  'The Duke\'s Diwan',
   'ksldjflkjdslfljdslkjads',
   [
     'img/DSC_1227-min.jpg',
