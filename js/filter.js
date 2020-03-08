@@ -145,4 +145,3 @@ function getCheckedCheckboxesFor(checkboxName) {
   });
   return values;
 }
-// console.log(filtered);
