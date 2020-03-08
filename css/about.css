@@ -1,11 +1,10 @@
-body{
+body {
     width: 80%;
     margin: auto;
     background-image: url(../img/DSC_93.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 5000px;
-
+    /* height: 5000px; */
 }
 
 header{
