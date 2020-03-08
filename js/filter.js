@@ -83,15 +83,15 @@ function render() {
   var p;
   for (let index = 0; index < filtered.length; index++) {
     artical = document.createElement('article');
-    artical.class='cardfullbox';
+    artical.setAttribute('class','cardfullbox');
     img = document.createElement('img');
-    img.class='cardphoto';
+    img.setAttribute('class','cardphoto');
     img.src = filtered[index].imgs[0];
     artical.appendChild(img);
     div = document.createElement('div');
-    div.class='cardtext';
+    div.setAttribute('class','cardtext');
     h3 = document.createElement('h3');
-    h3.class='cardtitle';
+    h3.setAttribute('class','cardtitle');
     h3.textContent = filtered[index].name;
     p = document.createElement('p');
     p.textContent = `${filtered[index].des.slice(0, 90)}....`;
@@ -151,7 +151,7 @@ function getCheckedCheckboxesFor(checkboxName) {
 }
 
 
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
+// function myFunction() {
+//   var popup = document.getElementById("myPopup");
+//   popup.classList.toggle("show");
+// }
