@@ -94,6 +94,7 @@ function render() {
     h3.setAttribute('class','cardtitle');
     h3.textContent = filtered[index].name;
     p = document.createElement('p');
+    p.setAttribute('class','card-rate');
     p.textContent = `${filtered[index].des.slice(0, 90)}....`;
     div.appendChild(h3);
     div.appendChild(p);

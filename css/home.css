@@ -6,6 +6,8 @@ body{
     background-position: center;
 	height: 100%;
 	color: #794d6f;;
+	font-family: 'Itim', cursive;
+
 
 }
 
@@ -34,7 +36,7 @@ a{
     color: #794d6f;
 }
 a:hover{
-    color: #adadad;;
+    color: #9d7a90;
 }
 #logo {
     width: 6%;
@@ -53,7 +55,7 @@ h1{
     margin-top: -10%;
     color: #794e6f;
 }
-ul{
+header ul{
     text-align: center;
     font-family: 'Satisfy', cursive;
 }
@@ -71,7 +73,7 @@ footer{
     background-color: #fbd9cf;
     text-align: center;
     padding: 0.5%;
-    font-family: 'Satisfy', cursive;
+    /* font-family: 'Satisfy', cursive; */
     color: #794e6f;
 
 }
@@ -83,7 +85,7 @@ footer{
     margin-left: -110px;
 }
 #phonenumber:hover{
-    color: #adadad;;
+    color: #9d7a90;
 }
 
 .form-style-5{
@@ -110,7 +112,7 @@ footer{
 }
 .form-style-5 input[type="number"],
 .form-style-5 select {
-	font-family: Georgia, "Times New Roman", Times, serif;
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
 	background: rgba(255,255,255,.1);
 	border: none;
 	border-radius: 4px;
@@ -130,7 +132,7 @@ footer{
     
 }
 .form-style-5 input[type="checkbox"]{
-	font-family: Georgia, "Times New Roman", Times, serif;
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
 	background: rgba(255,255,255,.1);
 	border: none;
 	border-radius: 4px;
@@ -212,8 +214,9 @@ footer{
 }
 .cardtext{
 	float: right;
-    margin-top: -22%;
-    margin-left: 40%;
+    margin-top: -30%;
+	margin-left: 40%;
+	line-height: 35px;
     font-size: 1.5em;
     margin-bottom: 0%;
     width: 60%;
@@ -223,10 +226,10 @@ footer{
     font-size: 2em;
     display: inline-block;
     border-bottom: solid #794d6f;
-    margin-bottom: 2%;
-
 }
-
+.card-rate{
+	margin-bottom: 5%;
+}
 
 
 /* Popup container */
