@@ -6,8 +6,8 @@ body {
     background-position: center;
     /* height: 5000px; */
 }
-main{
-    height: 1000px;
+main {
+    height: 1841px;
 }
 
 header{
@@ -92,15 +92,24 @@ footer{
 
 .flip-box {
     background-color: transparent;
-    width: 20%;
-    height: 200px;
+    width: 30%;
+    height: 313px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
-    margin-left: 15%;
+    margin-left: 13%;
     margin-top: 2%;
     float: left;
-  }
-  
+}
+.flip-box-yazan {
+    background-color: transparent;
+    width: 30%;
+    height: 367px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin-left: 36%;
+    margin-top: 2%;
+    float: left;
+}
   .flip-box-inner {
     position: relative;
     width: 100%;
@@ -109,6 +118,15 @@ footer{
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
+  .flip-box-inner-yazan{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
   
   .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
@@ -120,9 +138,27 @@ footer{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
   }
   
+  
+  .flip-box-yazan:hover .flip-box-inner-yazan {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front-yazan, .flip-box-back-yazan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+  }
   .flip-box-front {
+    background-color: #bbb;
+    color: #fbd9cf;
+  }
+  .flip-box-front-yazan {
     background-color: #bbb;
     color: #fbd9cf;
   }
@@ -131,6 +167,15 @@ footer{
     background-color: #fbd9cf;
     color: #794d6f;
     transform: rotateY(180deg);
+    border-radius: 30%;
+  }
+
+ 
+  .flip-box-back-yazan {
+    background-color: #fbd9cf;
+    color: #794d6f;
+    transform: rotateY(180deg);
+    border-radius: 30%;
   }
 
   h2#name {
@@ -140,4 +185,9 @@ footer{
 }
 p#description {
     margin-top: 12%;
+}
+
+img#potos {
+    border-radius: 30%;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
 }
