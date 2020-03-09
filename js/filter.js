@@ -160,3 +160,8 @@ function getCheckedCheckboxesFor(checkboxName) {
 //   var popup = document.getElementById("myPopup");
 //   popup.classList.toggle("show");
 // }
+
+function renderPackage(){
+  var sectionPackage= document.getElementById('container');
+  
+}
