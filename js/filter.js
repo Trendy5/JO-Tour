@@ -117,6 +117,8 @@ function filterCost(cost) {
 // }
 // render();
 
+
+
 var filter = document.getElementById('filter');
 
 // filter.addEventListener('submit', funFilter);
