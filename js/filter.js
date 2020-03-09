@@ -74,6 +74,7 @@ function filterCost(cost) {
   }
 }
 
+
 // function render() {
 //   var section = document.getElementById('render-objects');
 //   var artical;
@@ -119,6 +120,7 @@ function filterCost(cost) {
 
 
 
+
 var filter = document.getElementById('filter');
 
 // filter.addEventListener('submit', funFilter);
@@ -144,6 +146,9 @@ function funFilter(event) {
     filterCost(search);
     // console.log(filtered);
   }
+  
+  render();
+  
   console.log(filtered);
 }
 

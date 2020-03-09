@@ -1,5 +1,9 @@
 'use strict';
-//console.log(Comment);
+
+console.log(Comment);
+
+// adding skideshow to header photo
+
 var slideIndex = 0;
 var slideimgs = 0;
 showSlides();
@@ -19,6 +23,7 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
+
 function showImgs() {
   var slides = document.getElementsByClassName('filterimgs');
   for (var i = 0; i < slides.length; i++) {
@@ -35,6 +40,7 @@ function showImgs() {
 }
 
 //addComment('KFC', 'abdallah', 'hggakjhglgoihiho');
+
 function addComment(name, userName, comment) {
   var time = Date();
   //console.log(time);
