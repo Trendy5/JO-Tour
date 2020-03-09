@@ -81,17 +81,21 @@ function render() {
   var div;
   var h3;
   var p;
+  var a;
   for (let index = 0; index < filtered.length; index++) {
+    a = document.createElement('a');
+    a.setAttribute('name', filtered[index].name);
+    a.setAttribute('href', `javascript:test("${filtered[index].name}")`);
     artical = document.createElement('article');
-    artical.setAttribute('class','cardfullbox');
+    artical.setAttribute('class', 'cardfullbox');
     img = document.createElement('img');
-    img.setAttribute('class','cardphoto');
+    img.setAttribute('class', 'cardphoto');
     img.src = filtered[index].imgs[0];
     artical.appendChild(img);
     div = document.createElement('div');
-    div.setAttribute('class','cardtext');
+    div.setAttribute('class', 'cardtext');
     h3 = document.createElement('h3');
-    h3.setAttribute('class','cardtitle');
+    h3.setAttribute('class', 'cardtitle');
     h3.textContent = filtered[index].name;
     p = document.createElement('p');
     p.setAttribute('class','card-rate');
@@ -105,7 +109,8 @@ function render() {
     )}/5`;
     div.appendChild(p);
     artical.appendChild(div);
-    section.appendChild(artical);
+    a.appendChild(artical);
+    section.appendChild(a);
   }
   console.log(filtered[0]);
   console.log(section);
@@ -150,7 +155,6 @@ function getCheckedCheckboxesFor(checkboxName) {
   });
   return values;
 }
-
 
 // function myFunction() {
 //   var popup = document.getElementById("myPopup");
