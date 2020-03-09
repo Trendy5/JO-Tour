@@ -53,14 +53,14 @@ function addComment(name, userName, comment) {
         time: time
       });
       //console.log(filtered[index]);
-      console.log(filtered);
+      //console.log(filtered);
     }
   }
 }
 function rating(name, user_name, rate) {
-  console.log(rate);
-  console.log(name);
-  console.log(user_name);
+  // console.log(rate);
+  // console.log(name);
+  // console.log(user_name);
   for (let index = 0; index < Storge.places.length; index++) {
     if (name === Storge.places[index].name) {
       new Rate(index, user_name, rate);
@@ -71,7 +71,7 @@ function rating(name, user_name, rate) {
   for (let index = 0; index < filtered.length; index++) {
     if (name === filtered[index].name) {
       filtered[index].rate.push({ user_name: user_name, rate: rate });
-      console.log(filtered[index]);
+      //console.log(filtered[index]);
       break;
     }
   }
@@ -114,28 +114,42 @@ function test(e) {
       h4.textContent = 'Comments:'
       pop.appendChild(h4)
       for (let j = 0; j < filtered[i].comments.length; j++) {
-        // const element = array[j];
-        var p2 = document.createElement('p')
-        p2.textContent = filtered[i].comments[j].time;
-        pop.appendChild(p2)
+        var p_time = document.createElement('p')
+        p_time.textContent = filtered[i].comments[j].time;
+        pop.appendChild(p_time)
         p = document.createElement('p')
         p.textContent = `${filtered[i].comments[j].user_name} :     ${filtered[i].comments[j].comment} `
         pop.appendChild(p)
         
-        // p.textContent = filtered[i].comments[j].comment
-        // pop.appendChild(p)
-        // p = document.createElement('p')
-        
-        
-        // console.log(filtered[i].comments[j])
 
-      }
+
+      }  
+
+       var user=document.createTextNode("UserName: ")
+      pop.appendChild(user)
       input = document.createElement('input')
       input.setAttribute('type', 'text')
       input.style.width = '80%'
       input.style.margin = '5px 20% 5px 0'
       pop.appendChild(input)
 
+      var comment =document.createTextNode("Comment: ")
+      pop.appendChild(comment)
+      input = document.createElement('input')
+      input.setAttribute('type', 'text')
+      input.style.width = '80%'
+      input.style.margin = '5px 20% 5px 0'
+      pop.appendChild(input)
+
+      var rate=document.createTextNode("Rate:  ")
+      pop.appendChild(rate)
+      input = document.createElement('input')
+      input.setAttribute('type', 'text')
+      input.style.width = '80%'
+      input.style.margin = '5px 20% 5px 0'
+      pop.appendChild(input)
+      addComment(filtered[i].name,user,comment)
+      rating(filtered[i].name,user,rate)
     }
   }
   showImgs()
