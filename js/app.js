@@ -10,6 +10,7 @@ function showSlides() {
     slides[i].style.display = 'none';
   }
   slideIndex++;
+
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
@@ -17,7 +18,7 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
-//addComment('KFC','abdallah','hggakjhglgoihiho');
+addComment('KFC','abdallah','hggakjhglgoihiho');
 function addComment(name, userName, comment) {
   var time = Date();
 
