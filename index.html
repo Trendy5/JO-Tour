@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/header-footer.css">
   <link rel="stylesheet" href="css/home.css">
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Satisfy&display=swap" 
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Itim&display=swap" 
+        rel="stylesheet">
+
 
   <title>JO Tour</title>
 </head>
@@ -48,11 +52,12 @@
   </header>
 
   <main>
-
+    
     <aside class="form-style-5">
+      <p id="formtitle">APPLY DESIRED FILTERS:</p>
       <form id="filter">
         <fieldset>
-          <legend><span class="number">1</span> Location</legend>
+          <legend><span class="number">1</span> Location:</legend>
           <br>
           <input type="checkbox" id="0" name="loction" value="Amman" />
           <label for="0">Amman</label>
@@ -67,7 +72,7 @@
         </fieldset>
         <fieldset>
 
-          <legend><span class="number">2</span> category </legend>
+          <legend><span class="number">2</span> Category: </legend>
 
           <input type="checkbox" id="restaurants" name="place" value="Resturants" />
           <label for="restaurants">Resturants</label>
@@ -76,11 +81,11 @@
           <label for="places">Places</label>
         </fieldset>
         <fieldset>
-          <legend for="Budget"><span class="number">3</span> Enter your budget</legend>
+          <legend for="Budget"><span class="number">3</span> Enter your budget:</legend>
           <input type="number" id="Budget" name="Budget"><br>
         </fieldset>
         <fieldset>
-          <legend><span class="number">4</span> Choose a rate</legend>
+          <legend><span class="number">4</span> Choose a rate:</legend>
           <select name="rating" id="rating" class="rating__select">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -96,19 +101,31 @@
 
     
 
-    <div class="popup" onclick="myFunction()">Click me!
+    <!-- <div class="popup" onclick="myFunction()">Click me!
       <span class="popuptext" id="myPopup">Popup text...</span>
-    </div>
+    </div> -->
 
     <section id="render-objects"></section>
+
+    <section id="maincontent"> 
+      <img id="contentimg" src="img/Pink Mandala Massage Logo.png" alt="logo">
+      <article class="content-article">
+        <h3>Our Vision</h3>
+        <p class="content-p"> &nbsp;&nbsp;&nbsp;&nbsp;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+      </article>
+      <article class="content-article">
+        <h3>Our Mission</h3>
+        <p class="content-p"> &nbsp;&nbsp;&nbsp;&nbsp;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>  
+      </article>
+    </section>
 
 
   </main>
   <footer>
     <ul>
       <li class="footerinfo">© 2020 TRENDY5. All Rights Reserved. </li>
-      <li class="footerinfo">For any inquiries call us @</li>
-      <li class="footerinfo" id="phonenumber">+1 365 888 3142</li>
+      <li class="footerinfo">For any inquiries, &nbsp;&nbsp;&nbsp; Call Us @</li>
+      <li class="footerinfo" id="phonenumber">+1 365 888 3121</li>
     </ul>
   </footer>
   <script src="js/storge.js"></script>

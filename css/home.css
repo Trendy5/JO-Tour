@@ -4,13 +4,17 @@ body{
     background-image: url(../img/DSC_93.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+	height: 100%;
+	color: #794d6f;;
+	font-family: 'Itim', cursive;
+
 
 }
 
 header{
     /* height: 100%; */
-    position: relative;
+	position: relative;
+	margin-bottom: 8%;
 }
 nav{
     width: 100%;
@@ -32,7 +36,7 @@ a{
     color: #794d6f;
 }
 a:hover{
-    color: #adadad;;
+    color: #9d7a90;
 }
 #logo {
     width: 6%;
@@ -51,7 +55,7 @@ h1{
     margin-top: -10%;
     color: #794e6f;
 }
-ul{
+header ul{
     text-align: center;
     font-family: 'Satisfy', cursive;
 }
@@ -69,7 +73,7 @@ footer{
     background-color: #fbd9cf;
     text-align: center;
     padding: 0.5%;
-    font-family: 'Satisfy', cursive;
+    /* font-family: 'Satisfy', cursive; */
     color: #794e6f;
 
 }
@@ -81,18 +85,18 @@ footer{
     margin-left: -110px;
 }
 #phonenumber:hover{
-    color: #adadad;;
+    color: #9d7a90;
 }
 
 .form-style-5{
-	max-width: 400px;
 	padding: 10px 20px;
 	background: #f4f7f8;
-	margin: 10px auto;
-	padding: 20px;
-	background: #f4f7f8;
-	border-radius: 8px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-left: 2%;
+	margin-right: 2%;
+	background-color: #fde9e4c7;
+	border-radius: 15px;
+	width: 22%;
+
 }
 .form-style-5 fieldset{
 	border: none;
@@ -104,11 +108,11 @@ footer{
 .form-style-5 label {
 	display: block;
 	margin-bottom: 8px;
+	float: right;
 }
-.form-style-5 input[type="checkbox"],
 .form-style-5 input[type="number"],
 .form-style-5 select {
-	font-family: Georgia, "Times New Roman", Times, serif;
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
 	background: rgba(255,255,255,.1);
 	border: none;
 	border-radius: 4px;
@@ -120,13 +124,32 @@ footer{
 	box-sizing: border-box; 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box; 
-	background-color: #e8eeef;
+    background-color: #f4f4f4;
 	color:#8a97a0;
 	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
     
 }
+.form-style-5 input[type="checkbox"]{
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+    background-color: #f4f4f4;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+
 .form-style-5 select:focus{
 	background: #d2d9dd;
 }
@@ -138,8 +161,8 @@ footer{
 .form-style-5 input[type="checkbox"]:focus,
 .form-style-5 input[type="number"]:focus,
 .form-style-5 .number {
-	background: #1abc9c;
-	color: #fff;
+	background: #794d6f;
+	color: #fbd9cf;
 	height: 30px;
 	width: 30px;
 	display: inline-block;
@@ -159,40 +182,41 @@ footer{
 	padding: 19px 39px 18px 39px;
 	color: #FFF;
 	margin: 0 auto;
-	background: #1abc9c;
+	background: #9d7a90;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	width: 100%;
-	border: 1px solid #16a085;
+	border: 1px solid #794d6f;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
 }
 .form-style-5 input[type="submit"]:hover,
 .form-style-5 input[type="button"]:hover
 {
-	background: #109177;
+	background: #794d6f;
 }   
 
 .cardfullbox{
-    width: 60%;
     float: right;
     border: double #794d6f;
     border-width: 10px;
-    margin-right: 3%;
+    margin-right: 2%;
     background-color: #fbd9d094;
     margin-bottom: 4%;
 }
 .cardphoto{
 	width: 34%;
+	height: 300px;
     float: left;
     border-right: solid #794d6f;
     border-width: 5px;
 }
 .cardtext{
 	float: right;
-    margin-top: -22%;
-    margin-left: 40%;
+    margin-top: -30%;
+	margin-left: 40%;
+	line-height: 35px;
     font-size: 1.5em;
     margin-bottom: 0%;
     width: 60%;
@@ -202,10 +226,10 @@ footer{
     font-size: 2em;
     display: inline-block;
     border-bottom: solid #794d6f;
-    margin-bottom: 2%;
-
 }
-
+.card-rate{
+	margin-bottom: 5%;
+}
 
 
 /* Popup container */
@@ -260,4 +284,46 @@ footer{
 	from {opacity: 0;}
 	to {opacity:1 ;}
   }
-
+main{
+	height: 5000px;
+}
+aside{
+	float: left;
+}
+#render-objects{
+	float: right;
+	width: 70%;
+}
+aside{
+	color: #794d6f;
+}
+#formtitle{
+	font-size: 1.4em;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+#maincontent{
+	width: 70%;
+    float: right;
+    line-height: 30px;
+}
+#contentimg{
+	margin-right: 25%;
+    margin-left: 25%;
+    border: double #794d6f;
+    border-width: 10px;
+    border-radius: 50%;
+}
+.content-article{
+	margin-top: 8%;
+}
+h3{
+	font-size: 2em;
+    margin-bottom: 5%;
+    margin-left: 3%;
+}
+.content-p{
+	font-size: 1.5em;
+	text-align: justify;
+    margin-right: 5%;
+}
