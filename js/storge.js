@@ -204,7 +204,7 @@ new Pleace(
   `One of the most famous juice makers in the city center
   It is known for its many delicious flavors, from cocktails to natural juices
   You can choose the flavor you like and enjoy drinking your favorite juice cold while you are walking around downtown`,
-  ['img/20170123_124523-min.jpg','img/DSC_1283-min.JPG'],
+  ['img/DSC_1283-min.JPG'],
   ' Downtown, ʿAmman',
   'restaurants'
 );
