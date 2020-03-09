@@ -92,21 +92,14 @@ function test(e) {
         // const element = array[j];
         p = document.createElement('p')
         p.textContent = `${filtered[i].comments[j].user_name} ${filtered[i].comments[j].comment} ${filtered[i].comments[j].time}`
-        pop.appendChild(p)
-        // p = document.createElement('p')
-        // p.textContent = filtered[i].comments[j].comment
-        // pop.appendChild(p)
-        // p = document.createElement('p')
-        // p.textContent = filtered[i].comments[j].time
-        // pop.appendChild(p)
-        // console.log(filtered[i].comments[j])
-        
+        pop.appendChild(p)      
       }
       input = document.createElement('input')
       input.setAttribute('type','text')
       input.style.width = '80%'
       input.style.margin = '5px 20% 5px 0'
       pop.appendChild(input)
+      break;
      
  }
   }
@@ -117,4 +110,19 @@ function removePop(){
   // console.log('dsf')
   var pop = document.getElementById('pop');
   pop.style.display = 'none'
+}
+
+function test3(){
+  console.log('jsdlkf')
+  var slides = document.getElementsByClassName('slideshow');
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = 'block';
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
