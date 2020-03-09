@@ -2,7 +2,8 @@
 var Storge = {
   locations: { Amman: 0, Maan: 1 },
   // restaurants : [],
-  places: []
+  places: [],
+  booking:[],
 };
 
 var Pleace = function(id, name, des, imgs, location, type) {
@@ -29,6 +30,17 @@ var Pleace = function(id, name, des, imgs, location, type) {
 //     this.type = type
 //     Storge.restaurants.push(this)
 // }
+var Booking=function(name,img,des,activite,bughet){
+  this.name=name,
+  this.img=img,
+  this.des=des,
+  this.activite=[],
+  this.bughet=bughet;
+  Storge.booking.push(this);
+};
+
+
+
 var Comment = function(object, user_name, comment, time) {
   (this.user_name = user_name),
   (this.comment = comment),
