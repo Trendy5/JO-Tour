@@ -30,32 +30,32 @@ var Pleace = function(id, name, des, imgs, location, type) {
 //     this.type = type
 //     Storge.restaurants.push(this)
 // }
-var Booking=function(name,img,des,activite,bughet){
+var Booking=function(name,img,des,activity,budget){
   this.name=name,
   this.img=img,
   this.des=des,
-  this.activite=activite,
-  this.bughet=bughet;
+  this.activity=activity,
+  this.budget=budget;
   Storge.booking.push(this);
 };
 
 new Booking(
   'Petra',
-  'IMG_3960-min.jpg',
+  'img/IMG_3960-min.jpg',
   'Petra, the world wonder, is without a doubt Jordan\'s most valuable treasure and greatest tourist attraction. It is a vast, unique city, carved into the sheer rock face by the Nabataeans',
   ['English Speaking driver', 'Three meals per day'],
   '$50'
 );
 new Booking(
   'Amman Citadel',
-  'DSC_0367-min.JPG',
+  'img/DSC_0367-min.JPG',
   'Citadel, the world wonder, is without a doubt Jordan\'s most valuable treasure and greatest tourist attraction. It is a vast, unique city, carved into the sheer rock face by the Nabataeans',
   ['English Speaking driver', 'Three meals per day'],
   '$30'
 );
 new Booking(
   'Downtown Amman',
-  'DSC_0228-min.JPG',
+  'img/DSC_0228-min.JPG',
   'Downtown, the world wonder, is without a doubt Jordan\'s most valuable treasure and greatest tourist attraction. It is a vast, unique city, carved into the sheer rock face by the Nabataeans',
   ['English Speaking driver', 'Three meals per day'],
   '$20'

@@ -74,52 +74,52 @@ function filterCost(cost) {
   }
 }
 
-function render() {
-  var section = document.getElementById('render-objects');
-  var artical;
-  var img;
-  var div;
-  var h3;
-  var p;
-  var a;
-  for (let index = 0; index < filtered.length; index++) {
-    a = document.createElement('a');
-    a.setAttribute('name', filtered[index].name);
-    a.setAttribute('href', `javascript:test("${filtered[index].name}")`);
-    artical = document.createElement('article');
-    artical.setAttribute('class', 'cardfullbox');
-    img = document.createElement('img');
-    img.setAttribute('class', 'cardphoto');
-    img.src = filtered[index].imgs[0];
-    artical.appendChild(img);
-    div = document.createElement('div');
-    div.setAttribute('class', 'cardtext');
-    h3 = document.createElement('h3');
-    h3.setAttribute('class', 'cardtitle');
-    h3.textContent = filtered[index].name;
-    p = document.createElement('p');
-    p.setAttribute('class','card-rate');
-    p.textContent = `${filtered[index].des.slice(0, 90)}....`;
-    div.appendChild(h3);
-    div.appendChild(p);
-    p = document.createElement('p');
-    p.textContent = `rate: ${Math.floor(
-      filtered[index].rate.reduce((a, b) => a + b.rate, 0) /
-        filtered[index].rate.length
-    )}/5`;
-    div.appendChild(p);
-    artical.appendChild(div);
-    a.appendChild(artical);
-    section.appendChild(a);
-  }
-  console.log(filtered[0]);
-  console.log(section);
-}
-render();
+// function render() {
+//   var section = document.getElementById('render-objects');
+//   var artical;
+//   var img;
+//   var div;
+//   var h3;
+//   var p;
+//   var a;
+//   for (let index = 0; index < filtered.length; index++) {
+//     a = document.createElement('a');
+//     a.setAttribute('name', filtered[index].name);
+//     a.setAttribute('href', `javascript:test("${filtered[index].name}")`);
+//     artical = document.createElement('article');
+//     artical.setAttribute('class', 'cardfullbox');
+//     img = document.createElement('img');
+//     img.setAttribute('class', 'cardphoto');
+//     img.src = filtered[index].imgs[0];
+//     artical.appendChild(img);
+//     div = document.createElement('div');
+//     div.setAttribute('class', 'cardtext');
+//     h3 = document.createElement('h3');
+//     h3.setAttribute('class', 'cardtitle');
+//     h3.textContent = filtered[index].name;
+//     p = document.createElement('p');
+//     p.setAttribute('class','card-rate');
+//     p.textContent = `${filtered[index].des.slice(0, 90)}....`;
+//     div.appendChild(h3);
+//     div.appendChild(p);
+//     p = document.createElement('p');
+//     p.textContent = `rate: ${Math.floor(
+//       filtered[index].rate.reduce((a, b) => a + b.rate, 0) /
+//         filtered[index].rate.length
+//     )}/5`;
+//     div.appendChild(p);
+//     artical.appendChild(div);
+//     a.appendChild(artical);
+//     section.appendChild(a);
+//   }
+//   console.log(filtered[0]);
+//   console.log(section);
+// }
+// render();
 
 var filter = document.getElementById('filter');
 
-filter.addEventListener('submit', funFilter);
+// filter.addEventListener('submit', funFilter);
 
 function funFilter(event) {
   event.preventDefault();
@@ -172,6 +172,7 @@ function renderPackage(){
   var divPkgImg;
   var divPkgImgInfo;
   var imgPkg;
+  var h3Pkg;
   var ulPkg;
   var liPkg;
 
@@ -194,12 +195,34 @@ function renderPackage(){
     divPkgControl.appendChild(buttonPkg);
     spanPkg = document.createElement('span');
     spanPkg.setAttribute('class', 'price');
-    spanPkg.textContent = Storge.booking[i].bughet;
+    spanPkg.textContent = Storge.booking[i].budget;
     buttonPkg.appendChild(spanPkg);
     spanPkg= document.createElement('span');
     spanPkg.setAttribute('class', 'buy');
     spanPkg.textContent = 'Book Now';
     buttonPkg.appendChild(spanPkg);
-
+    divPkgImg = document.createElement('div');
+    divPkgImg.setAttribute('class', 'product-image');
+    sectionPkg.appendChild(divPkgImg);
+    imgPkg = document.createElement('img');
+    imgPkg.setAttribute('alt', 'package-img');
+    imgPkg.setAttribute('src', Storge.booking[i].img);
+    divPkgImg.appendChild(imgPkg);
+    divPkgImgInfo = document.createElement('div');
+    divPkgImgInfo.setAttribute('class', 'info');
+    divPkgImg.appendChild(divPkgImgInfo);
+    h3Pkg = document.createElement('h3');
+    h3Pkg.textContent = 'Tour Details';
+    divPkgImgInfo.appendChild(h3Pkg);
+    ulPkg = document.createElement('ul');
+    divPkgImgInfo.appendChild(ulPkg);
+    for (let l = 0; l < Storge.booking[i].activity.length; l++) {
+      liPkg = document.createElement('li');
+      liPkg.textContent = Storge.booking[i].activity[l];
+      ulPkg.appendChild(liPkg);
+    }
+    
+    console.log(sectionPkg);
   }
 }
+renderPackage();
