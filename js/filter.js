@@ -112,8 +112,8 @@ function render() {
     a.appendChild(artical);
     section.appendChild(a);
   }
-  console.log(filtered[0]);
-  console.log(section);
+  // console.log(filtered[0]);
+  // console.log(section);
 }
 render();
 
