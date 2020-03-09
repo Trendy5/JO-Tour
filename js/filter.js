@@ -162,6 +162,44 @@ function getCheckedCheckboxesFor(checkboxName) {
 // }
 
 function renderPackage(){
-  var sectionPackage= document.getElementById('container');
-  
+  var sectionPkg= document.getElementById('container');
+  var divPkgInfo;
+  var divPkgControl
+  var h2Pkg;
+  var pPkg;
+  var buttonPkg;
+  var spanPkg;
+  var divPkgImg;
+  var divPkgImgInfo;
+  var imgPkg;
+  var ulPkg;
+  var liPkg;
+
+  for (let i = 0; i < Storge.booking.length; i++) {
+    divPkgInfo = document.createElement('div');  
+    divPkgInfo.setAttribute('class','product-details');
+    sectionPkg.appendChild(divPkgInfo);
+    h2Pkg = document.createElement('h2');
+    h2Pkg.textContent = Storge.booking[i].name;
+    divPkgInfo.appendChild(h2Pkg);
+    pPkg =document.createElement('p');
+    pPkg.setAttribute('class', 'information');
+    pPkg.textContent = Storge.booking[i].des;
+    divPkgInfo.appendChild(pPkg);
+    divPkgControl = document.createElement('div');
+    divPkgControl.setAttribute('class','control');
+    divPkgInfo.appendChild(divPkgControl);
+    buttonPkg = document.createElement('button');
+    buttonPkg.setAttribute('class','btn');
+    divPkgControl.appendChild(buttonPkg);
+    spanPkg = document.createElement('span');
+    spanPkg.setAttribute('class', 'price');
+    spanPkg.textContent = Storge.booking[i].bughet;
+    buttonPkg.appendChild(spanPkg);
+    spanPkg= document.createElement('span');
+    spanPkg.setAttribute('class', 'buy');
+    spanPkg.textContent = 'Book Now';
+    buttonPkg.appendChild(spanPkg);
+
+  }
 }

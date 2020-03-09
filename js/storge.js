@@ -252,7 +252,9 @@ if (!localStorage.places && !localStorage.locations) {
   localStorage.locations = JSON.stringify(Storge.locations);
   // localStorage.restaurants = JSON.stringify(Storge.restaurants)
   localStorage.places = JSON.stringify(Storge.places);
+  localStorage.booking = JSON.stringify(Storge.booking);
 }
 Storge.locations = JSON.parse(localStorage.locations);
 // Storge.restaurants = JSON.parse(localStorage.restaurants)
 Storge.places = JSON.parse(localStorage.places);
+Storge.booking = JSON.parse(localStorage.booking);
