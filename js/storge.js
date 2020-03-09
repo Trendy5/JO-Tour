@@ -160,6 +160,8 @@ new Pleace(
 );
 
 new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
+new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
+new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 4);
