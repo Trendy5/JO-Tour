@@ -75,7 +75,12 @@ function filterCost(cost) {
 }
 
 function render() {
+
   var section = document.getElementById('render-objects');
+  section.textContent="";
+  var contant= document.getElementById('maincontent').style.display = "none";
+
+  section.style.display= "block";
   var artical;
   var img;
   var div;
@@ -112,10 +117,11 @@ function render() {
     a.appendChild(artical);
     section.appendChild(a);
   }
+  
   console.log(filtered[0]);
   console.log(section);
 }
-render();
+// render();
 
 var filter = document.getElementById('filter');
 
@@ -142,6 +148,9 @@ function funFilter(event) {
     filterCost(search);
     // console.log(filtered);
   }
+  
+  render();
+  
   console.log(filtered);
 }
 

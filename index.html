@@ -58,48 +58,65 @@
 
   <main>
     
-    <aside class="form-style-5">
+    <aside class="form-style">
       <p id="formtitle">APPLY DESIRED FILTERS:</p>
       <form id="filter">
-        <fieldset>
-          <legend><span class="number">1</span> Location:</legend>
-          <br>
-          <input type="checkbox" id="0" name="loction" value="Amman" />
-          <label for="0">Amman</label>
-          <br>
-          <input type="checkbox" id="2" name="loction" value="Irbid" />
-          <label for="2">Irbid</label>
-          <br>
-          <input type="checkbox" id="1" name="loction" value="Maan" />
-          <label for="1">Maan</label>
+        <div id="choose">
+          <p id="option"> Location: </p> 
+          <div id="where">
+ 
+           <input type="checkbox" id="0" name="loction" value="Amman" />
+           <label for="0">Amman</label>
+         
+           <input type="checkbox" id="2" name="loction" value="Irbid" />
+           <label for="2">Irbid</label>
+   
+           <input type="checkbox" id="1" name="loction" value="Maan" />
+           <label for="1">Maan</label>
+ 
+          </div>
+        </div>
+         
+        <div id="choose">
+          <p id="option"> Category: </p> 
+          <div id="cat">
+ 
+           <input type="checkbox" id="restaurants" name="place" value="Resturants" />
+           <label for="restaurants">Resturants</label>
+         
+           <input type="checkbox" id="places" name="place" value="Places" />
+           <label for="places">Places</label>
+   
+           
+ 
+          </div>
+        </div>
+        
+        <div id="choose">
+          <p id="option"> Enter your budget: </p> 
+          <div id="cat">
+ 
+            <input type="number" id="Budget" name="Budget" placeholder="Ex: 10$ 20$ ...">
+            
+          </div>
+        </div>
 
-          <br>
-        </fieldset>
-        <fieldset>
-
-          <legend><span class="number">2</span> Category: </legend>
-
-          <input type="checkbox" id="restaurants" name="place" value="Resturants" />
-          <label for="restaurants">Resturants</label>
-
-          <input type="checkbox" id="places" name="place" value="Places" />
-          <label for="places">Places</label>
-        </fieldset>
-        <fieldset>
-          <legend for="Budget"><span class="number">3</span> Enter your budget:</legend>
-          <input type="number" id="Budget" name="Budget"><br>
-        </fieldset>
-        <fieldset>
-          <legend><span class="number">4</span> Choose a rate:</legend>
-          <select name="rating" id="rating" class="rating__select">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </fieldset>
-        <input type="submit" value="Apply" />
+      
+        <div id="choose">
+          <p id="option"> Choose a rate: </p> 
+          <div id="cat">
+ 
+            <select name="rating" id="rating" class="rating__select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+ 
+        <button  type="" value="Apply">SUBMIT</button>
 
       </form>
     </aside>
@@ -110,7 +127,7 @@
     <div id="pop" class="pop"></div>
 
     <section id="maincontent"> 
-      <img id="contentimg" src="img/Pink Mandala Massage Logo.png" alt="logo">
+      <!-- <img id="contentimg" src="" alt="logo"> -->
       <article class="content-article">
         <h3>Our Vision</h3>
         <p class="content-p"> &nbsp;&nbsp;&nbsp;&nbsp;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
