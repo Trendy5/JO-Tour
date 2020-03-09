@@ -1,6 +1,7 @@
 'use strict';
-console.log(Comment);
+//console.log(Comment);
 var slideIndex = 0;
+var slideimgs = 0;
 showSlides();
 
 function showSlides() {
@@ -18,10 +19,24 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
-addComment('KFC','abdallah','hggakjhglgoihiho');
+function showImgs() {
+  var slides = document.getElementsByClassName('filterimgs');
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slideimgs++;
+  if (slideimgs > slides.length) {
+    slideimgs = 1;
+  }
+  slides[slideimgs - 1].style.display = 'block';
+  setTimeout(showImgs, 6000);
+
+
+}
+
+//addComment('KFC', 'abdallah', 'hggakjhglgoihiho');
 function addComment(name, userName, comment) {
   var time = Date();
-
   //console.log(time);
   for (let index = 0; index < Storge.places.length; index++) {
     if (name === Storge.places[index].name) {
@@ -71,15 +86,25 @@ function test(e) {
   var a = document.createElement('a');
   var img;
   var i = document.createElement('i')
-  i.setAttribute('class','fas fa-times')
-  i.setAttribute('id','xpop')
+  i.setAttribute('class', 'fas fa-times')
+  i.setAttribute('id', 'xpop')
   a.appendChild(i)
   pop.appendChild(a)
-  for(let i = 0; i < filtered.length;i++){
-    if(filtered[i].name === e){
-      img = document.createElement('img')
-      img.src = filtered[i].imgs[0]
-      pop.appendChild(img)
+  for (let i = 0; i < filtered.length; i++) {
+    if (filtered[i].name === e) {
+
+      var imgsdiv = document.createElement('div');
+      for (let q = 0; q < filtered[i].imgs.length; q++) {
+        img = document.createElement('img');
+        img.setAttribute('class', 'filterimgs');
+        img.src = filtered[i].imgs[q];
+        imgsdiv.appendChild(img);
+        pop.appendChild(imgsdiv);
+      }
+
+
+
+
       h4.textContent = filtered[i].name
       p = document.createElement('p')
       p.textContent = filtered[i].des
@@ -90,30 +115,34 @@ function test(e) {
       pop.appendChild(h4)
       for (let j = 0; j < filtered[i].comments.length; j++) {
         // const element = array[j];
+        var p2 = document.createElement('p')
+        p2.textContent = filtered[i].comments[j].time;
+        pop.appendChild(p2)
         p = document.createElement('p')
-        p.textContent = `${filtered[i].comments[j].user_name} ${filtered[i].comments[j].comment} ${filtered[i].comments[j].time}`
+        p.textContent = `${filtered[i].comments[j].user_name} :     ${filtered[i].comments[j].comment} `
         pop.appendChild(p)
-        // p = document.createElement('p')
+        
         // p.textContent = filtered[i].comments[j].comment
         // pop.appendChild(p)
         // p = document.createElement('p')
-        // p.textContent = filtered[i].comments[j].time
-        // pop.appendChild(p)
-        // console.log(filtered[i].comments[j])
         
+        
+        // console.log(filtered[i].comments[j])
+
       }
       input = document.createElement('input')
-      input.setAttribute('type','text')
+      input.setAttribute('type', 'text')
       input.style.width = '80%'
       input.style.margin = '5px 20% 5px 0'
       pop.appendChild(input)
-     
- }
+
+    }
   }
-  pop.style.display='inline-block'
-  i.addEventListener('click',removePop)
+  showImgs()
+  pop.style.display = 'inline-block'
+  i.addEventListener('click', removePop)
 }
-function removePop(){
+function removePop() {
   // console.log('dsf')
   var pop = document.getElementById('pop');
   pop.style.display = 'none'

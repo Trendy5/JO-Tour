@@ -202,9 +202,9 @@ new Pleace(
   'restaurants'
 );
 
-new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
-new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
-new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
+new Comment(0, 'yazan', ' this is great', '12;00');
+new Comment(0, 'abdallah', 'that was cool place', '23:00');
+new Comment(0, 'osama ', 'no no no ', '24:00');
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 4);
