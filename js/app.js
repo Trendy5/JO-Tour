@@ -118,3 +118,84 @@ function removePop(){
   var pop = document.getElementById('pop');
   pop.style.display = 'none'
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//making a guess game 
+
+//helper functions
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var count = 0;
+
+places=[];
+var unique =[];
+
+for (var i = 0; i < Storge.places.length; i++) {
+  new Pleace(Storge.places[i]);
+}
+
+function rendering(Storge.Places.name , Storge.places.imgs) {
+
+  var randomimage = Storge.Places.imgs[randomNumber(0, Storge.places.imgs.length - 1)];
+  var randomname= Storge.Places.name[randomNumber(0, Storge.places.name.length - 1)];
+  
+  while (  (unique.includes(randomimage.name))        ) {
+
+    var randomimage = Storge.Places[randomNumber(0, Storge.places.length - 1)];
+   
+     
+  }
+
+ // ||   (unique.includes(randomname.name)) 
+
+ // setItem();
+
+  unique=[];
+  unique.push(randomimage.name,randomname1.name,randomname2.name,randomname3.name);
+
+
+}
+
+
+
+rendering();
+
+
+
+
+document.getElementById("choosing").addEventListener('click', function (e) {
+  count++;
+  if (count < 6) {
+     
+      for (var i = 0; i < Storage.places.length; i++) {
+        rendering();
+
+      }
+    
+  }
+
+  if (count === 6) {
+    List();
+  }
+});
+
+function List() {
+
+
+  for (var j = 0; j < Pleace.places.length; j++) {
+
+   
+  }
