@@ -30,16 +30,36 @@ var Pleace = function(id, name, des, imgs, location, type) {
 //     this.type = type
 //     Storge.restaurants.push(this)
 // }
-var Booking=function(name,img,des,activite,bughet){
+var Booking=function(name,img,des,activity,budget){
   this.name=name,
   this.img=img,
   this.des=des,
-  this.activite=[],
-  this.bughet=bughet;
+  this.activity=activity,
+  this.budget=budget;
   Storge.booking.push(this);
 };
 
-
+new Booking(
+  'Petra',
+  'img/IMG_3960-min.jpg',
+  'Petra, the world wonder, is without a doubt Jordan\'s most valuable treasure and greatest tourist attraction. It is a vast, unique city, carved into the sheer rock face by the Nabataeans',
+  ['English Speaking driver', 'Three meals per day'],
+  '$50'
+);
+new Booking(
+  'Amman Citadel',
+  'img/DSC_0367-min.JPG',
+  'Citadel, the world wonder, is without a doubt Jordan\'s most valuable treasure and greatest tourist attraction. It is a vast, unique city, carved into the sheer rock face by the Nabataeans',
+  ['English Speaking driver', 'Three meals per day'],
+  '$30'
+);
+new Booking(
+  'Downtown Amman',
+  'img/DSC_0228-min.JPG',
+  'Downtown, the world wonder, is without a doubt Jordan\'s most valuable treasure and greatest tourist attraction. It is a vast, unique city, carved into the sheer rock face by the Nabataeans',
+  ['English Speaking driver', 'Three meals per day'],
+  '$20'
+);
 
 var Comment = function(object, user_name, comment, time) {
   (this.user_name = user_name),
@@ -202,9 +222,9 @@ new Pleace(
   'restaurants'
 );
 
-new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
-new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
-new Comment(0, 'yazan', 'jlkjsdlkj', 'kldsjfkl');
+new Comment(0, 'yazan', ' this is great', '12;00');
+new Comment(0, 'abdallah', 'that was cool place', '23:00');
+new Comment(0, 'osama ', 'no no no ', '24:00');
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 4);
@@ -232,7 +252,9 @@ if (!localStorage.places && !localStorage.locations) {
   localStorage.locations = JSON.stringify(Storge.locations);
   // localStorage.restaurants = JSON.stringify(Storge.restaurants)
   localStorage.places = JSON.stringify(Storge.places);
+  localStorage.booking = JSON.stringify(Storge.booking);
 }
 Storge.locations = JSON.parse(localStorage.locations);
 // Storge.restaurants = JSON.parse(localStorage.restaurants)
 Storge.places = JSON.parse(localStorage.places);
+Storge.booking = JSON.parse(localStorage.booking);
