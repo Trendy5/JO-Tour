@@ -271,35 +271,41 @@ to {
 
 }}
 
-.pop img {
-  width: 100%;
-  height: 200px;
+
+.pop img{
+width: 100%;
+height: 291px;
+
 }
 .pop h4 {
   margin: 7px 0 7px 0;
   font-size: x-large;
   font-weight: 700;
-  color: #794d6f;
+
+  color: #fbd9cf;
+
 }
 .pop {
-  /* opacity: 5; */
-  display: none;
-  position: fixed;
-  z-index: 99;
-  top: 5%;
-  left: 20%;
-  width: 60%;
-  background-color: #ffefadcc;
-  height: 90%;
-  overflow: auto;
-  text-align: center;
-  /* border: 1px; */
-  border-radius: 25px;
+/* opacity: 5; */
+display: none;
+position: fixed;
+z-index: 99;
+top: 5%;
+left: 27%;
+width: 70%;
+background-color:#000000cc;
+height: 90%;
+overflow: auto;
+text-align: center;
+/* border: 1px; */
+border-radius: 25px;
 }
-#xpop {
-  margin-left: 90%;
+#xpop{
+margin-left: 90%;
+
   font-size: 20px;
-  color: red;
+  color:#fbd9cf;
+  cursor: pointer;
 }
 
 main {
@@ -505,4 +511,21 @@ button:hover {
   transition: all 0.3s ease;
   transition-delay: 0.1s;
   transform: translate3d(0, 0, 0);
+}
+#popbtn{
+  border-radius: 51px;
+    width: 29%;
+    margin-top: 3%;
+    align-self: center;
+    outline: 0;
+    padding: 20px 20px;
+    color: black;
+    margin-left: 10px;
+    background-color: #fbd9cf;
+    font-size: 20px;
+}
+
+.pop p{
+  margin: 2px 20px 2px 20px;
+  color: #fbd9cf;
 }
