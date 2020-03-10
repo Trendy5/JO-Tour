@@ -164,10 +164,12 @@ function test(e) {
       input.style.margin = '5px 10px 5px 46px';
       input.style.float = 'left';
       pop.appendChild(input);
+
       var btn = document.createElement('button')
       btn.setAttribute('id','popbtn')
       btn.textContent = 'Done ';
       pop.appendChild(btn)
+
       // addComment(filtered[i].name, user, comment);
       // rating(filtered[i].name, user, rate);
     }
@@ -231,6 +233,7 @@ function myFunction() {
 // }
 
 
+
 function comment_render(user, comment, rate) {
   user = document.getElementById('input1').values;
   console.log(user)
@@ -242,3 +245,119 @@ function comment_render(user, comment, rate) {
   rating(filtered[i].name, user, rate);
   //localStorage.places.comment = JSON.stringify(Storage.places.comment)
 }
+//making a guess game
+
+//helper functions
+
+var score = 0;
+var count = 0;
+
+function rendering() {
+  var origin = Storge.places[Math.floor(Math.random() * Storge.places.length)];
+  var num1 = Storge.places[Math.floor(Math.random() * Storge.places.length)];
+  var num2 = Storge.places[Math.floor(Math.random() * Storge.places.length)];
+  while (
+    origin.name === num1.name ||
+    origin.name === num2.name ||
+    num1.name === num2.name
+  ) {
+    origin = Storge.places[Math.floor(Math.random() * Storge.places.length)];
+    num1 = Storge.places[Math.floor(Math.random() * Storge.places.length)];
+    num2 = Storge.places[Math.floor(Math.random() * Storge.places.length)];
+  }
+  var arr = [origin, num1, num2];
+  startRender(arr);
+}
+var img;
+var ds3;
+function startRender(arr) {
+  var div = document.getElementById('quiz');
+  div.textContent = ''
+var countp = 0;
+  var simg = arr[Math.floor(Math.random() * arr.length)];
+  ds3 = simg.des
+  var p = document.createElement('p')
+  p.setAttribute('class','q-p')
+  p.textContent = 'jfkds'
+  div.appendChild(p)
+  img = document.createElement('img');
+  img.setAttribute(
+    'src',
+    `${simg.imgs[Math.floor(Math.random() * simg.imgs.length)]}`
+  );
+  img.setAttribute('alt', `${simg.name}`);
+  img.setAttribute('id', `img-q`);
+  var div2 = document.createElement('div');
+  div2.setAttribute('id', 'form');
+  var test = [];
+  for (let i = 0; i < arr.length; i++) {
+    var object = arr[Math.floor(Math.random() * arr.length)];
+    while (test.includes(object)) {
+      object = arr[Math.floor(Math.random() * arr.length)];
+    }
+    test.push(object)
+    var div3 = document.createElement('div')
+    var p = document.createElement('p')
+    p.setAttribute('onclick',`check("${object.name}")`)
+    p.setAttribute('class','red')
+    if(object.name === img.alt){
+    p.setAttribute('id','sa7')
+    }
+    p.textContent = object.name
+    div3.appendChild(p)
+    div2.appendChild(div3)
+  }
+  console.log(test)
+  var d6 = document.createElement('div')
+  d6.setAttribute('id','des')
+  // console.log(img);
+  div.appendChild(img);
+  div.appendChild(d6);
+  div.appendChild(div2);
+  var a = document.createElement('a')
+  a.textContent = 'Next'
+  a.setAttribute('onclick','next()')
+  div.appendChild(a)
+}
+function next(){
+  console.log('jlkj')
+  rendering()
+}
+rendering();
+function check(name,id){
+  var d7 = document.getElementById('des')
+  var p5 = document.createElement('p')
+  console.log(ds3)
+  p5.textContent = ds3
+  d7.appendChild(p5)
+  console.log(img.alt === name,id)
+  var red = document.getElementsByClassName('red')
+  for(let i = 0; i < red.length; i++){
+    red[i].style.color = 'red'
+  }
+  var f =document.getElementById('sa7')
+  f.style.color = 'green'
+}
+
+
+
+function game() {
+ 
+  for (var i = 0; i < 5; i++) {
+    if (event.target.name === placename) {
+      score++;
+      placename.style.backgroundColor = 'green';
+      rendering();
+    } else {
+      randomName1.style.backgroundColor = 'red';
+      randomName2.style.backgroundColor = 'red';
+      rendering();
+    }
+  }
+  count++;
+  if ((count = 5)) {
+    document.getElementById('scoreDisplay').innerHTML =
+      ' Your Score is :  ${score} /  5  ';
+  }
+}
+
