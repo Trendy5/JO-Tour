@@ -61,6 +61,50 @@ header ul {
 }
 
 .slideshow {
+
+height: 500px;
+width: 100%;
+/* margin-left: 1.5%; */
+/* margin-top: 1%; */
+/* animation: fadeI 3s linear;
+animation: fadeO 3s linear; */
+animation: cf3FadeInOut ease-in-out forwards 5s alternate;
+
+}
+/* 
+  @keyframes fadeI{
+    0%{ opacity: 0.2 }
+
+    50% { opacity: 0.5 }
+    100%{opacity: 1}
+  }
+  @keyframes fadeO{
+    0%{ opacity: 1 }
+    50% { opacity: 0.5 }
+    100%{ opacity: 0.2 }
+  } */
+  @keyframes cf3FadeInOut {
+    0% {
+    opacity:0.2;
+  }
+  45% {
+  opacity:0.5;
+  }
+  55% {
+  opacity:1;
+  }
+  75% {
+  opacity: 0.5;
+  }
+  80%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 0.2;
+  }
+  }
+footer{
+
   height: 500px;
   width: 100%;
   /* margin-left: 1.5%; */
@@ -68,6 +112,7 @@ header ul {
 }
 
 footer {
+
   background-color: #fbd9cf;
   text-align: center;
 
@@ -93,7 +138,44 @@ footer {
   border-width: 10px;
   margin-right: 2%;
   background-color: #fbd9d094;
-  margin-bottom: 4%;
+
+margin-bottom: 4%;
+animation: swing 3s ease alternate forwards;
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+
 }
 #contentimg {
   margin-right: 25%;
@@ -103,6 +185,25 @@ footer {
   border-radius: 50%;
   width: 29%;
   margin-top: 3%;
+  animation: rollIn 5s ease alternate infinite;
+}
+@keyframes rollIn {
+  0% {
+    opacity: 0.5;
+    /* -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); */
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -90deg);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 2, 0);
+  }
+  100% {
+    opacity: 0.5;
+    /* -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); */
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 90deg);
+  }
 }
 
 .cardphoto {
@@ -152,21 +253,22 @@ footer {
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+from {
+  opacity: 0.5;
+}
+to {
+  opacity: 1;
+}
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes fadeOut {
+from {
+  opacity: 1;
+}
+to {
+  opacity: 0.5;
+
 }
 
 .pop img {
