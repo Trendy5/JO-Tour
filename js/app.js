@@ -224,10 +224,13 @@ function rendering() {
   startRender(arr);
 }
 var img;
+var ds3;
 function startRender(arr) {
   var div = document.getElementById('quiz');
-
+  div.textContent = ''
+var countp = 0;
   var simg = arr[Math.floor(Math.random() * arr.length)];
+  ds3 = simg.des
   var p = document.createElement('p')
   p.setAttribute('class','q-p')
   p.textContent = 'jfkds'
@@ -251,32 +254,50 @@ function startRender(arr) {
     var div3 = document.createElement('div')
     var p = document.createElement('p')
     p.setAttribute('onclick',`check("${object.name}")`)
+    p.setAttribute('class','red')
+    if(object.name === img.alt){
+    p.setAttribute('id','sa7')
+    }
     p.textContent = object.name
     div3.appendChild(p)
     div2.appendChild(div3)
   }
   console.log(test)
+  var d6 = document.createElement('div')
+  d6.setAttribute('id','des')
   // console.log(img);
   div.appendChild(img);
+  div.appendChild(d6);
   div.appendChild(div2);
+  var a = document.createElement('a')
+  a.textContent = 'Next'
+  a.setAttribute('onclick','next()')
+  div.appendChild(a)
+}
+function next(){
+  console.log('jlkj')
+  rendering()
 }
 rendering();
-function check(name){
-  console.log(name)
+function check(name,id){
+  var d7 = document.getElementById('des')
+  var p5 = document.createElement('p')
+  console.log(ds3)
+  p5.textContent = ds3
+  d7.appendChild(p5)
+  console.log(img.alt === name,id)
+  var red = document.getElementsByClassName('red')
+  for(let i = 0; i < red.length; i++){
+    red[i].style.color = 'red'
+  }
+  var f =document.getElementById('sa7')
+  f.style.color = 'green'
 }
 
-// var answersArray=[randomName1,randomName2,placename];
-// for (var i =0 ; i<3 ; i++){
-//   var randomanswer =answersArray[randomNumber(0, answersArray.length - 1)];
-//   var a ;
-// a= document.createElement('a');
-// a.setAttribute('onclick','game()')
-// div.getElementById(quiz);
-// div.appendChild(a);
-// a.textContent=`${answersArray}`
-// };
+
 
 function game() {
+ 
   for (var i = 0; i < 5; i++) {
     if (event.target.name === placename) {
       score++;
