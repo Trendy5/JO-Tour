@@ -9,6 +9,11 @@ body {
   font-family: 'Itim', cursive;
 }
 
+main {
+  height: 5250px;
+}
+
+
 header {
   /* height: 100%; */
   position: relative;
@@ -101,20 +106,18 @@ animation: fadeO 3s linear; */
     opacity: 0.2;
   }
 }
-footer {
-  height: 500px;
-  width: 100%;
-  /* margin-left: 1.5%; */
-  /* margin-top: 1%; */
-}
+
 
 footer {
+ 
+  width: 100%;
   background-color: #fbd9cf;
   text-align: center;
 
   padding: 0.5%;
   /* font-family: 'Satisfy', cursive; */
   color: #794e6f;
+  z-index: 9999999;
 }
 .footerinfo {
   font-size: 1em;
@@ -302,9 +305,7 @@ margin-left: 90%;
   cursor: pointer;
 }
 
-main {
-  height: 5250px;
-}
+
 
 #render-objects {
   float: right;
@@ -319,9 +320,9 @@ main {
   background-color: #fbd9cf;
   border-radius: 60px;
   width: 20%;
-  height: 12%;
-}
+height: 10%;
 
+}
 aside {
   color: #794d6f;
   float: left;
@@ -331,11 +332,11 @@ aside {
 }
 
 #formtitle {
-  font-size: 152%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  font-size: 149%;
+  margin-top: 5%;
+  margin-bottom: 4%;
   text-align: center;
-  animation: blinkingText 2s infinite;
+  animation: blinkingText 1.5s infinite;
 }
 @keyframes blinkingText {
   0% {
@@ -427,7 +428,7 @@ button {
   border: 2px solid #794d6f;
   border-radius: 51px;
   width: 40%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   align-self: center;
   outline: 0;
   padding: 20px 20px;
