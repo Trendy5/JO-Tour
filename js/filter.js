@@ -165,8 +165,8 @@ function getCheckedCheckboxesFor(checkboxName) {
   });
   return values;
 }
-var sectionPkg = document.getElementById('container');
-
+var sectionPkg = document.getElementById('main');
+var divNewContainer;
 function renderPackage() {
   var divPkgInfo;
   var divPkgControl;
@@ -180,14 +180,18 @@ function renderPackage() {
   var h3Pkg;
   var ulPkg;
   var liPkg;
+  
 
   console.log('sdaf');
   for (let i = 0; i < Storge.booking.length; i++) {
     console.log('d');
+    divNewContainer = document.createElement('div');
+      divNewContainer.setAttribute('id', 'container');
+      sectionPkg.appendChild(divNewContainer);
 
     divPkgInfo = document.createElement('div');
     divPkgInfo.setAttribute('class', 'product-details');
-    sectionPkg.appendChild(divPkgInfo);
+    divNewContainer.appendChild(divPkgInfo);
 
     h2Pkg = document.createElement('h2');
     h2Pkg.textContent = Storge.booking[i].name;
@@ -212,7 +216,7 @@ function renderPackage() {
     buttonPkg.appendChild(spanPkg);
     divPkgImg = document.createElement('div');
     divPkgImg.setAttribute('class', 'product-image');
-    sectionPkg.appendChild(divPkgImg);
+    divNewContainer.appendChild(divPkgImg);
     imgPkg = document.createElement('img');
     imgPkg.setAttribute('alt', 'package-img');
     imgPkg.setAttribute('src', Storge.booking[i].img);
@@ -236,3 +240,5 @@ function renderPackage() {
 if (sectionPkg) {
   renderPackage();
 }
+
+
