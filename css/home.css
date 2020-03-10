@@ -61,15 +61,13 @@ header ul {
 }
 
 .slideshow {
-
-height: 500px;
-width: 100%;
-/* margin-left: 1.5%; */
-/* margin-top: 1%; */
-/* animation: fadeI 3s linear;
+  height: 500px;
+  width: 100%;
+  /* margin-left: 1.5%; */
+  /* margin-top: 1%; */
+  /* animation: fadeI 3s linear;
 animation: fadeO 3s linear; */
-animation: cf3FadeInOut ease-in-out forwards 5s alternate;
-
+  animation: cf3FadeInOut ease-in-out forwards 5s alternate;
 }
 /* 
   @keyframes fadeI{
@@ -83,28 +81,27 @@ animation: cf3FadeInOut ease-in-out forwards 5s alternate;
     50% { opacity: 0.5 }
     100%{ opacity: 0.2 }
   } */
-  @keyframes cf3FadeInOut {
-    0% {
-    opacity:0.2;
-  }
-  45% {
-  opacity:0.5;
-  }
-  55% {
-  opacity:1;
-  }
-  75% {
-  opacity: 0.5;
-  }
-  80%{
-    opacity: 0.3;
-  }
-  100%{
+@keyframes cf3FadeInOut {
+  0% {
     opacity: 0.2;
   }
+  45% {
+    opacity: 0.5;
   }
-footer{
-
+  55% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+footer {
   height: 500px;
   width: 100%;
   /* margin-left: 1.5%; */
@@ -112,7 +109,6 @@ footer{
 }
 
 footer {
-
   background-color: #fbd9cf;
   text-align: center;
 
@@ -139,8 +135,8 @@ footer {
   margin-right: 2%;
   background-color: #fbd9d094;
 
-margin-bottom: 4%;
-animation: swing 3s ease alternate forwards;
+  margin-bottom: 4%;
+  animation: swing 3s ease alternate forwards;
 }
 
 @keyframes swing {
@@ -175,7 +171,6 @@ animation: swing 3s ease alternate forwards;
   transform-origin: top center;
   -webkit-animation-name: swing;
   animation-name: swing;
-
 }
 #contentimg {
   margin-right: 25%;
@@ -253,23 +248,22 @@ animation: swing 3s ease alternate forwards;
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-
-from {
-  opacity: 0.5;
-}
-to {
-  opacity: 1;
-}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-from {
-  opacity: 1;
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
-to {
-  opacity: 0.5;
-
-}}
 
 .pop img {
   width: 100%;
@@ -446,6 +440,7 @@ button:hover {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -461,13 +456,13 @@ button:hover {
   display: inline-block;
   margin-bottom: 4%;
 }
-.inp-cbx{
+.inp-cbx {
   display: none;
 }
 .inp-cbx:checked + .cbx span:first-child {
   background: #d1b4ba;
   border-color: #794d6f;
-  
+
   animation: wave 0.4s ease;
 }
 
@@ -478,10 +473,9 @@ button:hover {
   border-radius: 3px;
   transform: scale(1);
   vertical-align: middle;
-  border: 1px solid #9098A9;
+  border: 1px solid #9098a9;
   transition: all 0.2s ease;
 }
-
 
 .inp-cbx:checked + .cbx span:first-child svg {
   stroke-dashoffset: 0;
@@ -496,7 +490,7 @@ button:hover {
   top: 3px;
   left: 3.4px;
   fill: none;
-  stroke: #FFFFFF;
+  stroke: #ffffff;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
