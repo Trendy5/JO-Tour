@@ -139,8 +139,8 @@ function test(e) {
       input.style.width = '80%';
       input.style.margin = '5px 20% 5px 0';
       pop.appendChild(input);
-      addComment(filtered[i].name, user, comment);
-      rating(filtered[i].name, user, rate);
+      // addComment(filtered[i].name, user, comment);
+      // rating(filtered[i].name, user, rate);
     }
   }
   showImgs();
