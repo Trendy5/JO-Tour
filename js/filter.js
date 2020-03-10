@@ -43,9 +43,9 @@ function filterRate(rate) {
     }
     avgRate = 0;
   }
-  if (arr.length > 0) {
-    filtered = arr;
-  }
+  // if (arr.length > 0) {
+  filtered = arr;
+  // }
 }
 
 function filterCost(cost) {
@@ -72,7 +72,15 @@ function filterCost(cost) {
 }
 
 function render() {
+  //   var numOfResult=document.createElement('h3');
+  //  numOfResult.textContent= filtered.length;
+
   var section = document.getElementById('render-objects');
+  section.textContent = '';
+  var contant = (document.getElementById('maincontent').style.display = 'none');
+
+  section.style.display = 'block';
+
   var artical;
   var img;
   var div;
@@ -114,25 +122,29 @@ function render() {
 }
 
 var filter = document.getElementById('filter');
-
-// filter.addEventListener('submit', funFilter);
-
+if (filter) {
+  filter.addEventListener('submit', funFilter);
+}
 function funFilter(event) {
   event.preventDefault();
   filtered = [...Storge.places];
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
+    console.log('1')
+    // console.log(search)
     filterLoction(search);
   }
 
   search = getCheckedCheckboxesFor('place');
   if (search.length > 0) {
+    console.log(2)
     filterType(search);
   }
 
   filterRate(event.target.rating.value);
   search = event.target.Budget.value;
   if (search) {
+    console.log(4)
     filterCost(search);
   }
 
@@ -151,9 +163,9 @@ function getCheckedCheckboxesFor(checkboxName) {
   });
   return values;
 }
+var sectionPkg = document.getElementById('container');
 
 function renderPackage() {
-  var sectionPkg = document.getElementById('container');
   var divPkgInfo;
   var divPkgControl;
   var h2Pkg;
@@ -170,9 +182,11 @@ function renderPackage() {
   console.log('sdaf');
   for (let i = 0; i < Storge.booking.length; i++) {
     console.log('d');
+
     divPkgInfo = document.createElement('div');
     divPkgInfo.setAttribute('class', 'product-details');
     sectionPkg.appendChild(divPkgInfo);
+
     h2Pkg = document.createElement('h2');
     h2Pkg.textContent = Storge.booking[i].name;
     divPkgInfo.appendChild(h2Pkg);
@@ -214,8 +228,9 @@ function renderPackage() {
       liPkg.textContent = Storge.booking[i].activity[l];
       ulPkg.appendChild(liPkg);
     }
-
-    console.log(sectionPkg);
   }
+  console.log(sectionPkg);
 }
-renderPackage();
+if (sectionPkg) {
+  renderPackage();
+}
