@@ -47,15 +47,7 @@ function addComment(name, userName, comment) {
     }
   }
   localStorage.places = JSON.stringify(Storge.places);
-  for (let index = 0; index < filtered.length; index++) {
-    if (name === filtered[index].name) {
-      filtered[index].comments.push({
-        userName: userName,
-        comment: comment,
-        time: time
-      });
-    }
-  }
+ 
 }
 function rating(name, user_name, rate) {
   for (let index = 0; index < Storge.places.length; index++) {
@@ -65,12 +57,7 @@ function rating(name, user_name, rate) {
     }
   }
   localStorage.places = JSON.stringify(Storge.places);
-  for (let index = 0; index < filtered.length; index++) {
-    if (name === filtered[index].name) {
-      filtered[index].rate.push({ user_name: user_name, rate: rate });
-      break;
-    }
-  }
+ 
 }
 
 
@@ -87,6 +74,7 @@ function test(e) {
   i.setAttribute('id', 'xpop');
   a.appendChild(i);
   pop.appendChild(a);
+  // console.log(e)
   for (let i = 0; i < filtered.length; i++) {
     if (filtered[i].name === e) {
       var imgsdiv = document.createElement('div');
@@ -129,6 +117,7 @@ function test(e) {
       input = document.createElement('input');
       input.setAttribute('type', 'text');
       input.setAttribute('id', 'input1');
+      input.setAttribute('name', e);
       input.style.width = '75%';
       input.style.margin = '5px 10px 5px 10px';
       input.style.float = 'left';
@@ -159,7 +148,9 @@ function test(e) {
       pop.appendChild(rate);
       input = document.createElement('input');
       input.setAttribute('id', 'input3');
-      input.setAttribute('type', 'text');
+      input.setAttribute('type', 'number');
+      input.setAttribute('max', '5');
+      input.setAttribute('min', '1');
       input.style.width = '75%';
       input.style.margin = '5px 10px 5px 46px';
       input.style.float = 'left';
@@ -177,7 +168,7 @@ function test(e) {
   showImgs();
   pop.style.display = 'inline-block';
   i.addEventListener('click', removePop);
-  btn.addEventListener('click',comment_render)
+  btn.setAttribute('onclick','comment_render()')
 }
 function removePop() {
   var pop = document.getElementById('pop');
@@ -234,15 +225,27 @@ function myFunction() {
 
 
 
-function comment_render(user, comment, rate) {
-  user = document.getElementById('input1').values;
-  console.log(user)
-  comment = document.getElementById('input2').values;
-  console.log(comment)
-  rate = document.getElementById('input3').values;
-  console.log(rate)
-  addComment(filtered[i].name, user, comment);
-  rating(filtered[i].name, user, rate);
+function comment_render() {
+ var user = document.getElementById('input1').value;
+  var user1 = document.getElementById('input1').name;
+  var comment = document.getElementById('input2').value;
+ var  rate = document.getElementById('input3').value;
+  // for(let i = 0;Storge.places.length;i++){
+  //   if(Storge.places[i].name===e){
+console.log(user,comment)
+      addComment(user1, user, comment);
+      rating(user1, user, rate);
+    // }
+    var comment1 = document.getElementById('commentdiv')
+    console.log(comment)
+    var p_time = document.createElement('p');
+    p_time.textContent = 'Now';
+    comment1.appendChild(p_time);
+   var p = document.createElement('p');
+
+    p.textContent = `${user} :     ${comment} `;
+    comment1.appendChild(p);
+  // }
   //localStorage.places.comment = JSON.stringify(Storage.places.comment)
 }
 //making a guess game
@@ -270,9 +273,12 @@ function rendering() {
 }
 var img;
 var ds3;
+var a ;
+var div = document.getElementById('quiz');
 function startRender(arr) {
-  var div = document.getElementById('quiz');
   div.textContent = ''
+  div.style.background = '#fff59d70'
+  div.style.border = '1px solid gray;'
 var countp = 0;
   var simg = arr[Math.floor(Math.random() * arr.length)];
   ds3 = simg.des
@@ -314,7 +320,7 @@ var countp = 0;
   div.appendChild(img);
   div.appendChild(d6);
   div.appendChild(div2);
-  var a = document.createElement('a')
+   a = document.createElement('a')
   a.textContent = 'Next'
   a.setAttribute('onclick','next()')
   div.appendChild(a)
@@ -323,8 +329,27 @@ function next(){
   console.log('jlkj')
   rendering()
 }
-rendering();
+function start(){
+  rendering();
+
+}
+function resulte(){
+  div.textContent = ''
+  var h4 = document.createElement('h4')
+  h4.textContent = `Your Score is ${score}/5`
+  div.appendChild(h4)
+  var btn = document.createElement('button')
+  btn.textContent = 'Try again'
+  btn.setAttribute('onclick','start()')
+  div.appendChild(btn)
+  score = 0
+  count = 0
+}
 function check(name,id){
+  if(count === 5){
+    a.textContent = 'Show score'
+    a.setAttribute('onclick','resulte()')
+  }
   var d7 = document.getElementById('des')
   var p5 = document.createElement('p')
   console.log(ds3)
@@ -337,27 +362,10 @@ function check(name,id){
   }
   var f =document.getElementById('sa7')
   f.style.color = 'green'
-}
-
-
-
-function game() {
- 
-  for (var i = 0; i < 5; i++) {
-    if (event.target.name === placename) {
-      score++;
-      placename.style.backgroundColor = 'green';
-      rendering();
-    } else {
-      randomName1.style.backgroundColor = 'red';
-      randomName2.style.backgroundColor = 'red';
-      rendering();
-    }
+  if(name === img.alt){
+    score++
   }
-  count++;
-  if ((count = 5)) {
-    document.getElementById('scoreDisplay').innerHTML =
-      ' Your Score is :  ${score} /  5  ';
-  }
+  count++
+  // console.log(score)
 }
 

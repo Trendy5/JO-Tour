@@ -15,8 +15,8 @@ main {
 #quiz {
   width: 70%;
   margin: 25px 15%;
-  border: 1px solid gray;
-  background: #fff59d70;
+  /* border: 1px solid gray; */
+  /* background: #fff59d70; */
 }
 .q-p {
   background: gainsboro;
