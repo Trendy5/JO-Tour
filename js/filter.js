@@ -57,13 +57,10 @@ function filterCost(cost) {
         avgCost += filtered[i].avarge[j].avg;
       }
     } else {
-      // console.log('else');
       arr.push(filtered[i]);
       continue;
     }
     if (avgCost / filtered[i].avarge.length <= cost) {
-      // console.log(avgCost / filtered[i].avarge.length);
-      // console.log('if');
       arr.push(filtered[i]);
     }
     avgCost = 0;
@@ -74,56 +71,51 @@ function filterCost(cost) {
   }
 }
 
-
-// function render() {
-//   var section = document.getElementById('render-objects');
-//   var artical;
-//   var img;
-//   var div;
-//   var h3;
-//   var p;
-//   var a;
-//   for (let index = 0; index < filtered.length; index++) {
-//     a = document.createElement('a');
-//     a.setAttribute('name', filtered[index].name);
-//     a.setAttribute('href', `javascript:test("${filtered[index].name}")`);
-//     artical = document.createElement('article');
-//     artical.setAttribute('class', 'cardfullbox');
-//     img = document.createElement('img');
-//     img.setAttribute('class', 'cardphoto');
-//     img.src = filtered[index].imgs[0];
-//     artical.appendChild(img);
-//     div = document.createElement('div');
-//     div.setAttribute('class', 'cardtext');
-//     h3 = document.createElement('h3');
-//     h3.setAttribute('class', 'cardtitle');
-//     h3.textContent = filtered[index].name;
-//     p = document.createElement('p');
-//     p.setAttribute('class','card-rate');
-//     p.textContent = `${filtered[index].des.slice(0, 90)}....`;
-//     div.appendChild(h3);
-//     div.appendChild(p);
-//     p = document.createElement('p');
-//     p.textContent = `rate: ${Math.floor(
-//       filtered[index].rate.reduce((a, b) => a + b.rate, 0) /
-//         filtered[index].rate.length
-//     )}/5`;
-//     div.appendChild(p);
-//     artical.appendChild(div);
-//     a.appendChild(artical);
-//     section.appendChild(a);
-//   }
-//   console.log(filtered[0]);
-//   console.log(section);
-// }
-// render();
-
-
-
+function render() {
+  var section = document.getElementById('render-objects');
+  var artical;
+  var img;
+  var div;
+  var h3;
+  var p;
+  var a;
+  for (let index = 0; index < filtered.length; index++) {
+    a = document.createElement('a');
+    a.setAttribute('name', filtered[index].name);
+    a.setAttribute('href', `javascript:test("${filtered[index].name}")`);
+    artical = document.createElement('article');
+    artical.setAttribute('class', 'cardfullbox');
+    img = document.createElement('img');
+    img.setAttribute('class', 'cardphoto');
+    img.src = filtered[index].imgs[0];
+    artical.appendChild(img);
+    div = document.createElement('div');
+    div.setAttribute('class', 'cardtext');
+    h3 = document.createElement('h3');
+    h3.setAttribute('class', 'cardtitle');
+    h3.textContent = filtered[index].name;
+    p = document.createElement('p');
+    p.setAttribute('class', 'card-rate');
+    p.textContent = `${filtered[index].des.slice(0, 90)}....`;
+    div.appendChild(h3);
+    div.appendChild(p);
+    p = document.createElement('p');
+    p.textContent = `rate: ${Math.floor(
+      filtered[index].rate.reduce((a, b) => a + b.rate, 0) /
+        filtered[index].rate.length
+    )}/5`;
+    div.appendChild(p);
+    artical.appendChild(div);
+    a.appendChild(artical);
+    section.appendChild(a);
+  }
+  console.log(filtered[0]);
+  console.log(section);
+}
 
 var filter = document.getElementById('filter');
 
-// filter.addEventListener('submit', funFilter);
+filter.addEventListener('submit', funFilter);
 
 function funFilter(event) {
   event.preventDefault();
@@ -131,24 +123,21 @@ function funFilter(event) {
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
     filterLoction(search);
-    // console.log(filtered);
   }
 
   search = getCheckedCheckboxesFor('place');
   if (search.length > 0) {
     filterType(search);
-    // console.log(filtered);
   }
 
   filterRate(event.target.rating.value);
   search = event.target.Budget.value;
   if (search) {
     filterCost(search);
-    // console.log(filtered);
   }
-  
+
   render();
-  
+
   console.log(filtered);
 }
 
@@ -163,15 +152,10 @@ function getCheckedCheckboxesFor(checkboxName) {
   return values;
 }
 
-// function myFunction() {
-//   var popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
-// }
-
-function renderPackage(){
-  var sectionPkg= document.getElementById('container');
+function renderPackage() {
+  var sectionPkg = document.getElementById('container');
   var divPkgInfo;
-  var divPkgControl
+  var divPkgControl;
   var h2Pkg;
   var pPkg;
   var buttonPkg;
@@ -184,27 +168,27 @@ function renderPackage(){
   var liPkg;
 
   for (let i = 0; i < Storge.booking.length; i++) {
-    divPkgInfo = document.createElement('div');  
-    divPkgInfo.setAttribute('class','product-details');
+    divPkgInfo = document.createElement('div');
+    divPkgInfo.setAttribute('class', 'product-details');
     sectionPkg.appendChild(divPkgInfo);
     h2Pkg = document.createElement('h2');
     h2Pkg.textContent = Storge.booking[i].name;
     divPkgInfo.appendChild(h2Pkg);
-    pPkg =document.createElement('p');
+    pPkg = document.createElement('p');
     pPkg.setAttribute('class', 'information');
     pPkg.textContent = Storge.booking[i].des;
     divPkgInfo.appendChild(pPkg);
     divPkgControl = document.createElement('div');
-    divPkgControl.setAttribute('class','control');
+    divPkgControl.setAttribute('class', 'control');
     divPkgInfo.appendChild(divPkgControl);
     buttonPkg = document.createElement('button');
-    buttonPkg.setAttribute('class','btn');
+    buttonPkg.setAttribute('class', 'btn');
     divPkgControl.appendChild(buttonPkg);
     spanPkg = document.createElement('span');
     spanPkg.setAttribute('class', 'price');
     spanPkg.textContent = Storge.booking[i].budget;
     buttonPkg.appendChild(spanPkg);
-    spanPkg= document.createElement('span');
+    spanPkg = document.createElement('span');
     spanPkg.setAttribute('class', 'buy');
     spanPkg.textContent = 'Book Now';
     buttonPkg.appendChild(spanPkg);
@@ -228,8 +212,8 @@ function renderPackage(){
       liPkg.textContent = Storge.booking[i].activity[l];
       ulPkg.appendChild(liPkg);
     }
-    
+
     console.log(sectionPkg);
   }
 }
-renderPackage();
+// renderPackage();
