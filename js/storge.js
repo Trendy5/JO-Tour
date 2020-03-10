@@ -13,7 +13,7 @@ var Pleace = function(id, name, des, imgs, location, type) {
     (this.location = location),
     (this.rate = [{ user_name: 'defulte', rate: 1 }]),
     (this.comments = []),
-    (this.avarge = []),
+    (this.avarge = [{user_name:'defulte',rate:1}]),
     (this.type = type);
   Storge.places.push(this);
 };

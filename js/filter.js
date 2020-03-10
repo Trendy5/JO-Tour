@@ -6,13 +6,15 @@ function filterLoction(arrId) {
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrId.length; j++) {
       if (filtered[i].id == arrId[j]) {
+        // console.log(arrId[j])
         arr.push(filtered[i]);
       }
     }
   }
-  if (arr.length > 0) {
+  // if (arr.length > 0) {
     filtered = arr;
-  }
+  // }
+  console.log(filtered)
 }
 
 function filterType(arrType) {

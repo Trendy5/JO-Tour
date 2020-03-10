@@ -7,11 +7,10 @@ var slideimgs = 0;
 
 var slides = document.getElementsByClassName('slideshow');
 // console.log(slides)
-if(slides.length > 0){
-showSlides();
+if (slides.length > 0) {
+  showSlides();
 }
 function showSlides() {
-  
   var i;
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
@@ -168,27 +167,35 @@ function test3() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
+// /// Sticky navbar
+// When the user scrolls the page, execute myFunctionwindow.onscroll = function() {myFunction()};
+// Get the navbarvar navbar = document.getElementById("navbar");
+// Get the offset position of the navbarvar sticky = navbar.offsetTop;
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll positionfunction myFunction() {  if (window.pageYOffset >= sticky) {    navbar.classList.add("sticky")  } else {    navbar.classList.remove("sticky");  }}
 
-/// Sticky navbar 
-
+/// Sticky navbar
 // When the user scrolls the page, execute myFunction
-var navbar = document.getElementById("navbar");
-
-if(navbar){
-  window.onscroll = function() {myFunction()};
-
-  // Get the navbar
-  
-  // Get the offset position of the navbar
-  var sticky = navbar.offsetTop;
-}
-
-
+window.onscroll = function() {
+  myFunction();
+};
+// Get the navbar
+var navbar = document.getElementById('navbar');
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add('sticky');
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove('sticky');
   }
 }
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
