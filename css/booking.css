@@ -335,6 +335,9 @@ ul {
   color: unset;
   animation: bounceIn 5s;
   color: #fbd9cf;
+  border: solid;
+    border-width: thick;
+    border-color: #fbd9cf;
 }
 #pop_booking h3{ 
 font-size: x-large;
@@ -425,7 +428,10 @@ padding-bottom: 46px;
   border-radius: 30%;
   padding: 5px;
   border-color: #fbd9cf;
+  padding: 3px 26px 3px 26px;
+  font-family: monospace;
+
 }
-#pop_booking a :hover{
+#pop_booking a:hover{
   color: #fbd9cf;
   }
