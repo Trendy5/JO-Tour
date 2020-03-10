@@ -271,7 +271,7 @@ body {
 .info {
   background: rgba(27, 26, 26, 0.9);
   font-family: 'Itim', cursive;
-  color: #fff;
+  /* color: #fff; */
 
   transition: all 0.3s ease-out;
   transform: translateX(-100%);
@@ -315,5 +315,4 @@ body {
 }
 ul {
   text-align: left;
-  font-family: unset;
 }
