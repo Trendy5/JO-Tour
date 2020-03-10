@@ -316,3 +316,27 @@ body {
 ul {
   text-align: left;
 }
+
+#popBooking{
+  float: right;
+  width: 61%;
+  background: #f3fd95e3;
+  height: 314px;
+  position: fixed;
+  top: 19%;
+  z-index: 9;
+  left: 20%;
+  border-radius: 31px;
+  display: none;
+  text-align: center;
+  }
+#popBooking h3{ 
+  color: #79005e;
+  font-size: x-large;
+  margin: 20px 0;
+}
+#popBooking h5{ 
+  color: #79005e;
+  font-size: larger;
+  margin: 20px 0;
+}
