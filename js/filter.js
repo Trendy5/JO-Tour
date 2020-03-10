@@ -72,8 +72,16 @@ function filterCost(cost) {
 }
 
 function render() {
+//   var numOfResult=document.createElement('h3');
+//  numOfResult.textContent= filtered.length;
+
+ console.log(numOfResult);
   var section = document.getElementById('render-objects');
-  section.textContent = ''
+  section.textContent="";
+  var contant= document.getElementById('maincontent').style.display = "none";
+
+  section.style.display= "block";
+  
   var artical;
   var img;
   var div;
