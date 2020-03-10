@@ -317,26 +317,62 @@ ul {
   text-align: left;
 }
 
-#pop_booking{
+#pop_booking {
   float: right;
-  width: 40%;
-  background: #ce68fbe3;
+  width: 50%;
+  background: floralwhite;
   height: 314px;
   position: fixed;
-  top: 19%;
+  top: 18%;
   z-index: 9;
   left: 25%;
-  border-radius: 31px;
+  border-radius: 50px;
   display: none;
   text-align: center;
-  }
+  font-family: fantasy;
+  font-size: x-large;
+  color: unset;
+  animation: kaboom 5s ease-out infinite;
+
+}
 #pop_booking h3{ 
   color: #79005e;
   font-size: x-large;
   margin: 30px 0;
+  animation: kaboom 5s ease-in-out infinite;
+
 }
 #pop_booking h5{ 
   color: #79005e;
   font-size: larger;
   margin: 30px 0;
+  animation: init 5s ease-in-out infinite;
+
+
+}
+@keyframes kaboom {
+  90% {
+opacity: 8; 20 }
+  100% {
+    transform: scale(1.1);
+  }
+  80%{
+    transform: translateX(1.1);
+  }
+}
+@-webkit-keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+ 50% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+#pop_booking p{
+  animation: kaboom 5s ease-in-out infinite;
+
 }
