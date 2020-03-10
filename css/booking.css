@@ -317,26 +317,26 @@ ul {
   text-align: left;
 }
 
-#popBooking{
+#pop_booking{
   float: right;
-  width: 61%;
-  background: #f3fd95e3;
+  width: 40%;
+  background: #ce68fbe3;
   height: 314px;
   position: fixed;
   top: 19%;
   z-index: 9;
-  left: 20%;
+  left: 25%;
   border-radius: 31px;
   display: none;
   text-align: center;
   }
-#popBooking h3{ 
+#pop_booking h3{ 
   color: #79005e;
   font-size: x-large;
-  margin: 20px 0;
+  margin: 30px 0;
 }
-#popBooking h5{ 
+#pop_booking h5{ 
   color: #79005e;
   font-size: larger;
-  margin: 20px 0;
+  margin: 30px 0;
 }

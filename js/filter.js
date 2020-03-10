@@ -2,7 +2,7 @@
 var filtered = [...Storge.places];
 
 function filterLoction(arrId) {
-  console.log('filterLoction')
+  console.log('filterLoction');
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrId.length; j++) {
@@ -13,13 +13,13 @@ function filterLoction(arrId) {
     }
   }
   // if (arr.length > 0) {
-    filtered = arr;
+  filtered = arr;
   // }
-  console.log(filtered,0)
+  console.log(filtered, 0);
 }
 
 function filterType(arrType) {
-  console.log('filterType')
+  console.log('filterType');
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrType.length; j++) {
@@ -29,13 +29,13 @@ function filterType(arrType) {
     }
   }
   // if (arr.length > 0) {
-    filtered = arr;
+  filtered = arr;
   // }
-  console.log(filtered,1)
+  console.log(filtered, 1);
 }
 
 function filterRate(rate) {
-  console.log('filterRate')
+  console.log('filterRate');
   var arr = [];
   var avgRate = 0;
   for (let i = 0; i < filtered.length; i++) {
@@ -43,22 +43,20 @@ function filterRate(rate) {
       avgRate += filtered[i].rate[j].rate;
     }
     avgRate = avgRate / filtered[i].rate.length;
-    
 
     if (Math.floor(avgRate) >= rate) {
-      
       arr.push(filtered[i]);
     }
     avgRate = 0;
   }
   // if (arr.length > 0) {
-    console.log(filtered,2,arr)
-    filtered = arr;
+  console.log(filtered, 2, arr);
+  filtered = arr;
   // }
 }
 
 function filterCost(cost) {
-  console.log('filterCost')
+  console.log('filterCost');
   var arr = [];
   var avgCost = 0;
   for (let i = 0; i < filtered.length; i++) {
@@ -79,7 +77,7 @@ function filterCost(cost) {
   if (arr.length > 0) {
     filtered = arr;
   }
-  console.log(filtered,3)
+  console.log(filtered, 3);
 }
 
 function render() {
@@ -88,7 +86,7 @@ function render() {
 
   var section = document.getElementById('render-objects');
   section.textContent = '';
-  document.getElementById('maincontent').style.display = 'none'
+  document.getElementById('maincontent').style.display = 'none';
 
   section.style.display = 'block';
 
@@ -98,8 +96,8 @@ function render() {
   var h3;
   var p;
   var a;
- 
-  console.log(filtered.length)
+
+  console.log(filtered.length);
   for (let index = 0; index < filtered.length; index++) {
     a = document.createElement('a');
     a.setAttribute('name', filtered[index].name);
@@ -132,12 +130,12 @@ function render() {
   }
   console.log(filtered[0]);
   console.log(section);
-  console.log('filtered[index]')
+  console.log('filtered[index]');
 }
 
 var filter = document.getElementById('filter');
 if (filter) {
-  console.log('ok')
+  console.log('ok');
   filter.addEventListener('submit', funFilter);
 }
 function funFilter(event) {
@@ -146,24 +144,23 @@ function funFilter(event) {
   filtered = [...Storge.places];
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
-    console.log('1')
+    console.log('1');
     // console.log(search)
     filterLoction(search);
   }
 
   search = getCheckedCheckboxesFor('place');
   if (search.length > 0) {
-    console.log(2)
+    console.log(2);
     filterType(search);
   }
 
   filterRate(event.target.rating.value);
   search = event.target.Budget.value;
   if (search) {
-    console.log(4)
+    console.log(4);
     filterCost(search);
   }
-
 
   render();
 
@@ -195,14 +192,13 @@ function renderPackage() {
   var h3Pkg;
   var ulPkg;
   var liPkg;
-  
 
   console.log('sdaf');
   for (let i = 0; i < Storge.booking.length; i++) {
     console.log('d');
     divNewContainer = document.createElement('div');
-      divNewContainer.setAttribute('id', 'container');
-      sectionPkg.appendChild(divNewContainer);
+    divNewContainer.setAttribute('id', 'container');
+    sectionPkg.appendChild(divNewContainer);
 
     divPkgInfo = document.createElement('div');
     divPkgInfo.setAttribute('class', 'product-details');
@@ -219,7 +215,7 @@ function renderPackage() {
     divPkgControl.setAttribute('class', 'control');
     divPkgInfo.appendChild(divPkgControl);
     buttonPkg = document.createElement('button');
-    buttonPkg.setAttribute('onclick','bookFun()')
+    buttonPkg.setAttribute('onclick', 'bookFun()');
     buttonPkg.setAttribute('class', 'btn');
     divPkgControl.appendChild(buttonPkg);
     spanPkg = document.createElement('span');
@@ -257,9 +253,14 @@ if (sectionPkg) {
   renderPackage();
 }
 
-var pop = document.getElementById('popBooking')
-function bookFun(){
-  pop.style.display= 'inline-block'
+var pop = document.getElementById('pop_booking');
+function bookFun() {
+  console.log('jlk')
+  pop.style.display = 'inline-block';
 }
+function hidepop(e) {
+  // e.preventDefault()
+  console.log('lljk');
 
-
+  pop.style.display = 'none';
+}
