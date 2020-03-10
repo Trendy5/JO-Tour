@@ -26,20 +26,17 @@ main {
   /* border-radius: 0px; */
   /* border-radius: 12px 12px 12px 12px; */
 }
-form div {
+#form div {
   display: inline-block;
   margin: 0px 50px 0px 50px;
   padding: 3px 0 20px 0;
   font-size: 22px;
   font-weight: 700;
 }
-form div:active {
-  /* display: inline;
-  margin: 0 50px 0 50px; */
+#form div:active {
   color: red;
-  /* visibility: hidden; */
 }
-form input[type='radio'] {
+#form input[type='radio'] {
   visibility: hidden;
 }
 
@@ -60,3 +57,7 @@ form input[type='radio'] {
 header {
   margin-bottom: 4%;
 }
+
+/* .red{
+  color: red;
+} */
