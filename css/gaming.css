@@ -44,19 +44,19 @@ form input[type='radio'] {
 }
 
 .ins p {
-    font-weight: 700;
-    word-spacing: 3px;
-    font-size: larger;
+  font-weight: 700;
+  word-spacing: 3px;
+  font-size: larger;
 }
 .ins {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .ins h3 {
-    font-weight: 700;
-    word-spacing: 3px;
-    font-size: 45px;
+  font-weight: 700;
+  word-spacing: 3px;
+  font-size: 45px;
 }
 
-header{
-    margin-bottom: 4%;
+header {
+  margin-bottom: 4%;
 }

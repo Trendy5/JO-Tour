@@ -1,7 +1,5 @@
 'use strict';
 
-console.log(Comment);
-
 // adding skideshow to header photo
 
 var slideIndex = 0;

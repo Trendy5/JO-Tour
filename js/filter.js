@@ -115,7 +115,7 @@ function render() {
 
 var filter = document.getElementById('filter');
 
-filter.addEventListener('submit', funFilter);
+// filter.addEventListener('submit', funFilter);
 
 function funFilter(event) {
   event.preventDefault();
@@ -167,7 +167,9 @@ function renderPackage() {
   var ulPkg;
   var liPkg;
 
+  console.log('sdaf');
   for (let i = 0; i < Storge.booking.length; i++) {
+    console.log('d');
     divPkgInfo = document.createElement('div');
     divPkgInfo.setAttribute('class', 'product-details');
     sectionPkg.appendChild(divPkgInfo);
@@ -216,4 +218,4 @@ function renderPackage() {
     console.log(sectionPkg);
   }
 }
-// renderPackage();
+renderPackage();
