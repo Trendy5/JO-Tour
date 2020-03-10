@@ -44,7 +44,7 @@ function filterRate(rate) {
     avgRate = 0;
   }
   // if (arr.length > 0) {
-    filtered = arr;
+  filtered = arr;
   // }
 }
 
@@ -72,15 +72,15 @@ function filterCost(cost) {
 }
 
 function render() {
-//   var numOfResult=document.createElement('h3');
-//  numOfResult.textContent= filtered.length;
-
+  //   var numOfResult=document.createElement('h3');
+  //  numOfResult.textContent= filtered.length;
+ filtered = [...Storge.places];
   var section = document.getElementById('render-objects');
-  section.textContent="";
-  var contant= document.getElementById('maincontent').style.display = "none";
+  section.textContent = '';
+  var contant = (document.getElementById('maincontent').style.display = 'none');
 
-  section.style.display= "block";
-  
+  section.style.display = 'block';
+
   var artical;
   var img;
   var div;
@@ -122,8 +122,8 @@ function render() {
 }
 
 var filter = document.getElementById('filter');
-if(filter){
-filter.addEventListener('submit', funFilter);
+if (filter) {
+  filter.addEventListener('submit', funFilter);
 }
 function funFilter(event) {
   event.preventDefault();
@@ -179,10 +179,9 @@ function renderPackage() {
   for (let i = 0; i < Storge.booking.length; i++) {
     console.log('d');
 
-      divPkgInfo = document.createElement('div');
-      divPkgInfo.setAttribute('class', 'product-details');
-      sectionPkg.appendChild(divPkgInfo);
-    
+    divPkgInfo = document.createElement('div');
+    divPkgInfo.setAttribute('class', 'product-details');
+    sectionPkg.appendChild(divPkgInfo);
 
     h2Pkg = document.createElement('h2');
     h2Pkg.textContent = Storge.booking[i].name;
@@ -226,8 +225,8 @@ function renderPackage() {
       ulPkg.appendChild(liPkg);
     }
   }
-    console.log(sectionPkg);
-  }
-if(sectionPkg){
- renderPackage();
+  console.log(sectionPkg);
+}
+if (sectionPkg) {
+  renderPackage();
 }
