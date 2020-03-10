@@ -269,8 +269,7 @@ from {
 to {
   opacity: 0.5;
 
-}
-}
+}}
 
 .pop img {
   width: 100%;
@@ -387,7 +386,7 @@ div#where {
 }
 p#option {
   font-size: 161%;
-  margin-bottom: 11%;
+  margin-bottom: 4%;
 }
 div#choose {
   align-items: center;
@@ -460,7 +459,7 @@ button:hover {
   user-select: none;
   cursor: pointer;
   display: inline-block;
-  margin-bottom: 17%;
+  margin-bottom: 4%;
 }
 .inp-cbx{
   display: none;
