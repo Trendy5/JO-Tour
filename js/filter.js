@@ -74,7 +74,7 @@ function filterCost(cost) {
 function render() {
   //   var numOfResult=document.createElement('h3');
   //  numOfResult.textContent= filtered.length;
- filtered = [...Storge.places];
+
   var section = document.getElementById('render-objects');
   section.textContent = '';
   var contant = (document.getElementById('maincontent').style.display = 'none');
@@ -130,17 +130,21 @@ function funFilter(event) {
   filtered = [...Storge.places];
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
+    console.log('1')
+    // console.log(search)
     filterLoction(search);
   }
 
   search = getCheckedCheckboxesFor('place');
   if (search.length > 0) {
+    console.log(2)
     filterType(search);
   }
 
   filterRate(event.target.rating.value);
   search = event.target.Budget.value;
   if (search) {
+    console.log(4)
     filterCost(search);
   }
 
