@@ -72,7 +72,7 @@ header ul {
   /* margin-top: 1%; */
   /* animation: fadeI 3s linear;
 animation: fadeO 3s linear; */
-  animation: cf3FadeInOut ease-in-out forwards 5s alternate;
+  animation: cf3FadeInOut ease-in-out forwards 7s alternate;
 }
 /* 
   @keyframes fadeI{
@@ -88,22 +88,28 @@ animation: fadeO 3s linear; */
   } */
 @keyframes cf3FadeInOut {
   0% {
-    opacity: 0.2;
-  }
-  45% {
-    opacity: 0.5;
-  }
-  55% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  80% {
     opacity: 0.3;
   }
+  10% {
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  90%{
+    opacity: 0.5;
+  }
   100% {
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }
 
