@@ -1,79 +1,99 @@
-body {
-  width: 80%;
+
+body{
+  width: 100%;
   margin: auto;
   background-image: url(../img/DSC_93.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  /* height: 5000px; */
-}
-main {
-  height: 1102px;
+  height: 100%;
+  color: #794d6f;;
+  font-family: 'Itim', cursive;
+
+
 }
 
-header {
-  height: 100%;
-  position: relative;
+header{
+  /* height: 100%; */
+position: relative;
+margin-bottom: 8%;
 }
-nav {
+nav{
   width: 100%;
   background-color: #fbd9cf;
   margin-top: 0%;
   position: sticky;
   top: 0;
 }
-li {
+li{
   display: inline-block;
   list-style-type: none;
   padding: 1% 8%;
   font-size: 1.3em;
   color: #794d6f;
-}
-a {
-  text-decoration: none;
-  color: #794d6f;
-}
-a:hover {
-  color: #adadad;
+
 }
 
+
+
+a {
+text-decoration: none;
+color: #794d6f;
+}
+
+a:hover{
+  color: #9d7a90;
+}
 #logo {
-  width: 8%;
-  border-radius: 60px;
-  margin-right: 29.5%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  border: double #794d6f;
+width: 6%;
+border-radius: 60px;
+margin-right: 24%;
+margin-top: 1%;
+margin-bottom: 3%;
+border: double #794d6f;
 }
 #logodiv {
-  text-align: center;
+text-align: center;
 }
 h1 {
-  font-family: 'Monoton', cursive;
-  font-size: 6em;
-  margin-top: -10%;
-  color: #794e6f;
-}
-ul {
-  text-align: center;
-  font-family: 'Satisfy', cursive;
+font-family: 'Monoton', cursive;
+font-size: 6em;
+margin-top: -10%;
+color: #794e6f;
 }
 
-footer {
+header ul{
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+
+}
+
+.slideshow {
+height: 500px;
+width: 100%;
+/* margin-left: 1.5%; */
+/* margin-top: 1%; */
+}
+
+
+footer{
   background-color: #fbd9cf;
   text-align: center;
   padding: 0.5%;
-  font-family: 'Satisfy', cursive;
+  /* font-family: 'Satisfy', cursive; */
   color: #794e6f;
+
+
 }
 .footerinfo {
-  font-size: 1em;
-  padding: 0.5% 5%;
+font-size: 1em;
+padding: 0.5% 5%;
 }
 #phonenumber {
-  margin-left: -110px;
+margin-left: -110px;
 }
-#phonenumber:hover {
-  color: #adadad;
+
+#phonenumber:hover{
+  color: #9d7a90;
 }
 
 /*css for the cards*/
@@ -109,8 +129,8 @@ body {
 }
 
 /* 	Product Name */
-#container .product-details h1 {
-  font-family: 'Old Standard TT', serif;
+#container .product-details h2 {
+  font-family: 'Satisfy', cursive;
   display: block;
   position: relative;
   font-size: 40px;
@@ -118,13 +138,13 @@ body {
   margin: 0;
 }
 
-#container .product-details h1:before {
+#container .product-details h2:before {
   position: absolute;
   content: '';
   right: 0%;
   top: 0%;
   transform: translate(25px, -15px);
-  font-family: 'Farsan', cursive;
+  font-family: 'Itim', cursive;
   display: block;
   background: white;
   border-radius: 15px;
@@ -151,7 +171,7 @@ body {
 
 /* The most important information about the product */
 #container .product-details > p {
-  font-family: 'Farsan', cursive;
+  font-family: 'Itim', cursive;
   text-align: left;
   font-size: 20px;
   color: #7d7d7d;
@@ -185,7 +205,7 @@ body {
 }
 
 .btn span {
-  font-family: 'Farsan', cursive;
+  font-family: 'Itim', cursive;
   transition: transform 0.3s;
   display: inline-block;
   padding: 10px 20px;
@@ -250,8 +270,8 @@ body {
 
 .info {
   background: rgba(27, 26, 26, 0.9);
-  font-family: 'Farsan', cursive;
-  color: #fff;
+  font-family: 'Itim', cursive;
+  /* color: #fff; */
 
   transition: all 0.3s ease-out;
   transform: translateX(-100%);
@@ -259,7 +279,7 @@ body {
   line-height: 1.5;
   text-align: left;
   font-size: 95%;
-  cursor: none;
+  /* cursor: none; */
 
   height: 100%;
   width: 100%;
@@ -268,10 +288,10 @@ body {
   top: 0;
 }
 
-.info h2 {
+.info h3 {
   text-align: center;
   font-size: 30px;
-  color: white;
+  color: #fbd9cf;
 }
 .product-image:hover .info {
   transform: translateX(0);
@@ -295,5 +315,4 @@ body {
 }
 ul {
   text-align: left;
-  font-family: unset;
 }
