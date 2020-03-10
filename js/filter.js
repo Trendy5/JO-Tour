@@ -75,7 +75,7 @@ function render() {
 //   var numOfResult=document.createElement('h3');
 //  numOfResult.textContent= filtered.length;
 
- console.log(numOfResult);
+//  console.log(numOfResult);
   var section = document.getElementById('render-objects');
   section.textContent="";
   var contant= document.getElementById('maincontent').style.display = "none";
