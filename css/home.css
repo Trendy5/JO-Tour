@@ -284,7 +284,7 @@ div#where {
 }
 p#option {
   font-size: 161%;
-  margin-bottom: 4%;
+  margin-bottom: 11%;
 }
 div#choose {
   align-items: center;
@@ -349,4 +349,58 @@ button:hover {
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+
+.cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 17%;
+}
+.inp-cbx{
+  display: none;
+}
+.inp-cbx:checked + .cbx span:first-child {
+  background: #d1b4ba;
+  border-color: #794d6f;
+  
+  animation: wave 0.4s ease;
+}
+
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098A9;
+  transition: all 0.2s ease;
+}
+
+
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 3.4px;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
 }
