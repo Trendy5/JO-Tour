@@ -175,7 +175,7 @@ function test3() {
 
 /// Sticky navbar
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {
+window.onscroll = function () {
   myFunction();
 };
 // Get the navbar
@@ -199,3 +199,76 @@ function myFunction() {
 //     navbar.classList.remove("sticky");
 //   }
 // }
+
+
+
+//making a guess game 
+
+//helper functions
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+var score = 0;
+var count = 0;
+
+
+var placename ;
+var randomName1 ;
+var randomName2 ;
+function rendering() {
+  var image = Storge.places[randomNumber(0, Storge.places.length - 1)];
+   placename = image.name;
+  var imgrad = image.imgs[randomNumber(0, image.imgs.length - 1)];
+   randomName1 = Storge.places[randomNumber(0, Storge.places.length - 1)].name;
+
+   randomName2 = Storge.places[randomNumber(0, Storge.places.length - 1)].name;
+
+  while (randomName1 === placename || randomName2 === placename || randomName2 === randomName1) {
+
+    randomName1 = Storge.places[randomNumber(0, Storge.places.length - 1)].name;
+
+    randomName2 = Storge.places[randomNumber(0, Storge.places.length - 1)].name;
+
+  }
+  console.log(image,randomName1,randomName2)
+
+}
+rendering();
+
+
+var answersArray=[randomName1,randomName2,placename];
+for (var i =0 ; i<3 ; i++){
+  var randomanswer =answersArray[randomNumber(0, answersArray.length - 1)];
+  var a ;
+a= document.createElement('a');
+a.setAttribute('onclick','game()')
+div.getElementById(quiz);
+div.appendChild(a);
+a.textContent=`${answersArray}`
+};
+
+function game(){
+  for (var i = 0; i < 5; i++) {
+    if (event.target.name === placename) {
+      score++;
+      placename.style.backgroundColor = "green";
+      rendering();
+    }
+    else {
+      randomName1.style.backgroundColor = "red";
+      randomName2.style.backgroundColor = "red";
+      rendering();
+    };
+  };
+  count++;
+  if (count = 5) {
+    document.getElementById("scoreDisplay").innerHTML = " Your Score is :  ${score} /  5  ";
+  }
+}
+
+
+
+
+
+
+
