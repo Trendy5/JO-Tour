@@ -188,71 +188,71 @@ function removePop() {
 //making a guess game 
 
 //helper functions
-function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function randomNumber(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
-var count = 0;
+// var count = 0;
 
-places=[];
-var unique =[];
+// places=[];
+// var unique =[];
 
-for (var i = 0; i < Storge.places.length; i++) {
-  new Pleace(Storge.places[i]);
-}
+// for (var i = 0; i < Storge.places.length; i++) {
+//   new Pleace(Storge.places[i]);
+// }
 
-function rendering(Storge.Places.name , Storge.places.imgs) {
+// function rendering(Storge.Places.name , Storge.places.imgs) {
 
-  var randomimage = Storge.Places.imgs[randomNumber(0, Storge.places.imgs.length - 1)];
-  var randomname= Storge.Places.name[randomNumber(0, Storge.places.name.length - 1)];
+//   var randomimage = Storge.Places.imgs[randomNumber(0, Storge.places.imgs.length - 1)];
+//   var randomname= Storge.Places.name[randomNumber(0, Storge.places.name.length - 1)];
   
-  while (  (unique.includes(randomimage.name))        ) {
+//   while (  (unique.includes(randomimage.name))        ) {
 
-    var randomimage = Storge.Places[randomNumber(0, Storge.places.length - 1)];
+//     var randomimage = Storge.Places[randomNumber(0, Storge.places.length - 1)];
    
      
-  }
+//   }
 
- // ||   (unique.includes(randomname.name)) 
+//  // ||   (unique.includes(randomname.name)) 
 
- // setItem();
+//  // setItem();
 
-  unique=[];
-  unique.push(randomimage.name,randomname1.name,randomname2.name,randomname3.name);
-
-
-}
+//   unique=[];
+//   unique.push(randomimage.name,randomname1.name,randomname2.name,randomname3.name);
 
 
-
-rendering();
+// }
 
 
 
+// rendering();
 
-document.getElementById("choosing").addEventListener('click', function (e) {
-  count++;
-  if (count < 6) {
+
+
+
+// document.getElementById("choosing").addEventListener('click', function (e) {
+//   count++;
+//   if (count < 6) {
      
-      for (var i = 0; i < Storage.places.length; i++) {
-        rendering();
+//       for (var i = 0; i < Storage.places.length; i++) {
+//         rendering();
 
-      }
+//       }
     
-  }
+//   }
 
-  if (count === 6) {
-    List();
-  }
-});
+//   if (count === 6) {
+//     List();
+//   }
+// });
 
-function List() {
+// function List() {
 
 
-  for (var j = 0; j < Pleace.places.length; j++) {
+//   for (var j = 0; j < Pleace.places.length; j++) {
 
    
-  }
+//   }
 
 function test3(){
   console.log('jsdlkf')
@@ -268,3 +268,4 @@ function test3(){
   slides[slideIndex - 1].style.display = 'block';
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 
+}
