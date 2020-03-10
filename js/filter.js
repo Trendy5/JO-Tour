@@ -43,9 +43,9 @@ function filterRate(rate) {
     }
     avgRate = 0;
   }
-  if (arr.length > 0) {
+  // if (arr.length > 0) {
     filtered = arr;
-  }
+  // }
 }
 
 function filterCost(cost) {
@@ -73,6 +73,7 @@ function filterCost(cost) {
 
 function render() {
   var section = document.getElementById('render-objects');
+  section.textContent = ''
   var artical;
   var img;
   var div;
@@ -115,7 +116,7 @@ function render() {
 
 var filter = document.getElementById('filter');
 
-// filter.addEventListener('submit', funFilter);
+filter.addEventListener('submit', funFilter);
 
 function funFilter(event) {
   event.preventDefault();
