@@ -3,7 +3,7 @@ main {
   width: 100%;
 }
 
-#img-q {
+.img-q {
   width: 90%;
   height: 500px;
   margin: 15px 5% 15px 5%;
@@ -67,9 +67,7 @@ header {
   margin-bottom: 4%;
 }
 
-/* .red{
-  color: red;
-} */
+
 .start {
   margin: 40px 20px 0 0;
   cursor: pointer;
@@ -88,3 +86,11 @@ button {
   font-size: 18px;
   font-family: cursive;
 }
+
+
+main {
+  height: 1100px;
+}
+
+
+

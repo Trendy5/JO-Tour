@@ -116,16 +116,17 @@ animation: fadeO 3s linear; */
   }
 }
 
-
 footer {
  
   width: 100%;
-  background-color: #fbd9cf;
-  text-align: center;
 
-  padding: 0.5%;
+  background-color: #fbd9cf;
+
+  text-align: center;
   /* font-family: 'Satisfy', cursive; */
-  color: #794e6f;
+
+  color: #794E6F;
+
   z-index: 9999999;
 }
 .footerinfo {
@@ -135,10 +136,10 @@ footer {
 #phonenumber {
   margin-left: -110px;
 }
-
 #phonenumber:hover {
-  color: #9d7a90;
+  color: #9D7A90;
 }
+
 
 .cardfullbox {
   float: right;
@@ -278,10 +279,11 @@ footer {
 }
 
 
-.pop img{
-width: 100%;
-height: 291px;
-
+.pop img {
+  width: 50%;
+  height: 315px;
+  margin-left: 24%;
+  border-radius: 20%;
 }
 .pop h4 {
   margin: 7px 0 7px 0;
@@ -292,29 +294,27 @@ height: 291px;
 
 }
 .pop {
-/* opacity: 5; */
-display: none;
-position: fixed;
-z-index: 99;
-top: 5%;
-left: 27%;
-width: 70%;
-background-color:#000000cc;
-height: 90%;
-overflow: auto;
-text-align: center;
-/* border: 1px; */
-border-radius: 25px;
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 5%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #000000cc;
+  height: 90%;
+  overflow: auto;
+  text-align: center;
+  border-radius: 25px;
 }
-#xpop{
-margin-left: 90%;
 
-  font-size: 20px;
-  color:#fbd9cf;
+#xpop {
+  margin-left: 90%;
+  font-size: 33px;
+  color: #fbd9cf;
   cursor: pointer;
+  padding: 2%;
 }
-
-
 
 #render-objects {
   float: right;
@@ -533,3 +533,26 @@ button:hover {
   margin: 2px 20px 2px 20px;
   color: #fbd9cf;
 }
+
+input#input2 {
+  /* height: 88%; */
+  padding: 5% 0;
+}
+
+input#input1 {
+  padding: 0.5% 0%;
+}
+
+input#input3 {
+  padding: 0.5% 0%;
+}
+
+/* 
+#slidedots{
+  height: 0.1%;
+  width: 100%;
+  background-color: #ff71447d;
+  margin-top: -8%;
+  opacity: 0.5;
+}
+ */
