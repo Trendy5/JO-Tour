@@ -100,7 +100,7 @@ new Pleace(
 );
 new Pleace(
   0,
-  'Al Kalha Stakirs',
+  'Al Kalha Stairs',
   `a walk to the downtown streets and stairs is enough to fill you with several memorable experiences. The magic of 
   Al Kalha Stairs is that it will  lead you to the heart of Amman,it’s not like any other stairs you can find art that speaks directly to your soul. `,
   [
@@ -207,10 +207,10 @@ new Comment(0, 'abdallah', 'that was cool place', '23:00');
 new Comment(0, 'osama ', 'no no no ', '24:00');
 new Rate(0, 'yazan', 5);
 new Rate(0, 'yazan', 5);
-new Rate(0, 'yazan', 4);
 new Rate(0, 'yazan', 5);
-new Rate(0, 'yazan', 4);
-new Rate(1, 'yazan', 2);
+new Rate(0, 'yazan', 5);
+new Rate(0, 'yazan', 5);
+new Rate(1, 'yazan', 3);
 new Rate(1, 'yazan', 5);
 new Rate(1, 'yazan', 5);
 new Rate(1, 'yazan', 3);
@@ -220,14 +220,38 @@ new Rate(2, 'yazan', 5);
 new Rate(2, 'yazan', 5);
 new Rate(2, 'yazan', 5);
 new Rate(2, 'yazan', 4);
-new Rate(2, 'yazan', 0);
-new Rate(2, 'yazan', 0);
-new Rate(2, 'yazan', 0);
-new Avarge(0, 'yazan', 20);
-new Avarge(0, 'yazan', 15);
-new Avarge(0, 'yazan', 5);
-new Avarge(1, 'yazan', 20);
-new Avarge(1, 'yazan', 35);
+new Rate(2, 'yazan', 3);
+new Rate(2, 'yazan', 4);
+new Rate(2, 'yazan', 2);
+new Rate(3, 'yazan', 5);
+new Rate(3, 'yazan', 4);
+new Rate(3, 'yazan', 3);
+new Rate(4, 'yazan', 3);
+new Rate(4, 'yazan', 4);
+new Rate(4, 'yazan', 2);
+new Rate(5, 'yazan', 4);
+new Rate(5, 'yazan', 5);
+new Rate(5, 'yazan', 4);
+new Rate(6, 'yazan', 3);
+new Rate(6, 'yazan', 4);
+new Rate(6, 'yazan', 3.5);
+new Rate(7, 'yazan', 3);
+new Rate(7, 'yazan', 4.5);
+new Rate(7, 'yazan', 3);
+new Rate(8, 'yazan', 3);
+new Rate(8, 'yazan', 4);
+new Rate(8, 'yazan', 4.3);
+new Rate(9, 'yazan', 3.5);
+new Rate(9, 'yazan', 4);
+new Rate(9, 'yazan', 5);
+new Rate(10, 'yazan', 3.5);
+new Rate(10, 'yazan', 4);
+new Rate(10, 'yazan', 2.2);
+// new Avarge(0, 'yazan', 25);
+// new Avarge(0, 'yazan', 25);
+// new Avarge(0, 'yazan', 25);
+// new Avarge(1, 'yazan', 20);
+// new Avarge(1, 'yazan', 35);
 if (!localStorage.places && !localStorage.locations) {
   localStorage.locations = JSON.stringify(Storge.locations);
   localStorage.places = JSON.stringify(Storge.places);

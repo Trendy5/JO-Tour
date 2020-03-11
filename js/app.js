@@ -129,12 +129,12 @@ function test(e) {
       user.style.padding = '5px';
       user.style.matgin = '0px 42px 3px 5px';
       user.style.float = 'left';
-
       pop.appendChild(user);
 
       input = document.createElement('input');
       input.setAttribute('type', 'text');
       input.setAttribute('id', 'input1');
+    
       input.setAttribute('name', e);
       input.style.width = '75%';
       input.style.margin = '5px 10px 5px 10px';
