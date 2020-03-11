@@ -415,3 +415,4 @@ function check(name, id) {
   count++;
   // console.log(score)
 }
+

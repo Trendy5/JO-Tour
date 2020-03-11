@@ -116,16 +116,19 @@ animation: fadeO 3s linear; */
   }
 }
 
-
 footer {
  
   width: 100%;
-  background-color: #fbd9cf;
-  text-align: center;
+  background-color: #FBD9CF;
 
-  padding: 0.5%;
+
+
+f
+  text-align: center;
   /* font-family: 'Satisfy', cursive; */
-  color: #794e6f;
+
+  color: #794E6F;
+
   z-index: 9999999;
 }
 .footerinfo {
@@ -135,10 +138,10 @@ footer {
 #phonenumber {
   margin-left: -110px;
 }
-
 #phonenumber:hover {
-  color: #9d7a90;
+  color: #9D7A90;
 }
+
 
 .cardfullbox {
   float: right;
