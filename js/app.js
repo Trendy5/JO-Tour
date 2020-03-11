@@ -21,7 +21,7 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = 'block';
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 4 seconds
 }
 
 function showImgs() {
@@ -38,8 +38,14 @@ function showImgs() {
 }
 
 function addComment(name, userName, comment) {
-  var time = Date();
-  //console.log(time);
+  var time;
+  var date = new Date();
+  var mintes = date.getMinutes() + '';
+
+  time = `${date.getMonth() + 1}/${date.getDate()} at ${date.getHours()}:${
+    mintes.length === 1 ? 0 + mintes : mintes
+  }`;
+  console.log(typeof date.getMinutes());
   for (let index = 0; index < Storge.places.length; index++) {
     if (name === Storge.places[index].name) {
       new Comment(index, userName, comment, time);
@@ -47,9 +53,9 @@ function addComment(name, userName, comment) {
     }
   }
   localStorage.places = JSON.stringify(Storge.places);
- 
 }
 function rating(name, user_name, rate) {
+  // console.log('hello  ')
   for (let index = 0; index < Storge.places.length; index++) {
     if (name === Storge.places[index].name) {
       new Rate(index, user_name, rate);
@@ -57,9 +63,7 @@ function rating(name, user_name, rate) {
     }
   }
   localStorage.places = JSON.stringify(Storge.places);
- 
 }
-
 
 function test(e) {
   var pop = document.getElementById('pop');
@@ -94,9 +98,9 @@ function test(e) {
       h4 = document.createElement('h4');
       h4.textContent = 'Comments:';
       pop.appendChild(h4);
-      var commentdiv = document.createElement('div')
-      pop.appendChild(commentdiv)
-      commentdiv.setAttribute('id', 'commentdiv')
+      var commentdiv = document.createElement('div');
+      pop.appendChild(commentdiv);
+      commentdiv.setAttribute('id', 'commentdiv');
       for (let j = 0; j < filtered[i].comments.length; j++) {
         var p_time = document.createElement('p');
         p_time.textContent = filtered[i].comments[j].time;
@@ -109,9 +113,9 @@ function test(e) {
       var user = document.createElement('p');
       user.textContent = 'UserName: ';
       user.style.padding = '5px';
-      user.style.matgin='0px 42px 3px 5px';
+      user.style.matgin = '0px 42px 3px 5px';
       user.style.float = 'left';
-      
+
       pop.appendChild(user);
 
       input = document.createElement('input');
@@ -123,18 +127,18 @@ function test(e) {
       input.style.float = 'left';
       pop.appendChild(input);
 
-      var comment = document.createElement('p')
+      var comment = document.createElement('p');
       comment.textContent = 'Comment: ';
       comment.style.clear = 'both';
       comment.style.float = 'left';
       comment.style.padding = '7px';
-      comment.style.matgin='0px 42px 3px 5px';
+      comment.style.matgin = '0px 42px 3px 5px';
       pop.appendChild(comment);
       input = document.createElement('input');
       input.setAttribute('id', 'input2');
       input.setAttribute('type', 'text');
       input.style.width = '75%';
-      input.style.height='25px';
+      input.style.height = '25px';
       input.style.margin = '5px 10px 5px 10px';
       input.style.float = 'left';
       pop.appendChild(input);
@@ -143,7 +147,7 @@ function test(e) {
       rate.style.clear = 'both';
       rate.style.float = 'left';
       rate.style.padding = '7px';
-      rate.style.matgin='0px 91px 3px 5px';
+      rate.style.matgin = '0px 91px 3px 5px';
       rate.textContent = 'Rate:  ';
       pop.appendChild(rate);
       input = document.createElement('input');
@@ -156,10 +160,10 @@ function test(e) {
       input.style.float = 'left';
       pop.appendChild(input);
 
-      var btn = document.createElement('button')
-      btn.setAttribute('id','popbtn')
+      var btn = document.createElement('button');
+      btn.setAttribute('id', 'popbtn');
       btn.textContent = 'Done ';
-      pop.appendChild(btn)
+      pop.appendChild(btn);
 
       // addComment(filtered[i].name, user, comment);
       // rating(filtered[i].name, user, rate);
@@ -168,7 +172,7 @@ function test(e) {
   showImgs();
   pop.style.display = 'inline-block';
   i.addEventListener('click', removePop);
-  btn.setAttribute('onclick','comment_render()')
+  btn.setAttribute('onclick', 'comment_render()');
 }
 function removePop() {
   var pop = document.getElementById('pop');
@@ -198,7 +202,7 @@ function test3() {
 
 /// Sticky navbar
 // When the user scrolls the page, execute myFunction
-window.onscroll = function () {
+window.onscroll = function() {
   myFunction();
 };
 // Get the navbar
@@ -223,37 +227,36 @@ function myFunction() {
 //   }
 // }
 
-
-
 function comment_render() {
- var user = document.getElementById('input1').value;
+  var user = document.getElementById('input1').value;
   var user1 = document.getElementById('input1').name;
   var comment = document.getElementById('input2').value;
- var  rate = document.getElementById('input3').value;
-  // for(let i = 0;Storge.places.length;i++){
-  //   if(Storge.places[i].name===e){
-console.log(user,comment)
-      addComment(user1, user, comment);
-      rating(user1, user, rate);
-    // }
-    var comment1 = document.getElementById('commentdiv')
-    console.log(comment)
-    var p_time = document.createElement('p');
-    p_time.textContent = 'Now';
-    comment1.appendChild(p_time);
-   var p = document.createElement('p');
+  var rate = document.getElementById('input3').value;
+  if (!user || !comment) {
+    removePop();
+    return;
+  }
+  addComment(user1, user, comment);
+  if (rate) {
+    rating(user1, user, rate);
+  }
+  var comment1 = document.getElementById('commentdiv');
+  console.log(comment);
+  var p_time = document.createElement('p');
+  p_time.textContent = 'Now';
+  comment1.appendChild(p_time);
+  var p = document.createElement('p');
 
-    p.textContent = `${user} :     ${comment} `;
-    comment1.appendChild(p);
-  // }
-  //localStorage.places.comment = JSON.stringify(Storage.places.comment)
+  p.textContent = `${user} :     ${comment} `;
+  comment1.appendChild(p);
+  removePop();
 }
 //making a guess game
 
 //helper functions
 
 var score = 0;
-var count = 0;
+var count = 1;
 
 function rendering() {
   var origin = Storge.places[Math.floor(Math.random() * Storge.places.length)];
@@ -273,19 +276,19 @@ function rendering() {
 }
 var img;
 var ds3;
-var a ;
+var a;
 var div = document.getElementById('quiz');
 function startRender(arr) {
-  div.textContent = ''
-  div.style.background = '#fff59d70'
-  div.style.border = '1px solid gray;'
-var countp = 0;
+  div.textContent = '';
+  div.style.background = '#fff59d70';
+  div.style.border = '1px solid gray;';
+  var countp = 0;
   var simg = arr[Math.floor(Math.random() * arr.length)];
-  ds3 = simg.des
-  var p = document.createElement('p')
-  p.setAttribute('class','q-p')
-  p.textContent = 'jfkds'
-  div.appendChild(p)
+  ds3 = simg.des;
+  var p = document.createElement('p');
+  p.setAttribute('class', 'q-p');
+  p.textContent = `round ${count}/5 `;
+  div.appendChild(p);
   img = document.createElement('img');
   img.setAttribute(
     'src',
@@ -301,71 +304,82 @@ var countp = 0;
     while (test.includes(object)) {
       object = arr[Math.floor(Math.random() * arr.length)];
     }
-    test.push(object)
-    var div3 = document.createElement('div')
-    var p = document.createElement('p')
-    p.setAttribute('onclick',`check("${object.name}")`)
-    p.setAttribute('class','red')
-    if(object.name === img.alt){
-    p.setAttribute('id','sa7')
+    test.push(object);
+    var div3 = document.createElement('div');
+    var p = document.createElement('p');
+    p.setAttribute('onclick', `check("${object.name}")`);
+    p.setAttribute('class', 'red');
+    if (object.name === img.alt) {
+      p.setAttribute('id', 'sa7');
     }
-    p.textContent = object.name
-    div3.appendChild(p)
-    div2.appendChild(div3)
+    p.textContent = object.name;
+    div3.appendChild(p);
+    div2.appendChild(div3);
   }
-  console.log(test)
-  var d6 = document.createElement('div')
-  d6.setAttribute('id','des')
+  console.log(test);
+  var d6 = document.createElement('div');
+  d6.setAttribute('id', 'des');
   // console.log(img);
   div.appendChild(img);
   div.appendChild(d6);
   div.appendChild(div2);
-   a = document.createElement('a')
-  a.textContent = 'Next'
-  a.setAttribute('onclick','next()')
-  div.appendChild(a)
+  a = document.createElement('a');
+  a.textContent = 'Next';
+  a.style.fontSize = 'x-large';
+  a.style.padding = '10px 35px 10px 35px';
+  a.style.background = 'pink';
+  a.style.borderRadius = '25px';
+  a.setAttribute('onclick', 'next()');
+  div.appendChild(a);
 }
-function next(){
-  console.log('jlkj')
-  rendering()
-}
-function start(){
+function next() {
+  console.log('jlkj');
   rendering();
+}
+function start() {
+  rendering();
+}
+function resulte() {
+  div.textContent = '';
+  var h4 = document.createElement('h4');
+  h4.style.fontSize = 'xx-large';
+  h4.textContent = `Your Score is ${score}/5`;
+  div.appendChild(h4);
+  var btn = document.createElement('button');
+  btn.textContent = 'Try again';
+  btn.setAttribute('onclick', 'start()');
+  btn.style.margin = '40px 20px 0 0';
 
+  div.appendChild(btn);
+  score = 0;
+  count = 0;
 }
-function resulte(){
-  div.textContent = ''
-  var h4 = document.createElement('h4')
-  h4.textContent = `Your Score is ${score}/5`
-  div.appendChild(h4)
-  var btn = document.createElement('button')
-  btn.textContent = 'Try again'
-  btn.setAttribute('onclick','start()')
-  div.appendChild(btn)
-  score = 0
-  count = 0
-}
-function check(name,id){
-  if(count === 5){
-    a.textContent = 'Show score'
-    a.setAttribute('onclick','resulte()')
+function check(name, id) {
+  if (count === 5) {
+    a.textContent = 'Show score';
+    a.setAttribute('onclick', 'resulte()');
   }
-  var d7 = document.getElementById('des')
-  var p5 = document.createElement('p')
-  console.log(ds3)
-  p5.textContent = ds3
-  d7.appendChild(p5)
-  console.log(img.alt === name,id)
-  var red = document.getElementsByClassName('red')
-  for(let i = 0; i < red.length; i++){
-    red[i].style.color = 'red'
+  var d7 = document.getElementById('des');
+  var p5 = document.createElement('p');
+  console.log(ds3);
+  p5.textContent = ds3;
+  d7.appendChild(p5);
+  console.log(img.alt === name, id);
+  var red = document.getElementsByClassName('red');
+  for (let i = 0; i < red.length; i++) {
+    red[i].style.color = 'red';
   }
-  var f =document.getElementById('sa7')
-  f.style.color = 'green'
-  if(name === img.alt){
-    score++
+  var f = document.getElementById('sa7');
+  f.style.color = 'green';
+  if (name === img.alt) {
+    var audio = new Audio('sounds/Correct-answer.mp3');
+    audio.play();
+    score++;
+  }else{
+
+    var audio = new Audio('sounds/Evil-toy-laughing-witch-laugh.mp3');
+      audio.play();
   }
-  count++
+  count++;
   // console.log(score)
 }
-
