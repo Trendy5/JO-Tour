@@ -3,7 +3,7 @@ main {
   width: 100%;
 }
 
-#img-q {
+.img-q {
   width: 90%;
   height: 500px;
   margin: 15px 5% 15px 5%;
@@ -15,8 +15,9 @@ main {
 #quiz {
   width: 70%;
   margin: 25px 15%;
-  border: 1px solid gray;
-  background: #fff59d70;
+  height: 13%;
+  /* border: 1px solid gray; */
+  /* background: #fff59d70; */
 }
 .q-p {
   background: gainsboro;
@@ -58,6 +59,14 @@ header {
   margin-bottom: 4%;
 }
 
+
 main {
   height: 1100px;
 }
+
+
+.start{
+  margin : 40px 20px 0 0;
+  
+}
+

@@ -4,7 +4,8 @@
 
 var slideIndex = 0;
 var slideimgs = 0;
-
+var slidGame = 0
+var slidGameImage;
 var slides = document.getElementsByClassName('slideshow');
 // console.log(slides)
 if (slides.length > 0) {
@@ -21,7 +22,20 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = 'block';
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 4 seconds
+}
+function showSlidesGame() {
+  var i;
+  for (i = 0; i < slidGameImage.length; i++) {
+    slidGameImage[i].style.display = 'none';
+  }
+  slidGame++;
+
+  if (slidGame > slidGameImage.length) {
+    slidGame = 1;
+  }
+  slidGameImage[slidGame - 1].style.display = 'block';
+   
 }
 
 function showImgs() {
@@ -38,8 +52,14 @@ function showImgs() {
 }
 
 function addComment(name, userName, comment) {
-  var time = Date();
-  //console.log(time);
+  var time;
+  var date = new Date();
+  var mintes = date.getMinutes() + '';
+
+  time = `${date.getMonth() + 1}/${date.getDate()} at ${date.getHours()}:${
+    mintes.length === 1 ? 0 + mintes : mintes
+  }`;
+  console.log(typeof date.getMinutes());
   for (let index = 0; index < Storge.places.length; index++) {
     if (name === Storge.places[index].name) {
       new Comment(index, userName, comment, time);
@@ -47,17 +67,9 @@ function addComment(name, userName, comment) {
     }
   }
   localStorage.places = JSON.stringify(Storge.places);
-  for (let index = 0; index < filtered.length; index++) {
-    if (name === filtered[index].name) {
-      filtered[index].comments.push({
-        userName: userName,
-        comment: comment,
-        time: time
-      });
-    }
-  }
 }
 function rating(name, user_name, rate) {
+  // console.log('hello  ')
   for (let index = 0; index < Storge.places.length; index++) {
     if (name === Storge.places[index].name) {
       new Rate(index, user_name, rate);
@@ -65,14 +77,7 @@ function rating(name, user_name, rate) {
     }
   }
   localStorage.places = JSON.stringify(Storge.places);
-  for (let index = 0; index < filtered.length; index++) {
-    if (name === filtered[index].name) {
-      filtered[index].rate.push({ user_name: user_name, rate: rate });
-      break;
-    }
-  }
 }
-
 
 function test(e) {
   var pop = document.getElementById('pop');
@@ -87,6 +92,7 @@ function test(e) {
   i.setAttribute('id', 'xpop');
   a.appendChild(i);
   pop.appendChild(a);
+  // console.log(e)
   for (let i = 0; i < filtered.length; i++) {
     if (filtered[i].name === e) {
       var imgsdiv = document.createElement('div');
@@ -106,9 +112,9 @@ function test(e) {
       h4 = document.createElement('h4');
       h4.textContent = 'Comments:';
       pop.appendChild(h4);
-      var commentdiv = document.createElement('div')
-      pop.appendChild(commentdiv)
-      commentdiv.setAttribute('id', 'commentdiv')
+      var commentdiv = document.createElement('div');
+      pop.appendChild(commentdiv);
+      commentdiv.setAttribute('id', 'commentdiv');
       for (let j = 0; j < filtered[i].comments.length; j++) {
         var p_time = document.createElement('p');
         p_time.textContent = filtered[i].comments[j].time;
@@ -121,31 +127,32 @@ function test(e) {
       var user = document.createElement('p');
       user.textContent = 'UserName: ';
       user.style.padding = '5px';
-      user.style.matgin='0px 42px 3px 5px';
+      user.style.matgin = '0px 42px 3px 5px';
       user.style.float = 'left';
-      
+
       pop.appendChild(user);
 
       input = document.createElement('input');
       input.setAttribute('type', 'text');
       input.setAttribute('id', 'input1');
+      input.setAttribute('name', e);
       input.style.width = '75%';
       input.style.margin = '5px 10px 5px 10px';
       input.style.float = 'left';
       pop.appendChild(input);
 
-      var comment = document.createElement('p')
+      var comment = document.createElement('p');
       comment.textContent = 'Comment: ';
       comment.style.clear = 'both';
       comment.style.float = 'left';
       comment.style.padding = '7px';
-      comment.style.matgin='0px 42px 3px 5px';
+      comment.style.matgin = '0px 42px 3px 5px';
       pop.appendChild(comment);
       input = document.createElement('input');
       input.setAttribute('id', 'input2');
       input.setAttribute('type', 'text');
       input.style.width = '75%';
-      input.style.height='25px';
+      input.style.height = '25px';
       input.style.margin = '5px 10px 5px 10px';
       input.style.float = 'left';
       pop.appendChild(input);
@@ -154,21 +161,23 @@ function test(e) {
       rate.style.clear = 'both';
       rate.style.float = 'left';
       rate.style.padding = '7px';
-      rate.style.matgin='0px 91px 3px 5px';
+      rate.style.matgin = '0px 91px 3px 5px';
       rate.textContent = 'Rate:  ';
       pop.appendChild(rate);
       input = document.createElement('input');
       input.setAttribute('id', 'input3');
-      input.setAttribute('type', 'text');
+      input.setAttribute('type', 'number');
+      input.setAttribute('max', '5');
+      input.setAttribute('min', '1');
       input.style.width = '75%';
       input.style.margin = '5px 10px 5px 46px';
       input.style.float = 'left';
       pop.appendChild(input);
 
-      var btn = document.createElement('button')
-      btn.setAttribute('id','popbtn')
+      var btn = document.createElement('button');
+      btn.setAttribute('id', 'popbtn');
       btn.textContent = 'Done ';
-      pop.appendChild(btn)
+      pop.appendChild(btn);
 
       // addComment(filtered[i].name, user, comment);
       // rating(filtered[i].name, user, rate);
@@ -177,7 +186,7 @@ function test(e) {
   showImgs();
   pop.style.display = 'inline-block';
   i.addEventListener('click', removePop);
-  btn.addEventListener('click',comment_render)
+  btn.setAttribute('onclick', 'comment_render()');
 }
 function removePop() {
   var pop = document.getElementById('pop');
@@ -207,7 +216,7 @@ function test3() {
 
 /// Sticky navbar
 // When the user scrolls the page, execute myFunction
-window.onscroll = function () {
+window.onscroll = function() {
   myFunction();
 };
 // Get the navbar
@@ -232,25 +241,36 @@ function myFunction() {
 //   }
 // }
 
+function comment_render() {
+  var user = document.getElementById('input1').value;
+  var user1 = document.getElementById('input1').name;
+  var comment = document.getElementById('input2').value;
+  var rate = document.getElementById('input3').value;
+  if (!user || !comment) {
+    removePop();
+    return;
+  }
+  addComment(user1, user, comment);
+  if (rate) {
+    rating(user1, user, Number(rate));
+  }
+  var comment1 = document.getElementById('commentdiv');
+  console.log(comment);
+  var p_time = document.createElement('p');
+  p_time.textContent = 'Now';
+  comment1.appendChild(p_time);
+  var p = document.createElement('p');
 
-
-function comment_render(user, comment, rate) {
-  user = document.getElementById('input1').values;
-  console.log(user)
-  comment = document.getElementById('input2').values;
-  console.log(comment)
-  rate = document.getElementById('input3').values;
-  console.log(rate)
-  addComment(filtered[i].name, user, comment);
-  rating(filtered[i].name, user, rate);
-  //localStorage.places.comment = JSON.stringify(Storage.places.comment)
+  p.textContent = `${user} :     ${comment} `;
+  comment1.appendChild(p);
+  removePop();
 }
 //making a guess game
 
 //helper functions
 
 var score = 0;
-var count = 0;
+var count = 1;
 
 function rendering() {
   var origin = Storge.places[Math.floor(Math.random() * Storge.places.length)];
@@ -270,23 +290,37 @@ function rendering() {
 }
 var img;
 var ds3;
+var a;
+var div = document.getElementById('quiz');
 function startRender(arr) {
-  var div = document.getElementById('quiz');
-  div.textContent = ''
-var countp = 0;
+  var div4 = document.createElement('div')
+  div4.setAttribute('id','imgs-id') 
+div.appendChild(div4)
+  div.textContent = '';
+  div.style.background = '#fff59d70';
+  div.style.border = '1px solid gray;';
+  var countp = 0;
   var simg = arr[Math.floor(Math.random() * arr.length)];
-  ds3 = simg.des
-  var p = document.createElement('p')
-  p.setAttribute('class','q-p')
-  p.textContent = 'jfkds'
-  div.appendChild(p)
-  img = document.createElement('img');
-  img.setAttribute(
-    'src',
-    `${simg.imgs[Math.floor(Math.random() * simg.imgs.length)]}`
-  );
-  img.setAttribute('alt', `${simg.name}`);
-  img.setAttribute('id', `img-q`);
+  ds3 = simg.des;
+  var p = document.createElement('p');
+  p.setAttribute('class', 'q-p');
+  p.textContent = `round ${count}/5 `;
+  div.appendChild(p);
+for(let m = 0; m < simg.imgs.length;m++){
+  img = document.createElement('img')
+  img.setAttribute('src',simg.imgs[m])
+  img.setAttribute('alt',simg.name)
+  img.setAttribute('class','img-q')
+  img.setAttribute('onclick','nextImg()')
+  div.appendChild(img);
+}
+  // img = document.createElement('img');
+  // img.setAttribute(
+  //   'src',
+  //   `${simg.imgs[Math.floor(Math.random() * simg.imgs.length)]}`
+  // );
+  // img.setAttribute('alt', `${simg.name}`);
+  // img.setAttribute('class', `img-q`);
   var div2 = document.createElement('div');
   div2.setAttribute('id', 'form');
   var test = [];
@@ -295,70 +329,90 @@ var countp = 0;
     while (test.includes(object)) {
       object = arr[Math.floor(Math.random() * arr.length)];
     }
-    test.push(object)
-    var div3 = document.createElement('div')
-    var p = document.createElement('p')
-    p.setAttribute('onclick',`check("${object.name}")`)
-    p.setAttribute('class','red')
-    if(object.name === img.alt){
-    p.setAttribute('id','sa7')
+    test.push(object);
+    var div3 = document.createElement('div');
+    var p = document.createElement('p');
+    p.setAttribute('onclick', `check("${object.name}")`);
+    p.setAttribute('class', 'red');
+    if (object.name === img.alt) {
+      p.setAttribute('id', 'sa7');
     }
-    p.textContent = object.name
-    div3.appendChild(p)
-    div2.appendChild(div3)
+    p.textContent = object.name;
+    div3.appendChild(p);
+    div2.appendChild(div3);
   }
-  console.log(test)
-  var d6 = document.createElement('div')
-  d6.setAttribute('id','des')
+  console.log(test);
+  var d6 = document.createElement('div');
+  d6.setAttribute('id', 'des');
   // console.log(img);
-  div.appendChild(img);
+  // div.appendChild(img);
   div.appendChild(d6);
   div.appendChild(div2);
-  var a = document.createElement('a')
-  a.textContent = 'Next'
-  a.setAttribute('onclick','next()')
-  div.appendChild(a)
+  a = document.createElement('a');
+  a.textContent = 'Next';
+  a.style.fontSize = 'x-large';
+  a.style.padding = '10px 35px 10px 35px';
+  a.style.background = 'pink';
+  a.style.borderRadius = '25px';
+  a.setAttribute('onclick', 'next()');
+  div.appendChild(a);
+  slidGameImage = document.getElementsByClassName('img-q')
+  showSlidesGame()
 }
-function next(){
-  console.log('jlkj')
-  rendering()
+function nextImg(){
+  showSlidesGame()
+ console.log('jdsfl')
 }
-rendering();
-function check(name,id){
-  var d7 = document.getElementById('des')
-  var p5 = document.createElement('p')
-  console.log(ds3)
-  p5.textContent = ds3
-  d7.appendChild(p5)
-  console.log(img.alt === name,id)
-  var red = document.getElementsByClassName('red')
-  for(let i = 0; i < red.length; i++){
-    red[i].style.color = 'red'
+function next() {
+  console.log('jlkj');
+  rendering();
+}
+function start() {
+  rendering();
+}
+function resulte() {
+  div.textContent = '';
+  var h4 = document.createElement('h4');
+  h4.style.fontSize = 'xx-large';
+  h4.textContent = `Your Score is ${score}/5`;
+  div.appendChild(h4);
+  var btn = document.createElement('button');
+  btn.textContent = 'Try again';
+  btn.setAttribute('onclick', 'start()');
+  btn.style.margin = '40px 20px 0 0';
+
+  div.appendChild(btn);
+  score = 0;
+  count = 0;
+  document.getElementById('logo').scrollIntoView();
+}
+function check(name, id) {
+  if (count === 5) {
+    a.textContent = 'Show score';
+    a.setAttribute('onclick', 'resulte()');
   }
-  var f =document.getElementById('sa7')
-  f.style.color = 'green'
-}
+  var d7 = document.getElementById('des');
+  var p5 = document.createElement('p');
+  console.log(ds3);
+  p5.textContent = ds3;
+  d7.appendChild(p5);
+  console.log(img.alt === name, id);
+  var red = document.getElementsByClassName('red');
+  for (let i = 0; i < red.length; i++) {
+    red[i].style.color = 'red';
+  }
+  var f = document.getElementById('sa7');
+  f.style.color = 'green';
+  if (name === img.alt) {
+    var audio = new Audio('sounds/Correct-answer.mp3');
+    audio.play();
+    score++;
+  }else{
 
-
-
-function game() {
- 
-  for (var i = 0; i < 5; i++) {
-    if (event.target.name === placename) {
-      score++;
-      placename.style.backgroundColor = 'green';
-      rendering();
-    } else {
-      randomName1.style.backgroundColor = 'red';
-      randomName2.style.backgroundColor = 'red';
-      rendering();
-    }
+    var audio = new Audio('sounds/Mistake-sound-effect.mp3');
+      audio.play();
   }
   count++;
-  if ((count = 5)) {
-    document.getElementById('scoreDisplay').innerHTML =
-      ' Your Score is :  ${score} /  5  ';
-  }
+  // console.log(score)
 }
 
- 
