@@ -203,8 +203,10 @@ img#potos {
   margin-bottom: 5%;
   border-bottom: solid #794d6f;
   padding-bottom: 5%;
+text-align:center;
 }
 h3 {
+  text-align: center;
   font-size: 2em;
   margin-bottom: 5%;
   margin-left: 3%;
