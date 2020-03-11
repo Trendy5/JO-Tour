@@ -101,10 +101,6 @@ margin-left: -110px;
 /* fonts  */
 @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 
-body {
-  background-attachment: fixed;
-  background-size: cover;
-}
 
 #container {
   box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
@@ -117,8 +113,8 @@ body {
   width: 650px;
 
 }
-#container:onscroll{
-  animation: slideInUp 5s ease alternate forwards;
+#container{
+  animation: slideInUp 3s ease alternate forwards;
 
 }
 
