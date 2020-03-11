@@ -297,7 +297,7 @@ function startRender(arr) {
   div4.setAttribute('id','imgs-id') 
 div.appendChild(div4)
   div.textContent = '';
-  div.style.background = '#fff59d70';
+  div.style.background = '#fbd9cf';
   div.style.border = '1px solid gray;';
   var countp = 0;
   var simg = arr[Math.floor(Math.random() * arr.length)];
