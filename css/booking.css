@@ -97,10 +97,6 @@ footer {
 
 @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 
-body {
-  background-attachment: fixed;
-  background-size: cover;
-}
 
 #container {
   box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
@@ -111,8 +107,30 @@ body {
   margin: 5em auto;
   height: 400px;
   width: 650px;
+
+}
+#container{
+  animation: slideInUp 3s ease alternate forwards;
+
 }
 
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
 /* 	Product details  */
 .product-details {
   position: relative;
