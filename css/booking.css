@@ -75,30 +75,26 @@ width: 100%;
 }
 
 
-footer{
-  background-color: #fbd9cf;
+footer {
+ 
+  width: 100%;
+  background-color: #FBD9CF;
   text-align: center;
-  padding: 0.5%;
   /* font-family: 'Satisfy', cursive; */
-  color: #794e6f;
-
-
+  color: #794E6F;
+  z-index: 9999999;
 }
 .footerinfo {
-font-size: 1em;
-padding: 0.5% 5%;
+  font-size: 1em;
+  padding: 0.5% 5%;
 }
 #phonenumber {
-margin-left: -110px;
+  margin-left: -110px;
+}
+#phonenumber:hover {
+  color: #9D7A90;
 }
 
-#phonenumber:hover{
-  color: #9d7a90;
-}
-
-/*css for the cards*/
-
-/* fonts  */
 @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 
 

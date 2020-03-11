@@ -69,24 +69,26 @@ ul{
   
 }
 
-footer{
-  background-color: #fbd9cf;
+footer {
+ 
+  width: 100%;
+  background-color: #FBD9CF;
   text-align: center;
   padding: 0.5%;
   font-family: 'Satisfy', cursive;
   color: #794e6f;
   clear: both;
-
+  z-index: 9999999;
 }
-.footerinfo{
+.footerinfo {
   font-size: 1em;
-  padding: .5% 5%;
+  padding: 0.5% 5%;
 }
-#phonenumber{
+#phonenumber {
   margin-left: -110px;
 }
-#phonenumber:hover{
-  color: #adadad;;
+#phonenumber:hover {
+  color: #9D7A90;
 }
 
 

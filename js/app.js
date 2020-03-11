@@ -4,7 +4,8 @@
 
 var slideIndex = 0;
 var slideimgs = 0;
-
+var slidGame = 0
+var slidGameImage;
 var slides = document.getElementsByClassName('slideshow');
 // console.log(slides)
 if (slides.length > 0) {
@@ -22,6 +23,19 @@ function showSlides() {
   }
   slides[slideIndex - 1].style.display = 'block';
   setTimeout(showSlides, 5000); // Change image every 4 seconds
+}
+function showSlidesGame() {
+  var i;
+  for (i = 0; i < slidGameImage.length; i++) {
+    slidGameImage[i].style.display = 'none';
+  }
+  slidGame++;
+
+  if (slidGame > slidGameImage.length) {
+    slidGame = 1;
+  }
+  slidGameImage[slidGame - 1].style.display = 'block';
+   
 }
 
 function showImgs() {
@@ -238,7 +252,7 @@ function comment_render() {
   }
   addComment(user1, user, comment);
   if (rate) {
-    rating(user1, user, rate);
+    rating(user1, user, Number(rate));
   }
   var comment1 = document.getElementById('commentdiv');
   console.log(comment);
@@ -279,6 +293,9 @@ var ds3;
 var a;
 var div = document.getElementById('quiz');
 function startRender(arr) {
+  var div4 = document.createElement('div')
+  div4.setAttribute('id','imgs-id') 
+div.appendChild(div4)
   div.textContent = '';
   div.style.background = '#fff59d70';
   div.style.border = '1px solid gray;';
@@ -289,13 +306,21 @@ function startRender(arr) {
   p.setAttribute('class', 'q-p');
   p.textContent = `round ${count}/5 `;
   div.appendChild(p);
-  img = document.createElement('img');
-  img.setAttribute(
-    'src',
-    `${simg.imgs[Math.floor(Math.random() * simg.imgs.length)]}`
-  );
-  img.setAttribute('alt', `${simg.name}`);
-  img.setAttribute('id', `img-q`);
+for(let m = 0; m < simg.imgs.length;m++){
+  img = document.createElement('img')
+  img.setAttribute('src',simg.imgs[m])
+  img.setAttribute('alt',simg.name)
+  img.setAttribute('class','img-q')
+  img.setAttribute('onclick','nextImg()')
+  div.appendChild(img);
+}
+  // img = document.createElement('img');
+  // img.setAttribute(
+  //   'src',
+  //   `${simg.imgs[Math.floor(Math.random() * simg.imgs.length)]}`
+  // );
+  // img.setAttribute('alt', `${simg.name}`);
+  // img.setAttribute('class', `img-q`);
   var div2 = document.createElement('div');
   div2.setAttribute('id', 'form');
   var test = [];
@@ -320,7 +345,7 @@ function startRender(arr) {
   var d6 = document.createElement('div');
   d6.setAttribute('id', 'des');
   // console.log(img);
-  div.appendChild(img);
+  // div.appendChild(img);
   div.appendChild(d6);
   div.appendChild(div2);
   a = document.createElement('a');
@@ -331,6 +356,12 @@ function startRender(arr) {
   a.style.borderRadius = '25px';
   a.setAttribute('onclick', 'next()');
   div.appendChild(a);
+  slidGameImage = document.getElementsByClassName('img-q')
+  showSlidesGame()
+}
+function nextImg(){
+  showSlidesGame()
+ console.log('jdsfl')
 }
 function next() {
   console.log('jlkj');
@@ -353,6 +384,7 @@ function resulte() {
   div.appendChild(btn);
   score = 0;
   count = 0;
+  document.getElementById('logo').scrollIntoView();
 }
 function check(name, id) {
   if (count === 5) {
@@ -377,9 +409,10 @@ function check(name, id) {
     score++;
   }else{
 
-    var audio = new Audio('sounds/Evil-toy-laughing-witch-laugh.mp3');
+    var audio = new Audio('sounds/Mistake-sound-effect.mp3');
       audio.play();
   }
   count++;
   // console.log(score)
 }
+

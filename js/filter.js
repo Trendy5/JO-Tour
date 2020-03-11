@@ -161,6 +161,7 @@ function funFilter(event) {
     // console.log(4);
     filterCost(search);
   }
+  document.getElementById('render-objects').scrollIntoView();
 
   render();
 
