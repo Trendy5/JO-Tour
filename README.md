@@ -1,10 +1,8 @@
 # JO-Tour
 
-First off all we want to thank you all for everything you do to us
-we will start with introduce ourself .
-
+We would like to start our documentation file with expressing our gratitude for this experience and for the efforts you all put to make it as good as it is.
 ## Yazan Alaiwah
-I finsh my high school and work a few jobs like Sales-man, Carpenter, A builder, and Car electrician. I joind LTUC college in codeing boot camp and i found my self love coding so i decide that I am committed to producing elegant code and to discovering optimal pathways to a solution.
+I finsh my high school and work a few jobs like Sales-man, Carpenter, A builder, and Car electrician. I joind LTUC college in coding boot camp and i found myself love coding so i decide that I am committed to producing elegant code and to discovering optimal pathways to a solution.
 ## Abdallah shana'ah
 
 Iam 23 years old i graduated in 2019 from middle east university and my major is computer science.
@@ -12,7 +10,7 @@ Iam 23 years old i graduated in 2019 from middle east university and my major is
 ## Osama Yousef
 
 ## Darah
-
+I entered the coding/programming world only recently, but I am realizing that I should have done that way earlier.
 ## Balqees Mohammad
 Iam 24  years old i graduated in 2018 from Hashemite university and my major is computer engineering.
 ## introduction
