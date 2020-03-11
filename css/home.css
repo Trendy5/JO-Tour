@@ -102,19 +102,13 @@ animation: fadeO 3s linear; */
   }
 }
 footer {
-  height: 500px;
+ 
   width: 100%;
-  /* margin-left: 1.5%; */
-  /* margin-top: 1%; */
-}
-
-footer {
-  background-color: #fbd9cf;
+  background-color: #FBD9CF;
   text-align: center;
-
-  padding: 0.5%;
   /* font-family: 'Satisfy', cursive; */
-  color: #794e6f;
+  color: #794E6F;
+  z-index: 9999999;
 }
 .footerinfo {
   font-size: 1em;
@@ -123,10 +117,10 @@ footer {
 #phonenumber {
   margin-left: -110px;
 }
-
 #phonenumber:hover {
-  color: #9d7a90;
+  color: #9D7A90;
 }
+
 
 .cardfullbox {
   float: right;
