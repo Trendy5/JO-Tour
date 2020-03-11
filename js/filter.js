@@ -2,7 +2,7 @@
 var filtered = [...Storge.places];
 
 function filterLoction(arrId) {
-  console.log('filterLoction');
+  // console.log('filterLoction');
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrId.length; j++) {
@@ -15,11 +15,11 @@ function filterLoction(arrId) {
   // if (arr.length > 0) {
   filtered = arr;
   // }
-  console.log(filtered, 0);
+  // console.log(filtered, 0);
 }
 
 function filterType(arrType) {
-  console.log('filterType');
+  // console.log('filterType');
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrType.length; j++) {
@@ -31,11 +31,11 @@ function filterType(arrType) {
   // if (arr.length > 0) {
   filtered = arr;
   // }
-  console.log(filtered, 1);
+  // console.log(filtered, 1);
 }
 
 function filterRate(rate) {
-  console.log('filterRate');
+  // console.log('filterRate');
   var arr = [];
   var avgRate = 0;
   for (let i = 0; i < filtered.length; i++) {
@@ -50,13 +50,13 @@ function filterRate(rate) {
     avgRate = 0;
   }
   // if (arr.length > 0) {
-  console.log(filtered, 2, arr);
+  // console.log(filtered, 2, arr);
   filtered = arr;
   // }
 }
 
 function filterCost(cost) {
-  console.log('filterCost');
+  // console.log('filterCost');
   var arr = [];
   var avgCost = 0;
   for (let i = 0; i < filtered.length; i++) {
@@ -77,7 +77,7 @@ function filterCost(cost) {
   if (arr.length > 0) {
     filtered = arr;
   }
-  console.log(filtered, 3);
+  // console.log(filtered, 3);
 }
 
 function render() {
@@ -97,7 +97,7 @@ function render() {
   var p;
   var a;
 
-  console.log(filtered.length);
+  // console.log(filtered.length);
   for (let index = 0; index < filtered.length; index++) {
     a = document.createElement('a');
     a.setAttribute('name', filtered[index].name);
@@ -128,14 +128,14 @@ function render() {
     a.appendChild(artical);
     section.appendChild(a);
   }
-  console.log(filtered[0]);
-  console.log(section);
-  console.log('filtered[index]');
+  // console.log(filtered[0]);
+  // console.log(section);
+  // console.log('filtered[index]');
 }
 
 var filter = document.getElementById('filter');
 if (filter) {
-  console.log('ok');
+  // console.log('ok');
   filter.addEventListener('submit', funFilter);
 }
 function funFilter(event) {
@@ -144,27 +144,27 @@ function funFilter(event) {
   filtered = [...Storge.places];
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
-    console.log('1');
+    // console.log('1');
     // console.log(search)
     filterLoction(search);
   }
 
   search = getCheckedCheckboxesFor('place');
   if (search.length > 0) {
-    console.log(2);
+    // console.log(2);
     filterType(search);
   }
 
   filterRate(event.target.rating.value);
   search = event.target.Budget.value;
   if (search) {
-    console.log(4);
+    // console.log(4);
     filterCost(search);
   }
 
   render();
 
-  console.log(filtered);
+  // console.log(filtered);
 }
 
 function getCheckedCheckboxesFor(checkboxName) {
