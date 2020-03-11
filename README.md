@@ -9,6 +9,8 @@ Iam 23 years old i graduated in 2019 from middle east university and my major is
 
 ## Osama Yousef
 
+I am 24 years old civil engineering graduate from J.U.S.T univerity .Highly-motivated and ambitious person and want to be a good software developer in the future .I love doing interesting and challenging things btw so coding is my challenge now . 
+
 ## Darah
 I entered the coding/programming world only recently, but I am realizing that I should have done that way earlier.
 ## Balqees Mohammad
