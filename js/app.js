@@ -297,8 +297,9 @@ function startRender(arr) {
   div4.setAttribute('id','imgs-id') 
 div.appendChild(div4)
   div.textContent = '';
-  div.style.background = '#fbd9cf';
+  div.style.background = 'rgba(0, 0, 0, 0.77)';
   div.style.border = '1px solid gray;';
+  
   var countp = 0;
   var simg = arr[Math.floor(Math.random() * arr.length)];
   ds3 = simg.des;
@@ -354,6 +355,8 @@ for(let m = 0; m < simg.imgs.length;m++){
   a.style.padding = '10px 35px 10px 35px';
   a.style.background = 'pink';
   a.style.borderRadius = '25px';
+  a.style.position= 'relative'
+  a.style.top= '30px'
   a.setAttribute('onclick', 'next()');
   div.appendChild(a);
   slidGameImage = document.getElementsByClassName('img-q')
@@ -387,12 +390,14 @@ function resulte() {
   document.getElementById('logo').scrollIntoView();
 }
 function check(name, id) {
+
   if (count === 5) {
     a.textContent = 'Show score';
     a.setAttribute('onclick', 'resulte()');
   }
   var d7 = document.getElementById('des');
   var p5 = document.createElement('p');
+  d7.textContent = '  '
   console.log(ds3);
   p5.textContent = ds3;
   d7.appendChild(p5);

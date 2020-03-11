@@ -15,14 +15,17 @@ main {
 #quiz {
   width: 70%;
   margin: 25px 15%;
-  height: 13%;
+  height: 70%;
+  /* background-color: #000000d9; */
+
   /* border: 1px solid gray; */
   /* background: #fff59d70; */
 }
 .q-p {
-  background: gainsboro;
-  color: black;
-  text-align: start;
+  background-color: #000000d9;
+  color: #fbd9cf;
+    text-align: center;
+    font-size: 180%;
   padding: 10px 0px 10px 15px;
   /* border-radius: 0px; */
   /* border-radius: 12px 12px 12px 12px; */
@@ -46,9 +49,13 @@ main {
   word-spacing: 3px;
   font-size: larger;
   font-size: 28px;
+  margin-top: 13%;
+
 }
 .ins {
   margin-bottom: 40px;
+  margin-left: 5%;
+  margin-right: 5%;s
 }
 .ins h3 {
   font-weight: 700;
