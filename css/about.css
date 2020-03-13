@@ -36,7 +36,7 @@ a{
   color: #794d6f;
 }
 a:hover{
-  color: #adadad;;
+  color: #9d7a90;
 }
 #logo {
   width: 6%;
@@ -55,7 +55,7 @@ h1{
   margin-top: -10%;
   color: #794e6f;
 }
-ul{
+header ul{
   text-align: center;
   font-family: 'Satisfy', cursive;
 }
@@ -74,11 +74,11 @@ footer {
   width: 100%;
   background-color: #FBD9CF;
   text-align: center;
-  padding: 0.5%;
-  font-family: 'Satisfy', cursive;
-  color: #794e6f;
-  clear: both;
+  font-family: 'Itim', cursive;
+  color: #794E6F;
   z-index: 9999999;
+  position: fixed;
+  bottom: 0;
 }
 .footerinfo {
   font-size: 1em;
@@ -212,4 +212,15 @@ h3 {
   margin-left: 3%;
   margin-top: 5%;
 
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
