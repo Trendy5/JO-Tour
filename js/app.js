@@ -263,7 +263,7 @@ function comment_render() {
 
   p.textContent = `${user} :     ${comment} `;
   comment1.appendChild(p);
-  removePop();
+  // removePop();
 }
 //making a guess game
 
@@ -333,6 +333,7 @@ for(let m = 0; m < simg.imgs.length;m++){
     test.push(object);
     var div3 = document.createElement('div');
     var p = document.createElement('p');
+    p.style.cursor= 'pointer';
     p.setAttribute('onclick', `check("${object.name}")`);
     p.setAttribute('class', 'red');
     if (object.name === img.alt) {
@@ -357,6 +358,7 @@ for(let m = 0; m < simg.imgs.length;m++){
   a.style.borderRadius = '25px';
   a.style.position= 'relative'
   a.style.top= '30px'
+  a.style.cursor= 'pointer';
   a.setAttribute('onclick', 'next()');
   div.appendChild(a);
   slidGameImage = document.getElementsByClassName('img-q')
@@ -376,7 +378,7 @@ function start() {
 function resulte() {
   div.textContent = '';
   var h4 = document.createElement('h4');
-  h4.style.fontSize = 'xx-large';
+  h4.style.fontSize = '3em';
   h4.textContent = `Your Score is ${score}/5`;
   div.appendChild(h4);
   var btn = document.createElement('button');
