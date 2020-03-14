@@ -379,6 +379,7 @@ function resulte() {
   h4.style.fontSize = 'xx-large';
   h4.textContent = `Your Score is ${score}/5`;
   div.appendChild(h4);
+  div.style.background = 'none'
   var btn = document.createElement('button');
   btn.textContent = 'Try again';
   btn.setAttribute('onclick', 'start()');
