@@ -8,9 +8,9 @@ main {
   height: 500px;
   margin: 15px 5% 15px 5%;
 }
-/* 
-.ins{
-    width: 50%;
+
+/* .ins{
+
 } */
 #quiz {
   width: 70%;
@@ -32,10 +32,14 @@ main {
 }
 #form div {
   display: inline-block;
-  margin: 0px 50px 0px 50px;
+  margin: 5px 50px 0px 50px;
   padding: 3px 0 20px 0;
   font-size: 22px;
   font-weight: 700;
+  color: #fbd9cf;
+  /* margin-top: 5%; */
+  text-align: center;
+
 }
 #form div:active {
   color: red;
@@ -55,7 +59,7 @@ main {
 .ins {
   margin-bottom: 40px;
   margin-left: 5%;
-  margin-right: 5%;s
+  margin-right: 5%;
 }
 .ins h3 {
   font-weight: 700;

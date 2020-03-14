@@ -16,6 +16,8 @@ header{
   /* height: 100%; */
 position: relative;
 margin-bottom: 8%;
+border-bottom-width: 0px;
+
 }
 nav{
   width: 100%;
@@ -83,6 +85,8 @@ footer {
   /* font-family: 'Satisfy', cursive; */
   color: #794E6F;
   z-index: 9999999;
+  position: fixed;
+  bottom: 0;
 }
 .footerinfo {
   font-size: 1em;
