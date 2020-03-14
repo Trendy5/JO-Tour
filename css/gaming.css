@@ -9,26 +9,17 @@ main {
   margin: 15px 5% 15px 5%;
 }
 
-/* .ins{
-
-} */
 #quiz {
   width: 70%;
   margin: 25px 15%;
   height: 70%;
-  /* background-color: #000000d9; */
-
-  /* border: 1px solid gray; */
-  /* background: #fff59d70; */
 }
 .q-p {
   background-color: #000000d9;
   color: #fbd9cf;
-    text-align: center;
-    font-size: 180%;
+  text-align: center;
+  font-size: 180%;
   padding: 10px 0px 10px 15px;
-  /* border-radius: 0px; */
-  /* border-radius: 12px 12px 12px 12px; */
 }
 #form div {
   display: inline-block;
@@ -37,9 +28,7 @@ main {
   font-size: 22px;
   font-weight: 700;
   color: #fbd9cf;
-  /* margin-top: 5%; */
   text-align: center;
-
 }
 #form div:active {
   color: red;
@@ -54,7 +43,6 @@ main {
   font-size: larger;
   font-size: 28px;
   margin-top: 13%;
-
 }
 .ins {
   margin-bottom: 40px;
@@ -71,13 +59,11 @@ main {
   border-radius: 22%;
   margin: auto;
   margin-bottom: 33px;
-
 }
 
 header {
   margin-bottom: 4%;
 }
-
 
 .start {
   margin: 40px 20px 0 0;
@@ -87,7 +73,6 @@ button {
   border: 2px solid #794d6f;
   border-radius: 51px;
   width: 40%;
-  /* margin-top: 2%; */
   align-self: center;
   outline: 0;
   padding: 20px 20px;
@@ -98,10 +83,6 @@ button {
   font-family: cursive;
 }
 
-
 main {
   height: 1100px;
 }
-
-
-

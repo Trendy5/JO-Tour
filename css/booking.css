@@ -1,89 +1,75 @@
-
-body{
+body {
   width: 100%;
   margin: auto;
   background-image: url(../img/DSC_93.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  color: #794d6f;;
+  color: #794d6f;
   font-family: 'Itim', cursive;
-
-
 }
 
-header{
-  /* height: 100%; */
-position: relative;
-margin-bottom: 8%;
-border-bottom-width: 0px;
-
+header {
+  position: relative;
+  margin-bottom: 8%;
+  border-bottom-width: 0px;
 }
-nav{
+nav {
   width: 100%;
   background-color: #fbd9cf;
   margin-top: 0%;
   position: sticky;
   top: 0;
 }
-li{
+li {
   display: inline-block;
   list-style-type: none;
   padding: 1% 8%;
   font-size: 1.3em;
   color: #794d6f;
-
 }
-
-
 
 a {
-text-decoration: none;
-color: #794d6f;
+  text-decoration: none;
+  color: #794d6f;
 }
 
-a:hover{
+a:hover {
   color: #9d7a90;
 }
 #logo {
-width: 6%;
-border-radius: 60px;
-margin-right: 24%;
-margin-top: 1%;
-margin-bottom: 3%;
-border: double #794d6f;
+  width: 6%;
+  border-radius: 60px;
+  margin-right: 24%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  border: double #794d6f;
 }
 #logodiv {
-text-align: center;
+  text-align: center;
 }
 h1 {
-font-family: 'Monoton', cursive;
-font-size: 6em;
-margin-top: -10%;
-color: #794e6f;
+  font-family: 'Monoton', cursive;
+  font-size: 6em;
+  margin-top: -10%;
+  color: #794e6f;
 }
 
-header ul{
+header ul {
   text-align: center;
   font-family: 'Satisfy', cursive;
-
 }
 
 .slideshow {
-height: 500px;
-width: 100%;
-/* margin-left: 1.5%; */
-/* margin-top: 1%; */
+  height: 500px;
+  width: 100%;
 }
 
-
 footer {
- 
   width: 100%;
-  background-color: #FBD9CF;
+  background-color: #fbd9cf;
   text-align: center;
-  /* font-family: 'Satisfy', cursive; */
-  color: #794E6F;
+  color: #794e6f;
   z-index: 9999999;
   position: fixed;
   bottom: 0;
@@ -96,11 +82,10 @@ footer {
   margin-left: -110px;
 }
 #phonenumber:hover {
-  color: #9D7A90;
+  color: #9d7a90;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
-
 
 #container {
   box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
@@ -111,11 +96,9 @@ footer {
   margin: 5em auto;
   height: 400px;
   width: 650px;
-
 }
-#container{
+#container {
   animation: slideInUp 3s ease alternate forwards;
-
 }
 
 @keyframes slideInUp {
@@ -172,12 +155,6 @@ footer {
   margin: 0;
   animation: chan-sh 6s ease infinite;
 }
-
-/*@keyframes chan-sh {
-	from  {content: 'free shipping';}
-	to  {content: 'New';}
-	
-}*/
 
 /*Product Rating  */
 .hint-star {
@@ -289,16 +266,12 @@ footer {
 .info {
   background: rgba(27, 26, 26, 0.9);
   font-family: 'Itim', cursive;
-  /* color: #fff; */
-
   transition: all 0.3s ease-out;
   transform: translateX(-100%);
   position: absolute;
   line-height: 1.5;
   text-align: left;
   font-size: 95%;
-  /* cursor: none; */
-
   height: 100%;
   width: 100%;
 
@@ -354,103 +327,97 @@ ul {
   animation: bounceIn 5s;
   color: #fbd9cf;
   border: solid;
-    border-width: thick;
+  border-width: thick;
 }
-#pop_booking h3{ 
-font-size: x-large;
-margin: 30px 0;
-animation:  bounceInLeft 5s;
-color: #fbd9cf;
-text-shadow: 1px 1px 2px black,  5px 8px 5px #794e6f;
-
+#pop_booking h3 {
+  font-size: x-large;
+  margin: 30px 0;
+  animation: bounceInLeft 5s;
+  color: #fbd9cf;
+  text-shadow: 1px 1px 2px black, 5px 8px 5px #794e6f;
 }
-#pop_booking h5{ 
-color: #fbd9cf;
-font-size: x-large;
-margin: 30px 0;
-animation:  bounceInLeft 5s;
-font-family: cursive;
-
+#pop_booking h5 {
+  color: #fbd9cf;
+  font-size: x-large;
+  margin: 30px 0;
+  animation: bounceInLeft 5s;
+  font-family: cursive;
 }
-
 
 @keyframes bounceIn {
-0% {
-  transform: scale(0.1);
-  opacity: 0;
-}
-60% {
-  transform: scale(1.2);
-  opacity: 1;
-}
-100% {
-  transform: scale(1);
-}
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @keyframes bounceInLeft {
-from,
-60%,
-75%,
-90%,
-to {
-  -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
-0% {
-  opacity: 0;
-  -webkit-transform: translate3d(-3000px, 0, 0);
-  transform: translate3d(-3000px, 0, 0);
-}
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
 
-60% {
-  opacity: 1;
-  -webkit-transform: translate3d(25px, 0, 0);
-  transform: translate3d(25px, 0, 0);
-}
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
 
-75% {
-  -webkit-transform: translate3d(-10px, 0, 0);
-  transform: translate3d(-10px, 0, 0);
-}
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
 
-90% {
-  -webkit-transform: translate3d(5px, 0, 0);
-  transform: translate3d(5px, 0, 0);
-}
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
 
-to {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .bounceInLeft {
--webkit-animation-name: bounceInLeft;
-animation-name: bounceInLeft;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
 }
 #pop_booking p {
-animation: bounceInLeft 5s;
-color: #fbd9cf;
-font-size: x-large;
-font-family: cursive;
-padding-bottom: 46px;
-
+  animation: bounceInLeft 5s;
+  color: #fbd9cf;
+  font-size: x-large;
+  font-family: cursive;
+  padding-bottom: 46px;
 }
 
 #pop_booking a {
   color: #794e6f;
   border: solid;
-  border border-radius: 34px;
+  borderborder-radius: 34px;
   border-radius: 30%;
   padding: 5px;
   border-color: #fbd9cf;
   font-family: monospace;
   padding: 4px 23px 4px 23px;
-
-
 }
 
-#pop_booking a:hover{
+#pop_booking a:hover {
   color: #fbd9cf;
-  }
+}

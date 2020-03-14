@@ -11,9 +11,9 @@ var Pleace = function(id, name, des, imgs, location, type) {
     (this.des = des),
     (this.imgs = imgs),
     (this.location = location),
-    (this.rate = [{ user_name: 'defulte', rate: 1 }]),
+    (this.rate = [{ user_name: 'defulte', rate: 5 }]),
     (this.comments = []),
-    (this.avarge = [{user_name:'defulte',rate:1}]),
+    (this.avarge = []),
     (this.type = type);
   Storge.places.push(this);
 };
@@ -232,9 +232,9 @@ new Rate(4, 'yazan', 2);
 new Rate(5, 'yazan', 4);
 new Rate(5, 'yazan', 5);
 new Rate(5, 'yazan', 4);
-new Rate(6, 'yazan', 3);
-new Rate(6, 'yazan', 4);
-new Rate(6, 'yazan', 3.5);
+new Rate(6, 'yazan', 5);
+new Rate(6, 'yazan', 5);
+new Rate(6, 'yazan', 5);
 new Rate(7, 'yazan', 3);
 new Rate(7, 'yazan', 4.5);
 new Rate(7, 'yazan', 3);
@@ -247,11 +247,26 @@ new Rate(9, 'yazan', 5);
 new Rate(10, 'yazan', 3.5);
 new Rate(10, 'yazan', 4);
 new Rate(10, 'yazan', 2.2);
-// new Avarge(0, 'yazan', 25);
-// new Avarge(0, 'yazan', 25);
-// new Avarge(0, 'yazan', 25);
-// new Avarge(1, 'yazan', 20);
-// new Avarge(1, 'yazan', 35);
+new Avarge(4, 'yazan', 10);
+new Avarge(0, 'yazan', 25);
+new Avarge(0, 'yazan', 25);
+new Avarge(1, 'yazan', 20);
+new Avarge(1, 'yazan', 30);
+new Avarge(0, 'yazan', 20);
+new Avarge(0, 'yazan', 25);
+new Avarge(0, 'yazan', 25);
+new Avarge(2, 'yazan', 10);
+new Avarge(1, 'yazan', 35);
+new Avarge(2, 'yazan', 25);
+new Avarge(2, 'yazan', 7);
+new Avarge(0, 'yazan', 25);
+new Avarge(2, 'yazan', 15);
+new Avarge(1, 'yazan', 35);
+new Avarge(3, 'yazan', 25);
+new Avarge(3, 'yazan', 9);
+new Avarge(3, 'yazan', 25);
+new Avarge(3, 'yazan', 7);
+new Avarge(4, 'yazan', 35);
 if (!localStorage.places && !localStorage.locations) {
   localStorage.locations = JSON.stringify(Storge.locations);
   localStorage.places = JSON.stringify(Storge.places);

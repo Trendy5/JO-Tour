@@ -2,24 +2,18 @@
 var filtered = [...Storge.places];
 
 function filterLoction(arrId) {
-  // console.log('filterLoction');
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrId.length; j++) {
       if (filtered[i].id == arrId[j]) {
-        // console.log(arrId[j])
         arr.push(filtered[i]);
       }
     }
   }
-  // if (arr.length > 0) {
   filtered = arr;
-  // }
-  // console.log(filtered, 0);
 }
 
 function filterType(arrType) {
-  // console.log('filterType');
   var arr = [];
   for (let i = 0; i < filtered.length; i++) {
     for (let j = 0; j < arrType.length; j++) {
@@ -28,14 +22,10 @@ function filterType(arrType) {
       }
     }
   }
-  // if (arr.length > 0) {
   filtered = arr;
-  // }
-  // console.log(filtered, 1);
 }
 
 function filterRate(rate) {
-  // console.log('filterRate');
   var arr = [];
   var avgRate = 0;
   for (let i = 0; i < filtered.length; i++) {
@@ -49,14 +39,10 @@ function filterRate(rate) {
     }
     avgRate = 0;
   }
-  // if (arr.length > 0) {
-  // console.log(filtered, 2, arr);
   filtered = arr;
-  // }
 }
 
 function filterCost(cost) {
-  // console.log('filterCost');
   var arr = [];
   var avgCost = 0;
   for (let i = 0; i < filtered.length; i++) {
@@ -74,16 +60,10 @@ function filterCost(cost) {
     avgCost = 0;
   }
 
-  if (arr.length > 0) {
-    filtered = arr;
-  }
-  // console.log(filtered, 3);
+  filtered = arr;
 }
 
 function render() {
-  //   var numOfResult=document.createElement('h3');
-  //  numOfResult.textContent= filtered.length;
-
   var section = document.getElementById('render-objects');
   section.textContent = '';
   document.getElementById('maincontent').style.display = 'none';
@@ -97,7 +77,6 @@ function render() {
   var p;
   var a;
 
-  // console.log(filtered.length);
   for (let index = 0; index < filtered.length; index++) {
     a = document.createElement('a');
     a.setAttribute('name', filtered[index].name);
@@ -128,44 +107,32 @@ function render() {
     a.appendChild(artical);
     section.appendChild(a);
   }
-  // console.log(filtered[0]);
-  // console.log(section);
-  // console.log('filtered[index]');
 }
 
 var filter = document.getElementById('filter');
 if (filter) {
-  // console.log('ok');
   filter.addEventListener('submit', funFilter);
 }
 function funFilter(event) {
   event.preventDefault();
-  // console.log(Storge.places,filtered  )
   filtered = [...Storge.places];
   var search = getCheckedCheckboxesFor('loction');
   if (search.length > 0) {
-    // console.log('1');
-    // console.log(search)
     filterLoction(search);
   }
 
   search = getCheckedCheckboxesFor('place');
   if (search.length > 0) {
-    // console.log(2);
     filterType(search);
   }
 
   filterRate(event.target.rating.value);
   search = event.target.Budget.value;
   if (search) {
-    // console.log(4);
     filterCost(search);
   }
   document.getElementById('render-objects').scrollIntoView();
-
   render();
-
-  // console.log(filtered);
 }
 
 function getCheckedCheckboxesFor(checkboxName) {
@@ -194,9 +161,7 @@ function renderPackage() {
   var ulPkg;
   var liPkg;
 
-  console.log('sdaf');
   for (let i = 0; i < Storge.booking.length; i++) {
-    console.log('d');
     divNewContainer = document.createElement('div');
     divNewContainer.setAttribute('id', 'container');
     sectionPkg.appendChild(divNewContainer);
@@ -248,7 +213,6 @@ function renderPackage() {
       ulPkg.appendChild(liPkg);
     }
   }
-  console.log(sectionPkg);
 }
 if (sectionPkg) {
   renderPackage();
@@ -256,12 +220,8 @@ if (sectionPkg) {
 
 var pop = document.getElementById('pop_booking');
 function bookFun() {
-  console.log('jlk')
   pop.style.display = 'inline-block';
 }
 function hidepop(e) {
-  // e.preventDefault()
-  console.log('lljk');
-
   pop.style.display = 'none';
 }
